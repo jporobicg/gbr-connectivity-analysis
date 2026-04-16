@@ -1,19 +1,27 @@
-# Connectivity Comparison Workflow
+# Connectivity (workflow and tools)
 
-This project compares a single connectivity estimate against a bootstrap connectivity ensemble stored in NetCDF files.
+This folder holds the **single vs bootstrap connectivity comparison** pipeline (`run_analysis.py`, `config.py`, `src/`) together with **older plotting helpers** (`make_plots.py`, `plot_images_functions.py`, notebooks).
+
+It compares a single connectivity estimate against a bootstrap connectivity ensemble stored in NetCDF files.
 
 The central question is:
 
 > Does the single matrix lead to the same ecological interpretation as the bootstrap ensemble, and how much extra uncertainty information does the bootstrap approach provide?
 
-## Project Layout
+## Layout of this folder
 
 ```text
-connectivity_comparison/
-├── README.md
-├── requirements.txt
-├── config.py
-├── run_analysis.py
+Connectivity/
+├── README.md                 # This file
+├── requirements.txt          # Pipeline dependencies
+├── config.py                 # Defaults and CLI merge
+├── run_analysis.py           # Main CLI entry point
+├── TODO.md
+├── codex_connectivity_extended_prompt.md
+├── make_plots.py             # Helper plotting scripts
+├── plot_images_functions.py
+├── Plot_parcels.ipynb
+├── Untitled-1.ipynb
 ├── src/
 │   ├── io_utils.py
 │   ├── preprocessing.py
@@ -25,15 +33,14 @@ connectivity_comparison/
 │   ├── family_comparison.py
 │   ├── plotting.py
 │   └── reporting.py
-├── outputs/
-│   ├── tables/
-│   ├── figures/
-│   ├── intermediate/
-│   ├── analysis_catalog.md
-│   ├── report_summary.md
-│   └── TODO.md
-└── notebooks/
-    └── optional_exploration.ipynb
+├── notebooks/
+│   └── optional_exploration.ipynb
+└── outputs/                  # Created when you run the pipeline (gitignored)
+    ├── tables/
+    ├── figures/
+    ├── intermediate/
+    ├── analysis_catalog.md
+    └── report_summary.md
 ```
 
 ## What The Workflow Covers
@@ -86,35 +93,38 @@ By default the project uses:
 - `datasets/connectivity_matrices/connectivity_acroporidae_single.nc`
 - `datasets/reefs/Reefs2024.csv`
 
-You can change these in [config.py](/home/por07g/Documents/Projects/GBR_modeling/Connectivity_analysis/connectivity_comparison/config.py) or pass them on the command line.
+You can change these in [config.py](config.py) or pass them on the command line.
 
-## Suggested Order To Run
+## Suggested order to run
+
+Run these from the `Connectivity/` directory (so `config.py` and `src/` resolve correctly).
 
 1. Install dependencies:
 
 ```bash
-pip install -r connectivity_comparison/requirements.txt
+cd Connectivity
+pip install -r requirements.txt
 ```
 
 2. Run a quick pilot on one or two time steps:
 
 ```bash
-python connectivity_comparison/run_analysis.py --time-indices 1,2 --skip-plots
+python run_analysis.py --time-indices 1,2 --skip-plots
 ```
 
 3. Run the full analysis:
 
 ```bash
-python connectivity_comparison/run_analysis.py
+python run_analysis.py
 ```
 
 4. Open the main outputs:
 
-- [analysis_catalog.md](/home/por07g/Documents/Projects/GBR_modeling/Connectivity_analysis/connectivity_comparison/outputs/analysis_catalog.md)
-- [report_summary.md](/home/por07g/Documents/Projects/GBR_modeling/Connectivity_analysis/connectivity_comparison/outputs/report_summary.md)
-- [TODO.md](/home/por07g/Documents/Projects/GBR_modeling/Connectivity_analysis/connectivity_comparison/TODO.md)
-- [outputs/tables](/home/por07g/Documents/Projects/GBR_modeling/Connectivity_analysis/connectivity_comparison/outputs/tables)
-- [outputs/figures](/home/por07g/Documents/Projects/GBR_modeling/Connectivity_analysis/connectivity_comparison/outputs/figures)
+- [outputs/analysis_catalog.md](outputs/analysis_catalog.md)
+- [outputs/report_summary.md](outputs/report_summary.md)
+- [TODO.md](TODO.md)
+- [outputs/tables](outputs/tables)
+- [outputs/figures](outputs/figures)
 
 ## Main Output Tables
 

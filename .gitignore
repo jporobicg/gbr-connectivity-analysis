@@ -52,7 +52,7 @@ test_map_old.png
 test_matrix_old.png
 
 # --- Analysis outputs (tables, plots, intermediates) ---
-connectivity_comparison/outputs/
+Connectivity/outputs/
 Settlement/results/
 Settlement/family_results/
 Settlement/Randal/data/
@@ -69,6 +69,7 @@ Tex_report/*.synctex.gz
 
 # --- Binary media, documents, and model outputs (keep repository code-focused) ---
 *.png
+!assets/social-preview.png
 *.jpg
 *.jpeg
 *.gif

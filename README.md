@@ -6,61 +6,113 @@
   <img src="assets/repo-icon.svg" alt="GBR connectivity analysis icon" width="96" height="96"/>
 </p>
 
-Code and workflows for analysing **Great Barrier Reef (GBR) larval connectivity**: comparing single connectivity estimates with bootstrap ensembles, summarising network structure, uncertainty, and ecological interpretation metrics.
+Analysis code for **Great Barrier Reef (GBR) larval connectivity**: comparing single connectivity estimates with bootstrap ensembles, mapping and plotting helpers, settlement and spawning workflows, and reproducible reports.
 
-This repository is intended for **reproducible analysis scripts** only. Large **datasets**, **raster outputs**, and **generated figures** are excluded via `.gitignore` and should be kept locally or distributed separately.
+Large **datasets**, **generated figures**, and **tabular exports** stay local (see `.gitignore`).
 
-## Purpose
+---
 
-- **Connectivity comparison** (`connectivity_comparison/`): end-to-end pipeline (`run_analysis.py`) that reads single-matrix and bootstrap NetCDF products, computes matrix and node-level metrics, rank and profile stability, concentration and backbone diagnostics, coverage-style uncertainty, ordination, and writes tables plus optional plots and markdown reports.
-- **Broader scripts** (`Codes/`, `Connectivity/`, `Settlement/`, `Spawning/`): notebooks and utilities for mapping, clustering reefs, plotting connectivity matrices, and related analyses used in the wider GBR modelling context.
+## 1. Connectivity
 
-## Repository structure
+**Path:** [`Connectivity/`](Connectivity/)
 
-```text
-.
-├── README.md                 # This file
-├── requirements.txt          # Core Python dependencies (notebooks & scripts)
-├── assets/
-│   └── repo-icon.svg         # Repository icon (network / reef motif)
-├── Codes/                    # Standalone scripts, notebooks, plotting helpers
-├── Connectivity/             # Connectivity-related utilities
-├── connectivity_comparison/  # Main reproducible single vs bootstrap comparison workflow
-│   ├── README.md             # Detailed workflow documentation
-│   ├── config.py
-│   ├── run_analysis.py       # CLI entry point
-│   ├── requirements.txt      # Dependencies for the comparison pipeline
-│   ├── src/                  # Metrics, I/O, plotting, reporting
-│   └── notebooks/            # Optional exploration
-├── Documents/                # Notes and presentation materials (figures ignored)
-├── Settlement/               # Settlement-related analysis code
-├── Spawning/                 # Spawning-related scripts
-└── Tex_report/               # LaTeX catalog of analyses (figure copies ignored)
-```
+**Purpose:** Main hub for connectivity science code. It merges the former `connectivity_comparison/` pipeline with the older `Connectivity/` plotting helpers.
 
-Ignored paths (see `.gitignore`) include: `datasets/`, `**/figures/`, `connectivity_comparison/outputs/`, binary geospatial and NetCDF data, and LaTeX build products under `Tex_report/`.
+| What | Role |
+|------|------|
+| `run_analysis.py`, `config.py`, `src/` | Reproducible **single vs bootstrap** NetCDF comparison: matrix metrics, ranks, profiles, concentration, stable edges, coverage, ordination, regional and family extensions, markdown reports and plots. |
+| `requirements.txt` | Python dependencies for that pipeline. |
+| `notebooks/` | Optional exploration (e.g. `optional_exploration.ipynb`). |
+| `make_plots.py`, `plot_images_functions.py`, `*.ipynb` | Legacy or ad hoc **plotting and parcel** workflows. |
+| `outputs/` | **Generated** tables, figures, intermediates (not tracked in git). |
 
-## Quick start (connectivity comparison)
+**Quick start:** see [`Connectivity/README.md`](Connectivity/README.md).
 
 ```bash
-cd connectivity_comparison
-python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
+cd Connectivity
 pip install -r requirements.txt
-# Configure paths in config or pass CLI args, then:
-python run_analysis.py --bootstrap-path /path/to/bootstrap.nc --single-path /path/to/single.nc --output-dir ./outputs
+python run_analysis.py --help
 ```
 
-See `connectivity_comparison/README.md` for full options, outputs, and interpretation notes.
+---
 
-## Requirements
+## 2. Codes
 
-- Python 3.10+ recommended.
-- Root `requirements.txt` lists common scientific stack packages; `connectivity_comparison/requirements.txt` targets the comparison workflow specifically.
+**Path:** [`Codes/`](Codes/)
 
-## Citation
+**Purpose:** Standalone notebooks and scripts used across GBR modelling (clustering reefs, connectivity-by-area summaries, kernel helpers, shared plotting utilities).
 
-If you use this code in a publication, please cite the relevant GBR modelling or connectivity study and this repository as appropriate.
+---
+
+## 3. Settlement
+
+**Path:** [`Settlement/`](Settlement/)
+
+**Purpose:** Larval settlement and competency modelling, comparisons with literature parametrisations, R reproduction material (`Randal_github/`), and analysis notes (Markdown / Org).
+
+---
+
+## 4. Spawning
+
+**Path:** [`Spawning/`](Spawning/)
+
+**Purpose:** Spawning timing and related **R** analyses for coral reproductive schedules.
+
+---
+
+## 5. Documents
+
+**Path:** [`Documents/`](Documents/)
+
+**Purpose:** Manuscript sources, prompts, and internal notes (presentation figures are not committed).
+
+---
+
+## 6. Tex_report
+
+**Path:** [`Tex_report/`](Tex_report/)
+
+**Purpose:** LaTeX version of the analysis catalog (`analysis_catalog.tex`). Local `figures/` copies and PDF build artifacts are gitignored.
+
+---
+
+## 7. Data layout (local only)
+
+**Path:** [`datasets/`](datasets/) (not in git)
+
+Place NetCDF connectivity matrices, reef shapefiles / CSV metadata, and kernels here as expected by `Connectivity/config.py` defaults or your own paths.
+
+---
+
+## Root `requirements.txt`
+
+Lightweight stack for notebooks and scripts used outside the pipeline. For the **comparison workflow**, prefer:
+
+`Connectivity/requirements.txt`
+
+---
 
 ## License
 
-Add a `LICENSE` file if you want to specify terms (e.g. MIT, CC-BY). Until then, all rights reserved unless you state otherwise.
+This project is released under the [MIT License](LICENSE).
+
+---
+
+## Citation
+
+If you use this code, cite the relevant GBR or connectivity publication and link to this repository.
+
+---
+
+## GitHub (maintainers)
+
+1. **Repository description:** e.g. *“GBR larval connectivity analysis: single vs bootstrap ensembles, settlement, spawning.”*  
+   Settings → General → **Repository name** (already set) and **Description**.
+
+2. **Social preview:** Settings → General → **Social preview** → upload  
+   [`assets/social-preview.png`](assets/social-preview.png)  
+   (1200×630 recommended for Open Graph / link cards.)
+
+3. **Topics:** e.g. `great-barrier-reef`, `connectivity`, `larval-dispersal`, `python`, `netcdf`, `bootstrap`.
+
+4. **Default branch:** `main` (already used for pushes).
