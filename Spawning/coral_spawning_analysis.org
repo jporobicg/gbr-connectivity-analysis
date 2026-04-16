@@ -1,0 +1,136 @@
+#+TITLE: Coral Spawning Analysis: Global and Family-Level Patterns
+#+AUTHOR: ReefConnect Project
+#+DATE: 2025-10-17
+#+OPTIONS: toc:t num:t
+
+* Overview
+This document summarizes coral spawning patterns across seven coral families included in Randall et al. (2024). The main idea behind this analysis is severalfold:
+
+Generate accurate measures of when the species are spawning, so that I can create a particle tracking exercise that mimics the spawning times for most families and is statistically robust.
+
+Generate probability distributions that can be used later to run bootstraps over the generated particle tracking outputs.
+
+I’m using the data shared by Christopher Doropoulos, and all the analyses are contained in two R scripts: one to calculate the time window (in days) for the spawning event, and a second R script to calculate the best time (hour) of day when corals start and stop spawning.
+
+Dataset source: Baird et al. (2021) Indo-Pacific coral spawning database.
+Total observations analyzed: 1268
+Families: 7
+Genera: 28
+Species: 131
+
+* Global Analysis
+
+** Spawning by Hour of Day
+
+Analysis of spawning time across all families combined.
+
+[[file:global_spawning_hour.png]]
+
+*Key finding:* Peak spawning occurs at hour 21 (9:00 PM), with  30.0%  of all spawning events. Most spawning (>95%) occurs between 19:00-23:00.
+
+** Spawning by Days After Full Moon
+
+Analysis of spawning timing relative to lunar cycle.
+
+[[file:global_spawning_moon.png]]
+
+*Key finding:* Peak spawning occurs  4  nights after full moon, with  27.1%  of events. Most spawning (>90%) occurs 2-7 nights after full moon.
+
+* Family-Level Analysis
+
+** Spawning by Hour of Day (Per Family)
+
+Spawning time patterns vary slightly among families but show consistent evening timing.
+
+[[file:family_spawning_hour.png]]
+
+*Key finding:* All families spawn predominantly between 20:00-22:00, with median times ranging from  20.0  to  22.0  hours.
+
+** Spawning by Days After Full Moon (Per Family)
+
+Lunar timing shows family-specific patterns with overlapping windows.
+
+[[file:family_spawning_moon.png]]
+
+*Key finding:* Median spawning ranges from  4  to  6  nights after full moon. Acroporidae and Poritidae spawn earlier (median 4 nights), while Lobophylliidae and Diploastreidae spawn later (median 6 nights).
+
+* Summary Tables
+
+** Table 1: Genera by Family
+
+| Family | Genera |
+|--------+--------|
+| Acroporidae | Acropora, Alveopora, Anacropora, Astreopora, Montipora |
+| Agariciidae | Pavona |
+| Diploastreidae | Diploastrea |
+| Euphylliidae | Euphyllia |
+| Lobophylliidae | Acanthastrea, Echinophyllia, Lobophyllia, Oxypora |
+| Merulinidae | Astrea, Caulastraea, Coelastrea, Cyphastrea, Dipsastraea, Echinopora, Favites, Goniastrea, Leptoria, Merulina, Oulophyllia, Paragoniastrea, Pectinia, Platygyra |
+| Poritidae | Goniopora, Porites |
+
+** Table 2: Global Spawning by Hour
+
+| Hour | Proportion (n) |
+|------+----------------|
+| 0 | 0.1% (n=1) |
+| 16 | 0.1% (n=1) |
+| 18 | 3.1% (n=25) |
+| 19 | 9.6% (n=77) |
+| 20 | 30.0% (n=240) |
+| 21 | 25.1% (n=201) |
+| 22 | 28.1% (n=225) |
+| 23 | 2.4% (n=19) |
+| 24 | 1.4% (n=11) |
+
+** Table 3: Global Spawning by Nights After Full Moon
+
+| Nights | Proportion (n) |
+|--------+----------------|
+| 0 | 4.5% (n=57) |
+| 1 | 3.5% (n=44) |
+| 2 | 6.4% (n=81) |
+| 3 | 13.4% (n=170) |
+| 4 | 27.1% (n=344) |
+| 5 | 24.5% (n=311) |
+| 6 | 14.0% (n=178) |
+| 7 | 4.2% (n=53) |
+| 8 | 1.4% (n=18) |
+| 9 | 0.6% (n=8) |
+| 10 | 0.2% (n=2) |
+| 11 | 0.2% (n=2) |
+
+** Table 4: Family Summary - Hour of Day
+
+| Family | Median Hour | Mean Hour (±SD) | n |
+|--------+-------------+-----------------+---|
+| Acroporidae | 21.0 | 20.7 (±1.5) | 503 |
+| Agariciidae | 20.0 | 20.0 (±NA) | 1 |
+| Diploastreidae | 20.0 | 20.0 (±NA) | 1 |
+| Euphylliidae | 22.0 | 22.0 (±NA) | 1 |
+| Lobophylliidae | 20.0 | 20.0 (±1.0) | 25 |
+| Merulinidae | 21.0 | 20.9 (±1.1) | 206 |
+| Poritidae | 21.0 | 20.9 (±1.1) | 63 |
+
+** Table 5: Family Summary - Nights After Full Moon
+
+| Family | Median Nights | Mean Nights (±SD) | n |
+|--------+---------------+-------------------+---|
+| Acroporidae | 4 | 3.9 (±1.9) | 830 |
+| Agariciidae | 4 | 4.0 (±NA) | 1 |
+| Diploastreidae | 6 | 6.0 (±NA) | 1 |
+| Euphylliidae | 5 | 5.0 (±0.7) | 5 |
+| Lobophylliidae | 6 | 5.4 (±1.5) | 43 |
+| Merulinidae | 5 | 4.8 (±1.1) | 316 |
+| Poritidae | 4 | 4.0 (±1.1) | 72 |
+
+* Key Conclusions
+
+1. *Temporal synchronization:* Spawning is highly synchronized across families, occurring predominantly 20:00-22:00.
+2. *Lunar synchronization:* Most spawning occurs 3-6 nights after full moon, with family-specific variation.
+3. *Mass spawning:* Tight temporal clustering facilitates cross-fertilization and mass spawning events.
+4. *Family differences:* While timing is similar, Acroporidae shows earlier lunar timing (median 4 nights) compared to Lobophylliidae (median 6 nights).
+
+* References
+
+- Randall, C.J., et al. (2024). Larval precompetency and settlement behaviour in 25 Indo-Pacific coral species. /Communications Biology/, 7, 184.
+- Baird, A.H., et al. (2021). An Indo-Pacific coral spawning database. /Scientific Data/, 8(1), 1-8.

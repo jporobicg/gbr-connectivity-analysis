@@ -1,0 +1,366 @@
+% Analysis Catalog — LaTeX version of connectivity_comparison/outputs/analysis_catalog.md
+% Figures live in ./figures/ (copies from connectivity comparison outputs).
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{colorlinks=true, linkcolor=blue!60!black, urlcolor=blue!60!black}
+
+\graphicspath{{figures/}}
+
+\title{Analysis Catalog}
+\author{}
+\date{Generated: 2026-04-07}
+
+\begin{document}
+\maketitle
+
+\noindent
+This document is a quick guide to the analyses and figures in the connectivity comparison workflow.
+It corresponds to \texttt{connectivity\_comparison/outputs/analysis\_catalog.md}.
+
+% --- helper: full-width figure with safe scaling ---
+\newcommand{\catalogfig}[2]{%
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth,height=0.92\textheight,keepaspectratio]{#1}
+    \caption{#2}
+  \end{figure}
+}
+
+\section{Matrix comparison through time}
+
+\textbf{What it does.} Tracks whole-matrix agreement between the single estimate and the bootstrap mean across dates.
+It combines correlation and error-size summaries so you can see both similarity and mismatch.
+
+\catalogfig{time_series_matrix_metrics.png}{Whole-matrix agreement through time (correlation and error metrics).}
+
+\textbf{How to read it.} Higher correlation means the overall structure is more similar.
+Lower RMSE, MAE, and Frobenius norm mean the two products differ less in absolute terms.
+
+\section{Threshold sensitivity}
+
+\textbf{What it does.} Repeats key comparisons after redefining what counts as an active edge.
+This checks whether the main conclusions depend on weak links or remain stable under stricter cutoffs.
+
+\catalogfig{threshold_sensitivity.png}{Sensitivity of comparisons to connectivity thresholds.}
+
+\textbf{How to read it.} If the curves stay similar across thresholds, the interpretation is robust.
+If they change sharply, conclusions depend strongly on how small links are treated.
+
+\section{Edge uncertainty through time}
+
+\textbf{What it does.} Summarizes how often the single estimate falls outside bootstrap uncertainty intervals.
+It also compares node-level coverage and sample-to-sample similarity through time.
+
+\catalogfig{uncertainty_time_series.png}{Edge uncertainty and single-estimate consistency through time.}
+
+\textbf{How to read it.} Higher outside-CI fractions mean the single estimate is less consistent with bootstrap uncertainty.
+If single-vs-mean similarity is close to within-bootstrap similarity, the single matrix behaves more like a typical bootstrap realization.
+
+\section{Block heatmap panel}
+
+\textbf{What it does.} Shows large-scale spatial structure in the single matrix, bootstrap mean, their difference, and bootstrap uncertainty.
+The matrices are block-averaged so broad patterns can be seen without plotting all edges directly.
+
+\catalogfig{heatmap_panel_time_01.png}{Block-averaged heatmaps: single, bootstrap mean, difference, and uncertainty.}
+
+\textbf{How to read it.} Large coherent patches mean differences are spatially structured, not just random noise.
+If difference, SD, or CV hotspots line up with important regions, those regions deserve closer ecological interpretation.
+
+\section{Edge scatter}
+
+\textbf{What it does.} Compares sampled edge weights from the single matrix against the bootstrap mean.
+The raw and log views help reveal both strong-link agreement and behavior among weaker edges.
+
+\catalogfig{scatter_time_01.png}{Edge weights: single versus bootstrap mean (raw and log scales).}
+
+\textbf{How to read it.} Points close to the diagonal mean good agreement.
+Systematic spread away from the diagonal means one product is consistently stronger, weaker, or more variable than the other.
+
+\section{Edge and node distributions}
+
+\textbf{What it does.} Compares sampled edge weights plus outgoing and incoming node strengths.
+This shows whether the single estimate and bootstrap mean differ in overall spread, skew, or central tendency.
+
+\catalogfig{distributions_time_01.png}{Distributions of edge weights and node strengths.}
+
+\textbf{How to read it.} Similar histograms suggest broadly similar strength structure.
+Clear shifts or tail differences suggest the bootstrap mean is smoothing or redistributing connectivity.
+
+\section{Top sources and sinks}
+
+\textbf{What it does.} Compares the strongest exporters and importers under both products.
+It focuses on the reefs most likely to matter for ecological interpretation and management.
+
+\catalogfig{rank_panel_time_01.png}{Top source and sink reefs under single and bootstrap-mean products.}
+
+\textbf{How to read it.} If the lines track closely, the most important reefs are stable.
+Large mismatches suggest bootstrapping changes which reefs appear most influential.
+
+\section{Rank correlation through time}
+
+\textbf{What it does.} Tracks source and sink rank stability through time using the bootstrap distribution.
+It summarizes whether important reefs stay important across methods and dates.
+
+\catalogfig{rank_correlation_time_series.png}{Rank correlation of sources and sinks through time.}
+
+\textbf{How to read it.} Higher values mean the identity of important reefs is more stable.
+Drops through time suggest that bootstrapping changes ecological priorities more strongly at some dates than others.
+
+\section{Rank-change bars}
+
+\textbf{What it does.} Highlights reefs with the biggest changes in source or sink rank.
+This makes the main movers easy to inspect without scanning the full rank table.
+
+\catalogfig{rank_change_bars_time_01.png}{Largest rank changes for sources and sinks.}
+
+\textbf{How to read it.} Large bars indicate reefs whose apparent importance changes the most.
+Those reefs are good candidates for follow-up ecological interpretation or mapping.
+
+\section{Profile divergence histogram}
+
+\textbf{What it does.} Measures how much each reef's normalized destination or origin profile changes.
+This asks whether reefs connect to different places even when total strength stays similar.
+
+\catalogfig{profile_divergence_hist_time_01.png}{Distribution of profile divergence between products.}
+
+\textbf{How to read it.} Values near zero mean the connectivity profile is similar between products.
+A long right tail means a subset of reefs changes where it connects even if broad totals are stable.
+
+\section{Profile divergence top changes}
+
+\textbf{What it does.} Shows the reefs with the strongest destination-profile or origin-profile change.
+It focuses attention on the nodes where ecological routing changes most.
+
+\catalogfig{profile_top_changes_time_01.png}{Reefs with largest profile divergence.}
+
+\textbf{How to read it.} Higher bars mean stronger rewiring of connectivity patterns.
+These reefs may keep similar total strength while shifting their main partners.
+
+\section{Grouping similarity}
+
+\textbf{What it does.} Compares simple higher-level node groupings between the single matrix, bootstrap mean, and bootstrap samples.
+This gives a broad system-organization view without relying on heavy community-detection methods.
+
+\catalogfig{grouping_similarity_time_series.png}{Similarity of coarse node groupings through time.}
+
+\textbf{How to read it.} Higher similarity means the large-scale system structure is more stable.
+Lower similarity suggests bootstrapping changes how the network separates into major functional groupings.
+
+\section{Lorenz curves}
+
+\textbf{What it does.} Shows how concentrated total connectivity is among edges.
+It is the same logic used in inequality analysis: do a few links carry most of the total connectivity?
+
+\catalogfig{lorenz_curves_time_01.png}{Lorenz curves for connectivity concentration.}
+
+\textbf{How to read it.} Curves farther from the diagonal mean stronger concentration in fewer links.
+If the single curve is more bowed than the bootstrap mean, the single estimate is more dominated by a few pathways.
+
+\section{Concentration through time}
+
+\textbf{What it does.} Tracks Gini and top-share metrics through time.
+This shows whether connectivity is consistently diffuse or concentrated into a small set of strong pathways.
+
+\catalogfig{concentration_time_series.png}{Gini and top-share concentration metrics through time.}
+
+\textbf{How to read it.} Higher values mean connectivity is more concentrated in a small number of links.
+If the single estimate stays higher than the bootstrap mean, it suggests sharper or less smoothed pathways.
+
+\section{Tail behavior through time}
+
+\textbf{What it does.} Tracks the strongest-edge and top-k edge summaries through time.
+It focuses on the upper tail where ecologically dominant pathways are most likely to appear.
+
+\catalogfig{tail_metric_time_series.png}{Tail metrics for dominant pathways through time.}
+
+\textbf{How to read it.} Higher tail metrics mean stronger emphasis on dominant pathways.
+If only the tail changes while broad correlations stay high, differences are concentrated in the strongest links rather than everywhere.
+
+\section{Top-edge strength distribution}
+
+\textbf{What it does.} Compares the ranked strongest edge weights in the single matrix and bootstrap mean.
+It makes it easy to see whether one product has a sharper high-end tail.
+
+\catalogfig{top_edge_strength_distribution_time_01.png}{Distribution of ranked top edge strengths.}
+
+\textbf{How to read it.} A heavier single tail suggests sharper pathways in the single estimate.
+Closer curves suggest the strongest pathways keep similar magnitude under bootstrap averaging.
+
+\section{Node strength uncertainty}
+
+\textbf{What it does.} Shows bootstrap intervals for selected source and sink strengths.
+It directly compares the single node value with the bootstrap range for important reefs.
+
+\catalogfig{node_strength_uncertainty_time_01.png}{Bootstrap intervals for selected node strengths.}
+
+\textbf{How to read it.} If the single point falls outside the interval, that node is less robust.
+Wide intervals mean the reef's apparent importance is uncertain even if its mean value is high.
+
+\section{Node CV distribution}
+
+\textbf{What it does.} Shows how uncertain node strengths are across reefs using bootstrap coefficients of variation.
+It helps separate consistently important reefs from highly unstable ones.
+
+\catalogfig{node_strength_cv_hist_time_01.png}{Distribution of node strength coefficients of variation.}
+
+\textbf{How to read it.} Higher CV means the node's importance is less stable.
+A broad distribution means some reefs are much more uncertain than others.
+
+\section{Top-link overlap through time}
+
+\textbf{What it does.} Tracks how much the strongest pathways overlap between the single matrix and bootstrap mean.
+This is often more ecologically meaningful than comparing all edges equally.
+
+\catalogfig{topk_overlap_time_series.png}{Overlap of top-\(k\) links through time.}
+
+\textbf{How to read it.} Higher overlap means the dominant pathways are more robust.
+Lower overlap means bootstrapping changes which links you would identify as most important.
+
+\section{Top-link churn}
+
+\textbf{What it does.} Shows which edges enter or leave the strongest-link set.
+It identifies specific pathways that are gained or lost when moving from the single matrix to the bootstrap mean.
+
+\catalogfig{edge_churn_time_01.png}{Edges entering and leaving the strongest-link set.}
+
+\textbf{How to read it.} Large churn means the identity of dominant pathways is changing.
+If the entering and leaving edges have similar weights, conclusions about the strongest pathways are less stable.
+
+\section{Stable-edge counts}
+
+\textbf{What it does.} Counts edges that remain important across many bootstrap samples under different stability rules.
+This summarizes how large the robust bootstrap-supported backbone is.
+
+\catalogfig{stable_edge_counts.png}{Counts of stable edges under frequency rules.}
+
+\textbf{How to read it.} More stable edges mean the bootstrap ensemble supports a clearer robust backbone.
+Sharp drops under stricter frequency rules mean the strongest pathways are sensitive to sampling variation.
+
+\section{Stable-edge overlap}
+
+\textbf{What it does.} Compares stable bootstrap edges with the single and bootstrap-mean strongest links.
+It tests whether the pathways highlighted by each product are also stable across the bootstrap ensemble.
+
+\catalogfig{stable_edge_overlap.png}{Overlap between stable edges and single or mean strongest links.}
+
+\textbf{How to read it.} Higher overlap means the main pathways are robust across uncertainty rules.
+Low overlap means the visually strongest links may not be the most stable ones.
+
+\section{Entropy vs strength}
+
+\textbf{What it does.} Shows whether strong nodes are diffuse or focused in where they connect.
+It links total importance to how broadly or narrowly that importance is distributed across partners.
+
+\catalogfig{entropy_strength_time_01.png}{Node strength versus connectivity entropy.}
+
+\textbf{How to read it.} High entropy means connections are spread across many partners.
+Low entropy at high strength suggests a reef is important because of a small number of dominant routes.
+
+\section{Dominance ratio comparison}
+
+\textbf{What it does.} Compares how much each node is dominated by one main partner.
+This helps distinguish broad exporters/importers from reefs driven by one dominant connection.
+
+\catalogfig{dominance_ratio_time_01.png}{Dominance ratio: single versus bootstrap mean.}
+
+\textbf{How to read it.} Higher dominance means one connection dominates the node's pattern.
+If dominance falls in the bootstrap mean, bootstrapping is making connectivity appear more diffuse.
+
+\section{Effective-link distribution}
+
+\textbf{What it does.} Shows the effective number of destinations or sources for nodes.
+It translates entropy into an easier ecological interpretation: how many meaningful partners does a reef effectively have?
+
+\catalogfig{effective_links_distribution_time_01.png}{Distribution of effective numbers of links.}
+
+\textbf{How to read it.} Higher values mean more diffuse connectivity patterns.
+Lower values mean connectivity is concentrated into a smaller set of meaningful partners.
+
+\section{Backbone overlap}
+
+\textbf{What it does.} Compares a simple backbone proxy between the single and bootstrap-mean networks.
+The backbone is defined transparently from thresholds and local row-share dominance rather than a complex black-box method.
+
+\catalogfig{backbone_overlap_time_series.png}{Overlap of backbone proxies through time.}
+
+\textbf{How to read it.} Higher overlap means both products emphasize similar core links.
+Lower overlap means the structural backbone you would report depends on the uncertainty treatment.
+
+\section{Coverage rates}
+
+\textbf{What it does.} Summarizes whether single and bootstrap-mean system metrics fall inside bootstrap intervals.
+It extends coverage beyond edges to broader quantities such as connectance, Gini, self-recruitment, and top-edge summaries.
+
+\catalogfig{coverage_rates_time_series.png}{Coverage of system metrics relative to bootstrap intervals.}
+
+\textbf{How to read it.} Higher outside-CI rates mean the bootstrap ensemble is adding important uncertainty information.
+If the single estimate often falls outside the bootstrap range, it should not be treated as a typical realization.
+
+\section{Coverage examples}
+
+\textbf{What it does.} Shows example bootstrap intervals for selected node-level metrics.
+It gives a concrete view of which reefs look stable and which ones move outside the bootstrap-supported range.
+
+\catalogfig{coverage_examples_time_01.png}{Example bootstrap intervals for node-level metrics.}
+
+\textbf{How to read it.} Points outside the interval indicate disagreement with bootstrap uncertainty.
+Wide intervals mean high uncertainty even when the single point remains inside the interval.
+
+\section{Discrepancy vs variability}
+
+\textbf{What it does.} Compares single-vs-mean differences with the normal variability among bootstrap samples.
+This is a direct check of whether the single estimate is just another plausible realization or something more distinct.
+
+\catalogfig{single_vs_bootstrap_variability.png}{Single versus bootstrap mean relative to ensemble variability.}
+
+\textbf{How to read it.} If the single-vs-mean value is outside the bootstrap range, the single estimate is not just a typical bootstrap realization.
+If it sits inside the bootstrap range, the single matrix is more consistent with ensemble variability.
+
+\section{Top-k probability}
+
+\textbf{What it does.} Shows the probability that selected reefs are in the top-\(k\) set across bootstrap samples.
+This turns rank stability into a direct probability of being an important source or sink.
+
+\catalogfig{topk_probability_time_01.png}{Probability of reefs appearing in the top-\(k\) set.}
+
+\textbf{How to read it.} Probabilities near one indicate very stable importance.
+Intermediate probabilities mean a reef may be important in some realizations but not others.
+
+\section{Rank uncertainty intervals}
+
+\textbf{What it does.} Shows bootstrap rank intervals for important reefs.
+It helps separate reefs with stable ranking from reefs whose rank changes widely across bootstrap samples.
+
+\catalogfig{rank_uncertainty_intervals_time_01.png}{Bootstrap rank intervals for selected reefs.}
+
+\textbf{How to read it.} Wide intervals mean reef importance is uncertain.
+If the single rank falls outside the interval, the single estimate is not well aligned with bootstrap rank uncertainty.
+
+\section{Ordination cloud}
+
+\textbf{What it does.} Places bootstrap samples, the single estimate, and the bootstrap mean in low-dimensional space.
+This gives a compact view of whether the single matrix sits inside or outside the bootstrap cloud.
+
+\catalogfig{ordination_time_01.png}{Low-dimensional ordination of bootstrap samples and single estimate.}
+
+\textbf{How to read it.} If the single estimate sits inside the bootstrap cloud, it is more consistent with the ensemble.
+If it sits apart from the cloud, bootstrapping is adding information not captured by the single estimate.
+
+\section{Recommended figures for a paper or report}
+
+\begin{itemize}
+  \item \texttt{time\_series\_matrix\_metrics.png} for the broad comparison.
+  \item \texttt{rank\_correlation\_time\_series.png} and\\ \texttt{rank\_change\_bars\_time\_XX.png} for source and sink stability.
+  \item \texttt{lorenz\_curves\_time\_XX.png} and \texttt{concentration\_time\_series.png} for concentration of connectivity.
+  \item \texttt{stable\_edge\_overlap.png} and \texttt{single\_vs\_bootstrap\_variability.png} for robustness and uncertainty.
+  \item \texttt{ordination\_time\_XX.png} for the bootstrap cloud view.
+\end{itemize}
+
+\noindent
+\textit{Note:} filenames with \texttt{time\_XX} refer to time indices selected by the workflow (e.g.\ \texttt{time\_01}); replace with the indices used in your run when citing figures.
+
+\end{document}

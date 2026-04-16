@@ -1,0 +1,8 @@
+# Connectivity_analysis notebook and scripts
+matplotlib>=3.5
+seaborn>=0.12
+xarray>=2022.3
+netCDF4>=1.5
+geopandas>=0.10
+pandas>=1.3
+numpy>=1.21

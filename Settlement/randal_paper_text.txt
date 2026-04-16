@@ -1,0 +1,1331 @@
+Total pages: 15
+
+
+======================================================================
+PAGE 1
+======================================================================
+ARTICLE
+Larval precompetency and settlement behaviour in
+25 Indo-Paci ﬁc coral species
+Carly J. Randall1,2✉, Christine Giuliano1, Briony Stephenson1, Taylor N. Whitman1,2, Cathie A. Page1,
+Eric A. Treml3, Murray Logan1& Andrew P. Negri1
+Knowledge of coral larval precompetency periods and maximum competency windows is
+fundamental to understanding coral population dynamics, informing biogeography and con-nectivity patterns, and predicting reef recovery following disturbances. Yet for many species,estimates of these early-life history metrics are scarce and vary widely. Furthermore, set-tlement cues for many taxa are not known despite consequences to habitat selection. Herewe performed a comprehensive experimental time-series investigation of larval settlementbehaviour, for 25 Indo-Paci ﬁc broadcast-spawning species. To investigate the duration of
+precompetency, improve predictions of the competency windows, and compare settlementresponses within and amongst species, we completed replicated and repeated 24-hourassays that exposed larvae to ﬁve common settlement cues. Our study revealed that larval
+competency in some broadcast-spawning species begins as early as two days post fertili-zation, but that the precompetency period varies within and between species from about twoto six days, with consequences for local retention and population connectivity. We also foundthat larvae of some species are competent to settle beyond 70 days old and display complextemporal settlement behaviour, challenging the assumption that competency gradually wanesover time and adding to the evidence that larval longevity can support genetic connectivityand long-distance dispersal. Using these data, we grouped coral taxa by short, mid and longprecompetency periods, and identi ﬁed their preferred settlement cues. Taken together, these
+results inform our understanding of larval dynamics across a broad range of coral species and
+can be applied to investigations of population dynamics, connectivity, and reef recovery.https://doi.org/10.1038/s42003-024-05824-3 OPEN
+1Australian Institute of Marine Science, Townsville, QLD, Australia.2AIMS@JCU, Townsville, QLD, Australia.3Australian Institute of Marine Science, Perth,
+WA, Australia.✉email: c.randall@aims.gov.au
+COMMUNICATIONS BIOLOGY |           (2024) 7:142 | https://doi.org/10.1038/s42003-024-05824-3 | www.nature.com/commsbio 11234567890():,;
+
+
+
+======================================================================
+PAGE 2
+======================================================================
+Many coral ecological processes, including recovery,
+metapopulation persistence, adaptation, and range
+expansion, are dependent on population connectivity
+through dispersal by pelagic, free-swimming larvae1–3. The
+degree to which local populations are interconnected is in ﬂuenced
+by ocean currents and larval biology, including settlement com-
+petency characteristics, pelagic larval durations (PLDs), and larval
+settlement behaviour4–6. Yet despite the fundamentally important
+role that larval biology plays in driving metapopulation dynamics
+at ecological time scales, biological data are lacking for key coral
+life-history parameters that are known to shape connectivity, for
+the vast majority of species. For species with well-described life-
+history parameters, there is signi ﬁcant variability within and
+between cohorts and amongst species, driven by diversity in
+reproductive mode, method of symbiont acquisition, and other
+larval characteristics7,8. In addition, species-speci ﬁc plasticity in
+precompetency has been documented in response to changing
+environmental conditions9–11, adding to the known variance in
+these parameters. Understanding this variability, and the degree
+of plasticity in these early life-history metrics, is critical to pre-
+dicting coral persistence and adaptation under climate change,
+and to implementing appropriate ecosystem management and
+conservation actions.
+Both the timing of the onset of settlement competency (i.e. the
+precompetency period)8,9,12and the competency duration2,13,14
+have consequences for local larval retention, dispersal (population
+connectivity)2,5,6,11,15,16, and gene ﬂow (genetic connectivity)3,17–19,
+and are central to understanding biogeography and evolution1.T h e
+precompetency period in ﬂuences local retention and demographics,
+particularly over short (annual to decadal) time-scales5,8.F o r
+example, Figueiredo et al. 2013 integrated coral larval competency
+models with estimates of particle retention around reefs and found
+that species with shorter precompetency periods were more likely to
+recruit locally. Indeed, rates of larval retention (as modelled as
+particles) around reefs are often a similar order to the rates at which
+competency is acquired8,20. Cetina-Heredia and Connolly20mod-
+elled larval retention times for a variety of reef types using ahydrodynamic model and found that mean water residence times
+were 0.5 –5.6 days. Small differences in the precompetency period,
+therefore, can have signi ﬁcant consequences for local retention and
+dispersal. Similarly, in a theoretical coral population connectivity
+model, Treml et al.
+5found that local retention was strongly related
+to the length of the precompetency period. Unfortunately, the
+duration of precompetency has only been estimated for around a
+dozen broadcast-spawning coral species and ranges 6-fold, from
+<2 days in Goniastrea retiformis8to 12 days in Acropora
+lordhowensis13(Table S1). Previous evidence also suggests that, for
+marine invertebrate larvae, propagule size may be an important
+predictor of precompetency duration8,21,22.Y e tw h e t h e rt h i sr e l a -
+tionship is consistent across taxa and can be used to estimate such
+biological parameters requires further exploration. This variability
+undoubtedly has consequences for local retention, dispersal
+dynamics and metapopulation connectivity. Therefore, empirically
+quantifying precompetency across a broad range of coral taxa
+is necessary to predict how ecological processes on reefs will
+respond to shifting disturbance regimes and accelerating climate
+change10,23,24.
+Studies of larval longevity (i.e., maximum pelagic larval dura-
+tion (PLD)) and dispersal are similarly rare due to the inherent
+difﬁculties in following and sampling sub-mm-sized larvae in the
+ocean over vast distances, and the presence of confounding fac-
+tors such as environmental variability and habitat heterogeneity.
+Consequently, estimated PLDs vary widely, ranging 10-fold, from
+20 to 200 +days (Table S1). Of those studies that have experi-
+mentally measured PLD, many assume that settlement compe-
+tency is maintained as long as larvae are alive without con ﬁrmingsuccessful larval settlement at the end of the PLD3but see
+refs.2,11,15. Yet, Connolly and Baird2reported that after reaching
+peak competency, there was an exponential decline in compe-
+tency in ﬁve coral species (4 –13 days), reaching near 0 by
+60–120 days. However, this loss of competency varied ﬁve-fold
+amongst species, again illustrating high inherent variability in
+larval biology across Scleractinia. Actively swimming larvae
+require energy to function (including for locomotion and settle-
+ment); however, endogenous lipid energy reserves can decline
+quickly during the PLD3,14,25. For example, larval dry weight
+decreased by 50% within 30 days of spawning in Acropora
+tenuis26, and total lipids declined by 64% within 30 days in
+Goniastrea retiformis larvae25. Graham et al.3found that larvae
+ceased swimming after the ﬁrst month, with energy reserves
+reaching critically low levels 100 days after spawning in ﬁve
+broadcasting species. Thus, while the survival of lecithotrophic
+larvae may be supported for months, the energetic costs of
+settlement (i.e. attachment and metamorphosis)27may not be
+possible for the entire PLD. Therefore, it is necessary to
+understand the capacity of larvae to settle following
+these extended PLDs and describe the competency window
+within the PLD2.
+While the cues that initiate larval attachment and meta-
+morphosis of Acroporid corals have been well studied (e.g.
+refs.28–32), much less is known about the speci ﬁcity of settle-
+ment cues for the other ~20 genera that collectively dominate
+coral cover on the Great Barrier Reef (GBR), such as Porites
+and Goniastrea (reviewed in ref.32). Evidence to date suggests
+that preferred settlement cues vary considerably amongst
+species32–34, and contribute to variation in coral community
+structure and zonation28,35. Furthermore, whether a species is
+considered a ‘generalist settler ’(i.e. one that responds to many
+cues), or a ‘specialist settler ’(i.e. a species that requires a spe-
+ciﬁc inductive cue) and whether sensitivity to settlement cues
+changes throughout the competency window (i.e. the ‘desperate
+larval hypothesis ’sensu36) remain largely unexplored in corals.
+Indeed, most studies that investigate settlement cue preferencesdo so during peak competency and don ’t assess potential
+temporal variability. Investigating larval settlement behaviour
+through time can dramatically improve our understanding of
+these dynamics.
+Population connectivity and the retention of larvae drive local-
+scale demography and system-l evel metapopulation dynamics
+37–39
+but are also essential for natural recovery following disturbances40,41.
+A population that is connected to several upstream larval sources
+will have a greater capacity to recover quickly following a devas-
+tating event (e.g., ship grounding, cyclone or mass-bleaching event).
+Similarly, local populations that sustain patchy or modest mortality
+following disturbances have a greater recovery potential when locally
+sourced larvae are retained38. In addition, it has been recently
+highlighted that variability per se in larval connectivity at a meta-
+population level may also bolster persistence42. A greater under-
+standing of early life-history characteristics, and their variability, is
+essential in determining natural reef recovery rates.
+In response to recent declines in coral cover43,44and recruit-
+ment on the GBR45, efforts to develop restoration interventions to
+aid recovery and enhance heat tolerance are also underway46–49.
+Many of these interventions rely on the sexual propagation of
+corals in aquaculture systems and depend on knowledge of larval
+biology50,51. One such method is coral seeding, which aims to
+deliver newly settled coral polyps (i.e. ‘spat ’) to the reef via the
+deployment of seeding devices46,52–54. To incorporate meaningful
+biodiversity in reef restoration efforts, and to restore the appro-
+priate coral species for a given reef site, knowledge to reliably and
+predictably spawn, rear, and settle a diversity of species is
+required. Therefore, identifying when settlement can commence,ARTICLE COMMUNICATIONS BIOLOGY | https://doi.org/10.1038/s42003-024-05824-3
+2 COMMUNICATIONS BIOLOGY |           (2024) 7:142 | https://doi.org/10.1038/s42003-024-05824-3 | www.nature.com/commsbio
+
+
+
+======================================================================
+PAGE 3
+======================================================================
+for how long larvae are competent to settle, and what cues to use
+to induce settlement across diverse taxa are research priorities.
+Here we investigated the in vitro larval settlement behaviour of
+25 GBR coral species across three years of mass-spawning(Table S2). We performed replicated 24-h settlement assays
+starting during precompetency and tracked larval settlement up
+to 77 days post-spawning, to (i) de ﬁne the precompetency period,
+(ii) test settlement responses to a variety of common cues, and
+(iii) improve our predictions of settlement competency windows.
+We also explored whether egg diameter, as a proxy for larval
+nutrition, correlated with time to competency.
+Results
+Precompetency . The average estimated time to settlement com-
+petency (TC50) across species was 4.0 days after fertilization
+(DAF), while the shortest TC50 was found for Goniastrearetiformis at 2.1 DAF and the longest precompetency was esti-
+mated for Acropora austera at 6.2 DAF (Fig. 1; Fig. 2b; Table 1).
+14% of species were classi ﬁed as having ‘short ’precompetency
+periods (i.e. <3 days) and most were Merulinids. ‘Mid ’pre-
+competency duration (3 –5 days) was most common (71% of
+species) and included taxa from ﬁve families (Diploastraeidae,
+Lobophyllidae, Poritidae, Merulinidae and Acroporidae). Only
+three species, all of the genus Acropora , were classi ﬁed as having
+‘long ’precompetency periods (i.e. >5 days) (Table 1). For some
+species, the TC50 estimate differed signi ﬁcantly amongst cues
+(Fig. 1; Supplementary Code).
+A signi ﬁcant positive relationship was detected between oocyte
+diameter and TC50 ( p=0.011, adj R
+2=0.26; Fig. 2a). All species
+with short precompetency periods had oocytes less than ~450 µm
+average diameter, while oocytes of all species that had long
+precompetency periods were ~500 µm or larger. However, the
+Fig. 1 Modelled time to settlement competency. a Partial plots of the modelled cohort settlement probabilities (of exceeding a 0.3 threshold) against larval
+age for each cue and species. Solid curves represent the modelled posterior medians while the ribbons represent the associated 95% credible interval s
+around the estimates. Dashed lines correspond with the earliest TC50 estimate for that species and are coloured based on the cue. bModelled days to
+>0.5 settlement probability against cohort settlement threshold (0.1 –0.9), conditional on cue treatment for each species. ‘Best ’shows the data for
+whichever cue predicted the earliest time to settlement for a given cohort settlement threshold. Points represent posterior medians and error bars
+represent 95% credible intervals. Estimated medians are truncated to exclude durations that are greater than the extent of the experiments. Note the
+variable y-axes.COMMUNICATIONS BIOLOGY | https://doi.org/10.1038/s42003-024-05824-3 ARTICLE
+COMMUNICATIONS BIOLOGY |           (2024) 7:142 | https://doi.org/10.1038/s42003-024-05824-3 | www.nature.com/commsbio 3
+
+
+
+======================================================================
+PAGE 4
+======================================================================
+greatest range in oocyte diameter was detected in mid-
+precompetency taxa and included those with the smallest ( Porites
+lobata ) and largest ( Acropora glauca ) oocytes.
+TC50 estimates were also calculated using threshold settlement
+values from 0.1 to 0.9 (10 –90%) in increments of 0.1. For many
+species, TC50 estimates were consistent across much of the range
+in thresholds, particularly for the most effective cue (see ‘best’
+treatment in Figs. 1b and 2b). However, species such as M.
+aequituberculata andP. cylindrica had gradually increasing TC50
+estimates as the threshold increased.
+Competency duration and competency patterns through time .
+Most species remained competent to settle until the ﬁnal time-
+point of testing, often beyond 30 days (Fig. 3). Three of four
+species tested past 70 days remained capable of settlement above
+30% ( A. hyacinthus, D. matthaii, and D. pallida ), and Oulophyllia
+crispa settled at its ﬁnal timepoint of 59 days.
+Larval settlement also ﬂuctuated through time (Fig. 3) with
+peaks and troughs that were often consistent amongst cues withinand between species. A complex, multimodal settlement pattern
+was also observed for all ﬁve species tested beyond 40 days (i.e. A.
+hyacinthus ,D. matthaii ,D. pallida, O. crispa and M. elephanto-
+tus). In some cases (i.e. D. matthaii, O. crispa ) the number of
+inductive cues increased during the second peak (Fig. 3). Some
+indiscriminate (i.e. ‘spontaneous ’) settlement in the negative
+control was also observed throughout the study, although it was
+rare (Fig. 3).
+Inter- and intra-speci ﬁc patterns in response to settlement cues .
+The most effective cues overall were reef rubble and CCA, both of
+which cued every species to settle signi ﬁcantly better than the
+control (Table 2). Bio ﬁlm discs elicited settlement responses in
+~80% of species, while the CCA extract and peptide worked for 74%
+and 65% of species, respectively.
+Conditioned rubble was the most effective cue for most species
+and typically elicited over 80% settlement during peak compe-
+tency (Fig. 3; Table 2; Supplementary Data 1). The most effective
+settlement cue within the Acroporidae varied by species. The
+Fig. 2 Time to settlement competency by oocyte diameter and species. a Relationship between oocyte diameter ( µm) and the modelled time to
+competency (TC50) for 21 coral species (Table 1). Colours represent precompetency duration where short <3 days, mid-3 –5 days, long >5 days. Grey
+dashed line represents the linear regression with con ﬁdence intervals. bModelled TC50 at P> 0.3 for each species, ordered and coloured by
+precompetency classi ﬁcation of short, mid, or long, with the TC50 estimate at P> 0.7 overlaid in grey. Estimates for the cue that provided the earliest TC50
+estimate are P> 0.3 and are shown for both thresholds. Points indicate TC50 estimates and bars represent the range of the credible interval around each
+estimate. Species abbreviations as per.ARTICLE COMMUNICATIONS BIOLOGY | https://doi.org/10.1038/s42003-024-05824-3
+4 COMMUNICATIONS BIOLOGY |           (2024) 7:142 | https://doi.org/10.1038/s42003-024-05824-3 | www.nature.com/commsbio
+
+
+
+======================================================================
+PAGE 5
+======================================================================
+Table 1 Age to settlement competency.
+Family Species (abbreviation) Modelled
+(TC50) (days)Lower CI Upper CI Cue inducing
+earliest TC50Pre-competency
+period rankingAverage oocyte
+diameter ( µm)ref
+Acroporidae Acropora austera (Aaus) 6.16 5.18 7.22 Rubble Long 627*120,
+Acropora glauca (Agla) 4.42 3.64 5.09 Rubble Mid 708120
+Acropora hyacinthus
+(Ahya)4.55 3.90 5.43 Rubble Mid 520120 –122
+Acropora intermedia
+(Aint)5.35 4.59 6.10 Rubble Long 496120,121
+Acropora longicyathus
+(Alon)4.40 3.45 5.35 CCA Mid 582120,*
+Acropora loripes (Alor) 5.44 4.58 6.35 Disc Long 543120,*
+Acropora millepora
+(Amil)4.27 3.32 5.13 Disc Mid 582120,123,*
+Acropora cf. kenti [tenuis]
+(Aken)4.24 3.36 5.07 Rubble Mid 517120
+Montipora
+aequituberculata (Maeq)3.30 2.49 4.21 CCA Mid 310121,*
+Diploastraeidae Diploastrea heliopora
+(Dhel)3.43 2.68 4.06 Rubble Mid 230121,124
+Euphylliidae Galaxea fascicularis
+(Gfas)2.65 2.01 3.23 Rubble Short 453121
+Lobophyllidae Lobophyllia corymbosa
+(Lcor)4.19 3.32 5.10 CCA Mid 600*
+Lobophyllia hemprichii
+(Lhem)4.06 3.26 4.81 Rubble Mid 550122,123
+Merulinidae Dipsastraea matthaii
+(Dmat)2.83 2.26 3.59 Rubble Short 412*
+Dipsastraea pallida
+(Dpal)3.67 2.94 4.56 Rubble Mid 414121,123
+Goniastrea retiformis
+(Gret)2.12 1.73 2.53 Rubble Short 37787,121 –123
+Mycedium elephantotus
+(Mele)3.97 3.24 4.76 Rubble Mid 387121,*
+Oulophyllia crispa (Ocri) 3.09 2.55 3.72 Rubble Mid 250124
+Platygyra daedalea
+(Pdae)3.12 2.40 3.83 Rubble Mid 388121
+Poritidae Porites cylindrica (Pcyl) 4.44 3.76 5.15 Rubble Mid 233*
+Porites lobata (Plob) 3.56 3.03 4.13 Rubble Mid 208121
+Modelled age (days) to settlement competency, where the cohort is more likely than not (TC50) to have exceeded a 30% settlement threshold, for 21 coral species. The cue (i.e. CCA, rubble or disc) that provided the earliest TC50 estimate at a 30% threshold is identi ﬁed.
+Upper and lower credible intervals (CI) around the TC50 estimates are presented. Precompetency periods are ranked by short (<3 days), mid (3 –5 days), and long (>5 days) duration. CCA =Crustose coralline algae from the Porolithon spp. complex.*reference for oocyte
+diameter is C.J. Randall, personal observation.COMMUNICATIONS BIOLOGY | https://doi.org/10.1038/s42003-024-05824-3 ARTICLE
+COMMUNICATIONS BIOLOGY |           (2024) 7:142 | https://doi.org/10.1038/s42003-024-05824-3 | www.nature.com/commsbio 5
+
+
+
+======================================================================
+PAGE 6
+======================================================================
+Cohort settlement competency probability0.000.250.500.75
+0 5 10 15 20 25Acropora intermedia
+0.000.250.500.751.00
+0 5 10 15 20 25Acropora longicyathus
+0.000.250.500.751.00
+0 5 10 15 20 25Acropora loripes
+0.000.250.500.751.00
+0 5 10 15 20 25Acropora cf. kenti
+0.000.250.500.751.00
+0 5 10 15 20 25Goniastrea retiformis
+0.000.250.500.751.00
+0 5 10 15 20 25Lobophyllia corymbosa
+0.000.250.500.75
+0 5 10 15 20 25Lobophyllia hemprichii
+0.00.20.40.6
+0 5 10 15 20 25Montipora aequituberculata
+0.000.250.500.751.00
+0 5 10 15 20 25Platygyra daedalea
+0.000.250.500.751.00
+0 5 10 15 20 25Porites cylindrica0.000.250.500.75
+01 0 2 0 3 0 4 0Acropora austera
+0.000.250.500.751.00
+01 0 2 0 3 0 4 0Acropora glauca
+0.000.250.500.751.00
+01 0 2 0 3 0 4 0Acropora micropthalma
+0.000.250.500.751.00
+01 0 2 0 3 0 4 0Acropora millepora
+0.000.250.500.751.00
+01 0 2 0 3 0 4 0Acropora muricata
+0.000.250.500.751.00
+02 0 4 0 6 0 8 0Acropora hyacinthus
+0.000.250.500.751.00
+02 0 4 0 6 0 8 0Dipsastraea matthaii
+0.000.250.500.751.00
+02 0 4 0 6 0 8 0Dipsastraea pallida
+0.000.250.500.751.00
+02 0 4 0 6 0 8 0Mycedium elephantotus
+0.000.250.500.751.00
+02 0 4 0 6 0 8 0Oulophyllia crispa0.000.250.500.751.00
+01 0 2 0 3 0 4 0Diploastrea heliopora
+0.000.250.500.751.00
+01 0 2 0 3 0 4 0Galaxea fascicularis
+0.000.250.500.751.00
+01 0 2 0 3 0 4 0Montipora digitata
+0.000.250.500.751.00Porites lobata
+Larval age (days)Inducercontrol
+CCAdisc
+extractpeptide
+rubble01 0 2 0 3 0 4 0
+Fig. 3 Settlement through time by species. Generalized additive hierarchical models of the probability of settlement through time for each cue tested, for
+each species. Colours represent settlement inducer treatments. Solid lines represent posterior medians and ribbons represent associated 95% cred ible
+intervals. Note that x-axes (larval age in days) vary amongst species but are scaled equivalently.ARTICLE COMMUNICATIONS BIOLOGY | https://doi.org/10.1038/s42003-024-05824-3
+6 COMMUNICATIONS BIOLOGY |           (2024) 7:142 | https://doi.org/10.1038/s42003-024-05824-3 | www.nature.com/commsbio
+
+
+
+======================================================================
+PAGE 7
+======================================================================
+GLW-amide peptide cued all Acroporidae spp. to settle
+signiﬁcantly better than the control but was ineffective in all
+other families (Table 2).
+Discussion
+We performed an experimental investigation of larval settlement
+behaviour for a broad taxonomic cross-section of Indo-Paci ﬁc
+coral species and found that precompetency periods ranged from
+about 2 to 6 days and duration increased with egg size. We also
+conﬁrmed that extended competency windows ( +70 days) are
+possible for at least some species, and identi ﬁed novel and
+complex temporal dynamics in settlement behaviour during the
+competency window that may facilitate long-distance dispersal
+success. These patterns challenge the long-held assumption that
+settlement competency gradually wanes over time, with likely
+signiﬁcant implications for population connectivity and meta-
+population dynamics. Finally, we demonstrated that reef rubble
+was a broadly effective settlement cue, providing a starting point
+for further investigations into cultivating potential universal
+inducers.
+Precompetency durations ranged 3-fold across taxa, with the
+Merulinid Goniastrea retiformis on one end of the spectrum at 2.1
+DAF, and the staghorn Acropora austera on the other end of the
+spectrum at 6.1 DAF. Figueiredo et al.8modelled time to com-
+petency for six broadcasting coral species and found that esti-
+mates ranged from 1.4 to 3.8 days. Of the six species Figueiredo
+et al.8tested, three were again tested in this study and our esti-
+mates were remarkably similar: we estimated precompetency
+periods of 2.1, 4.3 and 3.1 days, compared to 1.4, 3.5 and 2.9 days
+forG. retiformis ,A. millepora andP. daedalea , respectively. Using
+these precompetency periods, Figueiredo et al.8modelled the
+proportion of larvae retained, based on water residence times on
+the GBR, and found that an increase in precompetency of as little
+as 1 day led to signi ﬁcantly reduced local larval retention.
+Therefore, our results, which quanti ﬁed precompetencies rangingfrom 2.1 to 6.1 days, suggest that larval retention should vary
+widely amongst coral taxa. For example, if local-scale currents are
+moving at 10 cm s−1, a 4-day increase in precompetency would
+result in an additional 35 km of transport.
+The rate of development through ontogeny is often size-
+dependent, in ﬂuenced by the average amount of energy needed to
+create cells (i.e. more rapid development for cells of less mass)55.
+Egg size governs larval size, with smaller conspeci ﬁc mar-
+ine invertebrate larvae reaching competency earlier56. In corals,
+egg size has been positively correlated with time to motility8and
+propagule size has been positively correlated with precompetency
+duration in brooding corals57. Our results support this relation-
+ship and expand this to more taxa and reproductive strategies,
+indicating that larger embryos take longer to reach settlement
+competency. The signi ﬁcant relationship between oocyte dia-
+meter and TC50, therefore, may be used to estimate TC50 for
+other taxa for which competency data are unknown (Fig. 2a).
+High variation in precompetency allowed us to classify species
+as having either short ( ≤3 days), mid (>3 –5 days), or long
+(>5 days) precompetency periods (Fig. 2b; Table 1) and revealed
+notable taxa-speci ﬁc patterns: most Merulinids, including the
+genera Goniastrea ,Dipsastraea (formerly Favia ),Platygyra , and
+Oulophyllia had ‘short ’precompetency periods while all ‘long ’
+precompetency-period species were of the genus Acropora .‘Mid ’
+precompetency durations were the most common and included
+species from the greatest diversity of families (5). While these
+differences could potentially result in comparatively greater local
+retention in Merulinids and greater dispersal of Acroporids, it is
+difﬁcult to determine whether this is re ﬂected in population
+genetic structure for several reasons. Firstly, small spatial-scale
+genetic structure is rarely studied in corals58,59, and these studies
+primarily investigate brooding species with extremely shortpelagic larval durations (<1 day, i.e. refs.
+60,61), or compare
+brooding and broadcasting reproductive strategies (i.e. ref.57).
+Therefore, little data exist directly comparing genetic diversityTable 2 Settlement cue effectiveness.
+Family Species Cue ranking
+Acroporidae Acropora austera CCA=Rubble =Peptide > Disc =Extract > Control
+Acropora glauca CCA=Rubble =Extract > Peptide > Control
+Acropora hyacinthus Peptide > Rubble =CCA > Extract > Control
+Acropora intermedia Rubble > CCA =Peptide > Extract > Control
+Acropora longicyathus CCA=Extract > Peptide =Rubble > Disc > Control
+Acropora loripes Extract =CCA=Peptide =Rubble =Disc > Control
+Acropora micropthalma Disc=Rubble =Peptide =CCA=Extract > Control
+Acropora millepora Disc=CCA=Peptide > Rubble =Extract > Control
+Acropora muricata Extract =CCA=Disc=Peptide =Rubble > Control
+Acropora cf.kenti (tenuis) Peptide > CCA > Disc =Extract =Rubble > Control
+Montipora aequituberculata Rubble > CCA =Disc=Peptide > Control =Extract
+Montipora digitata Peptide =Extract =Rubble > CCA > Control
+Diploastraeidae Diploastrea heliopora Rubble > CCA > Disc =Extract > Peptide > Control
+Euphylliidae Galaxea fascicularis Rubble > CCA > Extract > Peptide =Control
+Lobophyllidae Lobophyllia corymbosa Rubble > CCA > Disc =Peptide =Extract =Control
+Lobophyllia hemprichii Rubble > CCA > Extract =Disc=Control =Peptide
+Merulinidae Dipsastraea matthaii Rubble > Disc =CCA > Peptide =Control =Extract
+Dipsastraea pallida Rubble > CCA =Disc=Peptide =Control > Extract
+Goniastrea retiformis Rubble =CCA > Disc > Extract > Peptide > Control
+Mycedium elephantotus Rubble > CCA =Disc=Peptide =Extract =Control
+Oulophyllia crispa Rubble > CCA > Peptide =Extract =Control
+Platygyra daedalea Rubble > CCA > Disc > Extract > Peptide > Control
+Pachyseridae Pachyseris speciosa Rubble =CCA > Control =Peptide =Disc=Extract
+Poritidae Porites cylindrica Rubble > CCA > Disc =Peptide =Extract > Control
+Porites lobata Rubble > CCA > Extract > Peptide =Control
+Overall ranking of settlement cue effectiveness for each species, from strongest to weakest, based on estimated pairwise differences in the area und er the curve between inducer treatments, from a
+Bayesian generalized additive hierarchical model (Fig. 3). CCA =crustose coralline algae from the Porolithon spp. complex. Note that “disc ”was not tested for all species.COMMUNICATIONS BIOLOGY | https://doi.org/10.1038/s42003-024-05824-3 ARTICLE
+COMMUNICATIONS BIOLOGY |           (2024) 7:142 | https://doi.org/10.1038/s42003-024-05824-3 | www.nature.com/commsbio 7
+
+
+
+======================================================================
+PAGE 8
+======================================================================
+and dispersal capacity across space and taxa of broadcast spawners.
+Secondly, genetic structure within a local population can vary
+between recruits and adults, indicating that the adult populations
+sampled do not necessarily re ﬂect larval connectivity61. Further-
+more, broadcast spawning taxa with similar abilities to disperse can
+display different genetic structures (i.e. ref.62), with post-
+recruitment mortality processes also contributing to population
+structure. Despite these challenges, model-based and ﬁeld-based
+data to date would suggest that recruitment through local retention
+may be common for several species and locations8,10,20,41,63,b u t
+that enough propagules disperse long distances to ensure metapo-
+pulation connectivity across distant reefs8,57,64,65.I n d e e d ,t h e
+modelled TC50 values were not signi ﬁcantly correlated with geo-
+graphical species distributions, as estimated by Hughes et al.66
+(Fig. S1), suggesting that this variation in precompetency (poten-tially in ﬂuenced by egg size) does not necessarily correlate with
+biogeographic distributions on evolutionary time scales; the lack of
+a correlation is likely due to a number of additional factors in ﬂu-
+encing connectivity including the degree of isolation, local popu-
+lation size, oceanography, inter- and intra-speci ﬁc dynamics, and
+the competency window.
+High within-cohort variation in precompetency is character-
+istic of spawning corals
+2and other invertebrates21and is in ﬂu-
+enced by many factors including the genetic diversity within the
+cohort21and the environmental conditions during larval rearing,
+which affect rates of larval development9,67. Our analysis applied
+a cohort-level threshold of 0.3 as the de ﬁnition of ‘competent ’and
+thus the estimates here are most useful for understanding the
+onset of competency and, consequently, self-seeding dynamics2.
+On the other hand, the TC50 estimates modelled with a threshold
+of around 0.7 (Figs. 1b and 2b) would be most useful for
+understanding long-distance dispersal potential over evolutionary
+time scales57. While there was some variation in TC50 estimates
+amongst the thresholds used, the rank order of taxa was fairly
+consistent (Fig. 2b) suggesting that the gradual attainment of
+competency within the cohort occurs similarly amongst taxa.
+Our study precluded a comprehensive investigation of the
+timing of loss of competency. In many species tested, however,
+larvae remained competent until the ﬁnal available timepoint and
+some taxa demonstrated the potential for extended competency
+during the PLD (Fig. 3). These results corroborate the ﬁndings of
+Graham et al.3,68, Harrison et al.69, Wilson and Harrison13, and
+others11who describe competency windows in excess of 100 days
+for some taxa (Table S1), and suggest that larval connectivity may
+extend to greater distances than initially estimated for some reef
+systems, such as those in Western Australia63.
+Interestingly, larval settlement ﬂuctuated through time with
+peaks and troughs that were often consistent amongst cues within
+a species, and across taxa. This consistency suggests that ﬂuc-
+tuations in settlement are likely re ﬂective of larval behaviour and
+physiology and not cue variability alone, thereby challenging the
+assumption that competency gradually wanes over time. Periods
+of inactivity during the competency window, such as was seen in
+the bimodal pattern of every species tested beyond 40 days ( A.
+hyacinthus, D. matthaii, D. pallida, O. crispa, and Mycedium
+elephantotus ) (Fig. 3) could represent a ‘bet-hedging strategy ’70,
+where a pulse of local settlement is followed by a metabolically
+inactive period of pelagic dispersal facilitating connectivity to
+non-natal areas for colonization when settlement competence
+increases once more. This is supported by evidence from Graham
+et al.68indicating that larvae can enter a state of low metabolic
+activity shortly after becoming competent to settle, supporting the
+capacity for long-distance dispersal. The ‘desperate larval
+hypothesis ’—the notion that larvae become less discriminatory as
+they age21,36,71,72—may also explain the resurgence in settlement
+behaviour at later timepoints; indeed, some species settled inresponse to more cues during later timepoints (i.e. D. matthaii and
+D. pallida ), while the prevalence of indiscriminate settlement —
+settlement in the absence of any cue —also increased through time
+(Fig. 3). However, the conditioning time of the disc necessarily
+increased with larval age and it ’s likely that benthic communities
+on all substrates changed in culture over time; thus, potential
+variability in inductivity of substrates cannot be ruled out as a
+driver of this resurgence. Whether this temporal variation has
+realized consequences for dispersal also depends heavily on sur-
+vival throughout the pelagic period (Fig. 4).
+Larvae were not fed in this study but there is mounting evi-
+dence that at least some species of coral larvae are capable of
+heterotrophic feeding73and the uptake of dissolved organic
+matter to supply amino acids74. Many larvae can also ingest
+symbionts through their mouth and incorporate them into their
+endoderm75,76, and eggs of vertical transmitters and brooders
+host symbionts from parental colonies. Indeed, all vertical
+transmitters tested in this study ( P. cylindrica, P. lobata, M.
+digitata , and M. aequituberculata ) showed active settlement at the
+ﬁnal time point (22 –32 days) suggesting that nutrition from
+symbionts may aid in supporting long competency windows. Yet
+many horizontal transmitters also demonstrated extended com-
+petency in the absence of feeding. Whether heterotrophy and
+symbiont uptake during the larval stage can in ﬂuence these
+durations, and therefore, metapopulation connectivity requires
+further investigation. Interestingly, Chamberland et al.77found
+that larvae of the brooding coral Favia fragum demonstrated
+increased swimming duration as symbiont density increased, but
+that symbiont-dense larvae were more thermally sensitive. Their
+results suggest context-dependent costs and bene ﬁts of larvae
+hosting symbionts; while well-provisioned larvae may be capable
+of longer-distance dispersal, they may be more sensitive to
+changing environmental conditions across the dispersed envir-
+onment. How these costs and bene ﬁts inﬂuence connectivity in a
+changing climate warrants further study.
+Conditioned reef rubble was the most effective settlement cue
+for 76% of species tested and was signi ﬁcantly better at inducing
+settlement than the CCA and bio ﬁlm disc in nearly all non-
+Acropora species. Less settlement on CCA and live bio ﬁlm discs
+compared with rubble fragments have several possible
+Fig. 4 Conceptual model of settlement competency. Conceptualization of
+a proposed bimodal pattern in larval competency overlaid on the maximum
+pelagic larval duration with a survival curve representing a decay rate of
+0.05, and the product of competency and survival.ARTICLE COMMUNICATIONS BIOLOGY | https://doi.org/10.1038/s42003-024-05824-3
+8 COMMUNICATIONS BIOLOGY |           (2024) 7:142 | https://doi.org/10.1038/s42003-024-05824-3 | www.nature.com/commsbio
+
+
+
+======================================================================
+PAGE 9
+======================================================================
+explanations that are not mutually exclusive. Firstly, the physical
+features of complex microhabitats within rubble may be an
+important consideration in a larva ’s settlement decision. Larvae
+are known to preferentially settle in microhabitats that offerrefuge from external pressures
+53,78–81and to seek out habitats
+with lower light conditions82. Rubble fragments were texturally
+complex and offered ample microrefugia of various sizes that
+likely attracted larvae. Secondly, rubble fragments may have
+supported more complex and/or well-developed bio ﬁlms than the
+artiﬁcial discs, leading to the presence of stronger induction cues.
+Indeed, the presence of complex microhabitats likely created
+pockets of unique bio ﬁlm communities83–85that may have
+offered a wider diversity of potential inducers. It is also likely that
+bioﬁlm discs supported early successional species ( +4 weeks
+conditioned)83that were less mature and inductive than those on
+rubble fragments. Thirdly, while rubble was visually searched for
+CCA, it is likely that at least some fragments harboured cryptic
+and/or recruit CCA communities, which would be more diverse
+than the single CCA treatment tested and could be highly
+inductive31–33,86. As in Turnlund et al.84, sequencing the cryptic
+taxa on more and less inductive fragments may provide further
+insights into key inductive and inhibitory communities. Finally,
+chemical extracts of some dead coral and CCA skeletons can
+induce coral larval settlement, indicating the potential presence
+of legacy inducers within these calcareous matrices and this may
+also be the case for the reef rubble applied in the current
+experiment. Regardless of the mechanism, reef rubble was over-
+whelmingly the best non- Acropora settlement cue, corroborating
+past studies87,88and highlighting the importance of further
+characterizing rubble substrates to identify potential inducers.
+The best settlement inducer for Acroporidae varied by species
+and rubble was also a strong inducer across Acropora . This result
+was somewhat surprising because CCA is known to be a strong
+settlement inducers in Acropora28,31–34,86,89. However, Abdul
+Wahab et al.33recently demonstrated species-speci ﬁc preferences
+amongst a broad taxonomic cross-section of coral/CCA pairings,
+and Porolithon was not the most universal CCA cue, corrobor-
+ating previous ﬁndings28,30,90,91. Therefore, other CCAs may be
+as effective as rubble at inducing settlement across Acropora spp.
+but this remains untested.
+The GLW-amide peptide Hym-24892,93signiﬁcantly induced
+settlement in all Acroporidae species, but failed to induce settle-
+ment in nearly all non- Acropora species (Fig. 3; Supplementary
+Data 1; Table 2; Fig. S2), corroborating the ﬁndings of Erwin and
+Szmant94and indicating that this signalling pathway is likely not
+conserved amongst taxa within the Scleractinia, with high speci ﬁcity
+of neuropeptide activators at low taxonomic levels. The testing of
+additional neuropeptides across a wider range of concentrations will
+improve our understanding of larval neurobiology.
+While this laboratory-based experimental design was effective
+for assessing larval development and function, there are limita-
+tions to assessing larval behaviour in small-scale experiments. For
+example, larvae were con ﬁned in close proximity to physical and
+chemical cues for settlement and were not offered a choice. Thus,
+comparisons of absolute settlement success between cues should
+be interpreted cautiously. By contrast, the strategy of offering
+individual cues to identify the shortest precompetency period is
+an effective way of ensuring competency periods for larvae of
+diverse taxa are compared fairly. Indiscriminate larvae are more
+likely to settle soon after reaching competency, while selective
+species may spend longer in the plankton before encountering
+their preferred cue21. Because the preferred cue of most coral
+species is unknown, it is possible that we overestimated pre-
+competency for those species that are selective (i.e., optimal
+inducers for settlement may not have been offered). Our data also
+indicated that while all but one species ( P. speciosa ) achieved100% settlement in at least one replicate at some point during
+experimentation, the average peak competency wasn ’t at or near
+100% for all taxa. The reasons for not reaching 100% competency
+could be related to many factors including species- or genotype-speciﬁc differences in maximum competence, sub-optimal larval
+health, or that none of the cues selected was optimal for that
+species
+33. More work is needed to understand this phenomenon.
+Furthermore, we tested single larval cohorts for most taxa
+(Table S2). Yet high within- and between-cohort variation in
+competency windows2has the potential to shift TC50 estimates.
+Thus, when applying these results to models of local retention
+and dispersal, it would be prudent to embed uncertainty around
+the estimates (Fig. 1a).
+It wasn ’t possible to completely standardize the physical and
+biological settlement cues due to inherent variability in natural
+substrates and variations in spawning and settlement times. We
+attempted to account for this by: (i) using consistent (i.e., the
+same ‘parent ’) rubble and CCA fragments across all treatments
+and species within a given month whenever possible; (ii) con-
+ditioning all substrates together, (iii) haphazardly loading sub-
+strates across all experimental wells to minimize bias, (iv) creating
+standard-sized substrates, and (v) applying robust replication.
+Despite this, there was variability in larval responses within
+treatments; whether this variability was related to changes in the
+quality or potency of the cue, or behavioural changes throughout
+ontogeny is dif ﬁcult to untangle. Yet, overall patterns in settle-
+ment behaviour were remarkably consistent through time
+amongst treatments, and across species, supporting the patterns
+we describe.
+Lastly, seawater temperature is known to in ﬂuence survival and
+rate of embryogenesis9,67,95,96. Therefore, for consistency and to
+enable comparisons amongst taxa, larvae were cultured at
+27–28 °C and maintained in a temperature-controlled environ-
+ment during settlement. Consequently, experimental tempera-
+tures did not always precisely match those of natal reefs from
+which the broodstock originated. While these temperatures are
+generally considered non-stressful for GBR corals, it is unclearhow slight divergence from the natal reef environment may have
+inﬂuenced larval development. Furthermore, the experimental
+conditions were not representative of the spawning temperatures
+across the entire geographic ranges of the taxa tested
+66, and
+modelling has suggested that warming will decrease larval dis-
+persal and connectivity11. Further testing is needed to understand
+how variations in temperature in ﬂuence precompetency duration
+estimates and downstream dispersal.
+Human activity and global climate change are fundamentally
+altering connectivity and recovery processes11,97. For example,
+declining adult densities can reduce larval supply directly45, and
+indirectly via allee effects50. In addition, warmer temperatures can
+accelerate larval development9,67,96, likely reducing the pre-
+competency period and the maximum pelagic larval duration98,
+leading to increased retention and reduced downstream dispersal
+and connectivity11. Figueiredo et al.11modelled the effect of 2 °C
+warming on coral larval dispersal and connectivity and identi ﬁed
+signiﬁcant decreases in distance travelled and number of con-
+nections amongst reefs, and an increase in local retention. The
+accompanied changes and shifts in ocean currents can also
+inﬂuence local retention and downstream dispersal of corals. At
+the reef scale, shifts in the benthic-community composition dri-
+ven by marine heatwaves and acidifying conditions can impact
+the quality and quantity of larvae, their settlement cues, and the
+inducer-inhibitor ratio of organisms on the sea ﬂoor99,100. Yet the
+speciﬁcity for larval settlement cues32,86,101, the duration of
+precompetency12, and the PLD3,13,102,103vary considerably
+amongst species. Therefore, climate change is likely to unevenly
+affect the dispersal and recovery potential amongst species,COMMUNICATIONS BIOLOGY | https://doi.org/10.1038/s42003-024-05824-3 ARTICLE
+COMMUNICATIONS BIOLOGY |           (2024) 7:142 | https://doi.org/10.1038/s42003-024-05824-3 | www.nature.com/commsbio 9
+
+
+
+======================================================================
+PAGE 10
+======================================================================
+resulting in broad-scale and species-speci ﬁc implications for
+biogeographic patterns in coral-community composition, the
+colonization of new habitats, and the expansion of species ranges
+under climate change.
+There are four important management and restoration impacts
+resulting from this multi-species coral settlement study. The ﬁrst
+is an appreciation of the variability within cohorts and between
+coral species. This variability may serve as a natural insurance
+policy against disturbances where local-retention and down-
+stream connectivity are likely co-occurring and contributing to
+reef resilience. Second, the ef ﬁciency of seeding sexually produced
+corals for use in reef restoration purposes50can be improved
+through re ﬁned timing and prioritization of settlement by taxa
+based on our data, saving time and costs while maximizing output
+from aquaculture facilities. Third, the new knowledge of extended
+competency durations allows for the staged settlement and grow-
+out of spat prior to deployment, adding ef ﬁciencies and max-
+imising outputs of the coral production and restoration process.
+Finally, the multi-species data on precompetency and compe-
+tency dynamics, and the potential impact on local retention and
+downstream connectivity will improve the spatial planning
+process104–107to help manage climate impacts and maximize the
+success of restoration efforts.
+Methods
+Coral collection and spawning . Fecund colonies of 25 coral
+species were collected from locations along the GBR prior to the
+predicted 2017, 2018 and 2019 mass coral-spawning events in
+October and November each year (Table S2). Corals were iden-
+tiﬁed through visual characteristics of the live tissue and skeleton,
+with the aid of microscopy as required (i.e. for Montipora and
+Porites spp.), using Veron108. Corals were collected under permits
+G12/35236.1 and G19/43024.1 issued by the Great Barrier Reef
+Marine Park Authority (GBRMPA).
+Corals were transported to the National Sea Simulator
+(SeaSim) at the Australian Institute of Marine Science (AIMS)
+via ship and maintained in ﬂow-through outdoor aquaria under
+ambient light and at temperatures approximating those from
+source locations (based on daily 10-year average temperatures
+from in situ loggers or weather stations where available, or
+measured at the time of collection). On the predicted spawning
+nights109, adult colonies were isolated and monitored for
+spawning activity. On the evenings of spawning, egg and sperm
+bundles or gametes were collected, bulk fertilized, and then
+transferred to larval rearing tanks (75 or 500 L), at a stocking
+density of ~0.5 –1 larvae mL−1. All spawning and culture
+metadata can be found in Table S2. Larval culture tanks received
+ﬂow-through ﬁltered (0.45 µm) seawater (FSW) at 27.0 –28.0 °C
+and gentle aeration after ~16 h post-fertilization. Larval cultures
+were monitored and cleaned at least 3 times per day during the
+ﬁrst two weeks and daily thereafter. Larval samples were
+haphazardly collected from homogenized bulk cultures immedi-ately prior to assay preparation. Therefore, larvae were cultured in
+the absence of settlement cues and maintained in the water
+column in culture until testing.
+Assay preparation . Larval settlement assays were performed in
+sterile six-well cell-culture plates maintained in a constant tem-
+perature room (27 –28 °C) under a 12:12 h light:dark cycle with
+~20 µmol photons m
+−2s−1, achieved with light emitting diode
+(LED) lights (AquaIllumination Sol White LEDs). Coral larvae
+(n=10, nominally) were transferred by a 1.5 mL sterile plastic
+pipette into each well containing the cue to be tested, along with
+FSW, to a ﬁnal volume of 10 mL. Settlement assays included six
+experimental treatments: (1) FSW, negative control; (2) livePorolithon cf. onkodes fragment (~25 mm2) (crustose coralline
+algae (hereafter ‘Porolithon ’or CCA)); (3) 5 µL of a 10% EtOH
+extract of Porolithon ; (4) 10 mM concentration of GLW-amide
+peptide Hym-248; (5) a 12 mm diameter by 1 mm thick polylacticacid (PLA) 3D-printed disc (~113 mm
+2) conditioned for
++4 weeks in the SeaSim and hosting a bio ﬁlm (hereafter ‘disc’);
+and (6) a fragment of coral skeletal rubble conditioned in SeaSim
+(~25 mm2) covered in a live microbial bio ﬁlm with no visible
+CCA. Typically, each species, time and treatment combination
+was run with 6 replicate wells of 10 larvae each, although the
+number of larvae per replicate and the number of replicates per
+treatment occasionally varied due to larval availability (see Sup-
+plementary Code). Each assay was run with a new cohort of
+larvae. Each treatment is described in turn, below.
+Live Porolithon cf. onkodes fragments . Fragments from the
+widely distributed and ecologically signi ﬁcant Porolithon species
+complex110were gathered during adult broodstock collection
+(~3–6 m depth) (under permit # G12/35236.1 issued by
+GBRMPA) using a hammer and chisel and were returned to the
+SeaSim and maintained in indoor aquaria under stable culture
+conditions to minimize changes to inductive potential over time.
+Each morning of assay set-up, bone cutters were used to cut small
+fragments (~25 mm2) of CCA, each of which contained a live
+surface over a thin layer of cleanly cut calcium carbonate skeleton.
+Where possible, a continuous piece of CCA was cut and tested
+across all coral species on a given day and was tagged for useacross multiple timepoints in a given month and year, to mini-
+mize variation in the CCA condition tested across assays. Only
+visibly healthy fragments with normal CCA colour and texture
+were used in assays.
+Porolithon cf. onkodes chemical extract . Ethanolic extractions of
+Porolithon were generated following the protocol outlined in
+Whitman et al.
+32. Brie ﬂy, 25 mm2fragments of CCA were ground
+by mortar and pestle until 100 g of crushed material was obtained.
+150 mL of absolute ethanol (EtOH; 100%) was added to the
+crushed material and mixed on a horizontal roller for 2 h at room
+temperature to form a CCA paste. The supernatant was then
+decanted and stored ( −20 °C) to be used as the EtOH extract. An
+additional 150 mL of EtOH was added to the CCA paste for re-
+extraction and left mixing overnight to ensure all EtOH-soluble
+material was removed. The liquid EtOH extracts were combined,
+vacuum ﬁltered (Whatman GF/F, 0.7 μm), and then prepared in
+10% concentrations with EtOH (concentration equivalent to
+0.03 g CCA mL−1) and stored ( −20 °C) until use in settlement
+assays. The extract was added to the treatment well and allowed
+to evaporate before the FSW and larvae were added (as per
+ref.31).
+GLW-amide peptide Hym-248 . The neurotransmitter GLW-
+amide peptide Hym-248 is known to induce metamorphosis and
+settlement in some Acropora species92,94; it was tested to deter-
+mine whether the neuropeptide signalling pathways that induce
+metamorphosis in Acropora are conserved across taxa. 100 µL of
+1 mM concentrated peptide in 10 mL ﬁltered seawater was used
+to achieve a ﬁnal concentration of 10 µM per well. The peptide
+was added to the treatment well prior to the addition of FSW and
+larvae.
+Bioﬁlm disc . Microbial bio ﬁlms induce settlement in some coral
+species83,111and plastic substrates quickly recruit bio ﬁlm com-
+munities in aquaria. Thus, discs were developed to provide a
+standardized surface on which to colonize a bio ﬁlm. Polylactic
+acid (PLA) plastic discs (12 mm diameter, 1 mm thick) of aARTICLE COMMUNICATIONS BIOLOGY | https://doi.org/10.1038/s42003-024-05824-3
+10 COMMUNICATIONS BIOLOGY |           (2024) 7:142 | https://doi.org/10.1038/s42003-024-05824-3 | www.nature.com/commsbio
+
+
+
+======================================================================
+PAGE 11
+======================================================================
+neutral colour (brown) were 3D printed in sheets and placed
+horizontally and raised on polyvinyl chloride (PVC) racks, in
+semi-recirculating indoor aquaria (280 L, turnover 5 L min−1,
+ﬂuctuating light pro ﬁle mimicking in situ conditions). After
+1–3 months, the discs contained mature bio ﬁlm communities,
+and discs with similar conditioning duration and community
+composition (i.e. density of CCA, visible bio ﬁlm) were selected
+for assays. Discs were removed from the sheet using snips and
+added to FSW in the treatment wells using forceps before larvae
+were introduced.
+Conditioned reef rubble . The conditioned reef rubble treatment
+(hereafter ‘rubble ’) provided a structurally complex substrate
+harbouring a natural bio ﬁlm community known to induce set-
+tlement in some species83,111,112and offering microrefugia in
+which some larval taxa preferentially settle53,78,79,113. Fragments
+of rubble were sourced from the sumps of mature outdoor SeaSim
+aquaria. Only cylindrical rubble fragments originating from
+staghorn-type coral skeletons were used, to minimize variabilityamongst fragments and for ease of generating uniform fragments.
+Rubble fragments (25 –64 mm2) were cut from parent fragments
+using bone cutters. Only fragments with a ‘live’(outer) bio ﬁlm
+surface and without visible (by eye) CCA were used, althoughvery small CCA recruits were likely present on some fragments.
+Furthermore, single large fragments were cut and tested across all
+assays on a given day and reserved for use across timepoints in a
+given month and year, to minimize variation in the rubble tested
+in the assays. When cut, some fragments revealed endolithic
+sponges, polychaetes and other bioeroding organisms; only ‘clean ’
+fragments without such organisms were tested. Clean rubble
+fragments were rinsed in FSW to remove any residue from cut-
+ting, and then placed in the centre of each treatment well with the
+outer surface facing up, prior to loading larvae into wells.
+Assay assessment . All assays were scored 24 –36 h after set-up by
+counting the number of larvae that had and had not demon-
+strated settlement under a standard dissection microscope. In
+species with ﬂuorescent larvae, identi ﬁcation was aided by
+Fig. 5 Recently settled coral spat. Photomicrographs of coral spat of some species tested in the settlement assays, at ~24 h post settlement. * Indicates
+ﬂuorescent (440 –460 nm excitation) images demonstrating green ﬂuorescent proteins in the coral tissue. Note that scales vary and are not included in
+most images; for approximate spat sizes, refer to Table 1for oocyte diameter data.COMMUNICATIONS BIOLOGY | https://doi.org/10.1038/s42003-024-05824-3 ARTICLE
+COMMUNICATIONS BIOLOGY |           (2024) 7:142 | https://doi.org/10.1038/s42003-024-05824-3 | www.nature.com/commsbio 11
+
+
+
+======================================================================
+PAGE 12
+======================================================================
+applying a 440 –460 nm ﬂuorescent LED lighting system with a
+500 nm long-pass emission ﬁlter (NIGHTSEA ®Royal Blue) to the
+dissection microscope. Settlement was de ﬁned as the ﬁrm
+attachment of the larva to a surface, with a pronounced ﬂattening
+of the oral –aboral axis and the presence of early septal mesen-
+teries that radiated from a central mouth, with the deposition of a
+basal plate86(Fig. 5).
+Statistics and reproducibility: Precompetency period and
+competency duration . To explore the duration of precompetency
+for each species, aggregated cohort-level settlement data were
+transformed into a binomial response as either competent (1) or
+not competent (0) to settle, based on the proportion of the larval
+cohort that settled in each replicate well. This threshold approach
+was used for three reasons: (i) to reduce potential biases that
+could arise from not presenting each species with its optimal
+inducer for settlement (i.e. ref.33), (ii) to enable the quanti ﬁcation
+of precompetency parameters (i.e. probability of time to compe-
+tency), and (iii) to allow for cross-taxa comparisons. This
+approach also acknowledges cohort-level and species-level plas-
+ticity in individual behaviour and development (i.e. ref.2). A
+threshold settlement of 0.3 (30%) was used as a conservative
+proxy to de ﬁne species-level competency. Above this threshold,
+the larvae within that replicate were considered to have demon-
+strated the potential for morphological and physiological settle-
+ment competency. In other words, 30% settlement was assumed
+to indicate that larvae were physiologically capable of settlement
+even if not all larvae chose to settle at that timepoint. Estimates of
+precompetency are also reported for a wide range of settlement
+threshold values (0.1 –0.9) and the sensitivity of the analysis to
+this threshold is presented in the results.
+The relationship between settlement and the interaction of
+larval age and settlement cue was then explored for each species
+using a hierarchical logistic model in a Bayesian framework114.
+The age at which the cohort was more likely to have reached
+larval competency than not, termed TC50 (i.e. Time to
+Competency at 50% probability; the in ﬂection point at a
+probability of 0.5) was estimated for each species and settlement
+cue. To investigate the variability in TC50 amongst settlement
+cues, pairwise differences for each cue were calculated using
+exceedance probabilities.
+All models included three No-U-Turn (Markov chain Monte
+Carlo (MCMC)) chains of 6000 iterations, thinned to a rate of 10,
+with a warm-up of 2000. MCMC mixture and convergence were
+assessed using trace plots, autocorrelation plots, Rhat and
+effective sample size diagnostics. Models were validated using
+DHARMa simulated residuals115. Models were run in R (R Core
+Team 2022) using the brms package116,117through RStan118and
+visualized using ggplot2119.
+Because the numbers of larvae in culture were limited for many
+species, a comprehensive study of competency window duration
+was not possible for all species. Assay assessments continued untillarval supplies were exhausted, and this occurred as early as day 7
+forPachyseris speciosa and as late as day 77 for Dipsastraea
+pallida ,D. matthaii and Mycedium elephantotus . Therefore,
+temporal patterns in settlement behaviour are described qualita-
+tively by taxa.
+Statistics and reproducibility: Cue comparisons within species .
+Raw settlement data were then used to quantify the preferential
+settlement amongst cues by species, and to investigate temporal
+patterns in settlement; a Bayesian generalized additive hier-
+archical model was used to represent the proportion of larvae
+settled against a cubic regression spline for larval age, conditional
+on settlement cue. Each model included a varying effect of wellplate by age, to account for dependency structure. To protect
+against over ﬁtting, spline knots were limited to a maximum of 5,
+which permitted a reasonable degree of trend tortuosity while
+preventing unreasonable perturbations from unusual values inthe dataset. The area under each spline was calculated by
+numerical integration at a resolution of 100 for each posterior
+draw. Pairwise contrasts of the full posterior areas were compared
+using exceedance probabilities. Models were run and validated as
+described above.
+Egg diameter and TC50 . To investigate the relationship
+between egg size and TC50
+8, average egg diameter data were
+collated for each species (Table 1) and modelled against TC50
+(P> 0.3), using a generalized linear model with a Gaussian
+distribution, using the stats package in R (R Core Team 2022).
+All model diagnostics were assessed with the DHARMa package
+as described above.
+Reporting summary . Further information on research design is
+available in the Nature Portfolio Reporting Summary linked to
+this article.
+Data availability
+The permanent data record and raw data can be found here: https://apps.aims.gov.au/
+metadata/view/b5a63724-a339-488e-ae4d-b8a304371600 .
+Code availability
+Code is available at the github repository here: https://github.com/open-AIMS/larval_
+settlement_competency .
+Received: 24 September 2023; Accepted: 16 January 2024;
+References
+1. Willis, B. L. & Oliver, J. K. Direct tracking of coral larvae: Implications for
+dispersal studies of planktonic larvae in topographically complex
+environments. Ophelia 32, 145 –162 (1990).
+2. Connolly, S. R. & Baird, A. H. Estimating dispersal potential for marine
+larvae: dynamic models applied to scleractinian corals. Ecology 91, 3572 –3583
+(2010).
+3. Graham, E. M., Baird, A. H. & Connolly, S. R. Survival dynamics of
+scleractinian coral larvae and implications for dispersal. Coral Reefs 27,
+529–539 (2008).
+4. Cowen, R. K. & Sponaugle, S. Larval Dispersal and Marine population
+connectivity. Annu. Rev. Mar. Sci. 1, 443 –466 (2009).
+5. Treml, E. A. et al. Reproductive output and duration of the pelagic larval stage
+determine seascape-wide connectivity of marine populations. Integr. Comp.
+Biol. 52, 525 –537 (2012).
+6 . T r e m l ,E .A . ,F o r d ,J .R . ,B l a c k ,K .P . ,&S w e a r e r ,S .E .I d e n t i f y i n gt h e
+key biophysical drivers, connectivity outcomes, and metapopulationconsequences of larval dispersal in the sea. Mov. Ecol. 3,1 7
+(2015).
+7. Richmond, R. H. Competency and dispersal potential of planula larvae of a
+spawning versus brooding coral. (ed. Choat, J. H.) In Proc. 6th International
+Coral Reef Symposium Vol. 2, 827 –831 (International Society for Reef Studies,
+1988).
+8. Figueiredo, J., Baird, A. H. & Connolly, S. R. Synthesizing larval competence
+dynamics and reef-scale retention reveals a high potential for self-recruitment
+in corals. Ecology 94, 650 –659 (2013).
+9. Heyward, A. J. & Negri, A. P. Plasticity of larval pre-competency in response
+to temperature: observations on multiple broadcast spawning coral species.
+Coral Reefs 29, 631 –636 (2010).
+10. Figueiredo, J., Baird, A. H., Harii, S. & Connolly, S. R. Increased local retention
+of reef coral larvae as a result of ocean warming. Nat. Clim. Change 4, 498 –502
+(2014).
+11. Figueiredo, J. et al. Global warming decreases connectivity among coral
+populations. Nat. Clim. Chang. 12,8 3–87 (2022).ARTICLE COMMUNICATIONS BIOLOGY | https://doi.org/10.1038/s42003-024-05824-3
+12 COMMUNICATIONS BIOLOGY |           (2024) 7:142 | https://doi.org/10.1038/s42003-024-05824-3 | www.nature.com/commsbio
+
+
+
+======================================================================
+PAGE 13
+======================================================================
+12. Miller, K. & Mundy, C. Rapid settlement in broadcast spawning corals:
+implications for larval dispersal. Coral Reefs 22,9 9–106 (2003).
+13. Wilson, J. R. & Harrison, P. L. Settlement-competency periods of larvae of
+three species of scleractinian corals. Mar. Biol. 131, 339 –345 (1998).
+14. Harii, S., Kayanne, H., Takigawa, H., Hayashibara, T. & Yamamoto, M. Larval
+survivorship, competency periods and settlement of two brooding corals,
+Heliopora coerulea andPocillopora damicornis .Mar. Biol. 141,3 9–46 (2002).
+15. Richmond, R. Energetics, competency, and long-distance dispersal of planula
+larvae of the coral Pocillopora damicornis .Mar. Biol. 93, 527 –533 (1987).
+16. Gouezo, M. et al. Modelled larval supply predicts coral population recovery
+potential following disturbance. Mar. Ecol. Prog. Ser. 661, 127 –145 (2021).
+17. Falk, D. A., Richards, C. M., Montalvo, A. & Knapp, E. E. Population and
+ecological genetics in restoration ecology. (eds. Falk, D. A., Palmer, M. A. &
+Zedler, J. B.) In Foundations of Restoration Ecology 14–41 (Island Press, 2006).
+18. Davies, S. W., Strader, M. E., Kool, J. T., Kenkel, C. D. & Matz, M. V. Modeled
+differences of coral life-history traits in ﬂuence the refugium potential of a
+remote Caribbean reef. Coral Reefs 36, 913 –925 (2017).
+19. Baums, I. B., Paris, C. B. & Chérubin, L. M. A bio-oceanographic ﬁlter to larval
+dispersal in a reef-building coral. Limnol. Oceanogr. 51, 1969 –1981 (2006).
+20. Cetina-Heredia, P. & Connolly, S. R. A simple approximation for larval
+retention around reefs. Coral Reefs 30, 593 –605 (2011).
+21. Marshall, D. & Keough, M. Variation in the dispersal potential of non-feeding
+invertebrate larvae: the desperate larva hypothesis and larval size. Mar. Ecol.
+Prog. Ser. 255, 145 –153 (2003).
+22. Isomura, N. & Nishihira, M. Size variation of planulae and its effect on the
+lifetime of planulae in three pocilloporid corals. Coral Reefs 20, 309 –315
+(2001).
+23. Munday, P. L. et al. Climate change and coral reef connectivity. Coral Reefs 28,
+379–395 (2009).
+24. McManus, L. C. et al. Evolution and connectivity in ﬂuence the persistence and
+recovery of coral reefs under climate change in the Caribbean, Southwest
+Paciﬁc, and Coral Triangle. Glob. Change Biol. 27, 4307 –4321 (2021).
+25. Figueiredo, J. et al. Ontogenetic change in the lipid and fatty acid composition
+of scleractinian coral larvae. Coral Reefs 31, 613 –619 (2012).
+26. Harii, S., Nadaoka, K., Yamamoto, M. & Iwao, K. Temporal changes in
+settlement, lipid content and lipid composition of larvae of the spawninghermatypic coral Acropora tenuis .Mar. Ecol. Prog. Ser. 346,8 9–96 (2007).
+27. Edmunds, P. J., Cumbo, V. R. & Fan, T.-Y. Metabolic costs of larval settlement
+and metamorphosis in the coral Seriatopora caliendrum under ambient and
+elevated pCO
+2.J. Exp. Mar. Biol. Ecol. 443,3 3–38 (2013).
+28. Harrington, L., Fabricius, K., De ’ath, G. & Negri, A. Recognition and selection
+of settlement substrata determine post ‐settlement survival in corals. Ecology
+85, 3428 –3437 (2004).
+29. Ritson-Williams, R., Paul, V. J., Arnold, S. N. & Steneck, R. S. Larval
+settlement preferences and post-settlement survival of the threatenedCaribbean corals Acropora palmata and A. cervicornis .Coral Reefs 29,7 1–81
+(2010).
+30. Ritson-Williams, R., Arnold, S. & Paul, V. Patterns of larval settlement
+preferences and post ‑settlement survival for seven Caribbean corals. Mar.
+Ecol. Prog. Ser. 548, 127 –138 (2016).
+31. Tebben, J. et al. Chemical mediation of coral larval settlement by crustose
+coralline algae. Sci. Rep. 5, 10803 (2015).
+32. Whitman, T. N., Negri, A. P., Bourne, D. G. & Randall, C. J. Settlement of
+larvae from four families of corals in response to a crustose coralline alga andits biochemical morphogens. Sci. Rep. 10, 16397 (2020).
+33. Abdul Wahab, M. A. et al. Hierarchical settlement behaviours of coral larvae
+to common coralline algae. Sci. Rep. 13, 5795 (2023).
+34. Jorissen, H. et al. Coral larval settlement preferences linked to crustose
+coralline algae with distinct chemical and microbial signatures. Sci. Rep. 11,
+14610 (2021).
+35. Baird, A., Babcock, R. & Mundy, C. Habitat selection by larvae in ﬂuences the
+depth distribution of six common coral species. Mar. Ecol. Prog. Ser. 252,
+289–293 (2003).
+36. Knight-Jones, E. W. Gregariousness and Some other aspects of the setting
+behaviour of Sipirorbis .J. Mar. Biol. Assess. 30, 201 –222 (1951).
+37. Cecino, G. & Treml, E. A. Local connections and the larval competency
+strongly in ﬂuence marine metapopulation persistence. Ecol. Appl. 31, e02302
+(2021).
+38. Hastings, A. & Botsford, L. W. Persistence of spatial populations depends on
+returning home. Proc. Natl Acad. Sci. USA 103, 6067 –6072 (2006).
+39. Hock, K., Doropoulos, C., Gorton, R., Condie, S. A. & Mumby, P. J. Split
+spawning increases robustness of coral larval supply and inter-reefconnectivity. Nat. Commun. 10, 3463 (2019).
+40. Gilmour, J. P., Smith, L. D., Heyward, A. J., Baird, A. H. & Pratchett, M. S.
+Recovery of an isolated coral reef system following severe disturbance.
+Science
+340,6 9–71 (2013).
+41. Grimaldi, C. M. et al. Hydrodynamic drivers of ﬁne‐scale connectivity within a
+coral reef atoll. Limnol. Oceanogr. 67, 2204 –2217 (2022).42. Harrison, H. B., Bode, M., Williamson, D. H., Berumen, M. L. & Jones, G. P. A
+connectivity portfolio effect stabilizes marine reserve performance. Proc. Natl
+Acad. Sci. USA 117, 25595 –25600 (2020).
+43. De ’ath, G., Fabricius, K. E., Sweatman, H. & Puotinen, M. The 27-year decline
+of coral cover on the Great Barrier Reef and its causes. Proc. Natl Acad. Sci.
+USA 109, 17995 –17999 (2012).
+44. Hughes, T. P. et al. Spatial and temporal patterns of mass bleaching of corals
+in the Anthropocene. Science 359,8 0–83 (2018).
+45. Hughes, T. P. et al. Global warming impairs stock –recruitment dynamics of
+corals. Nature 568, 387 –390 (2019).
+46. Bay, L. K. et al. Reef Restoration and Adaptation Program: Intervention
+Technical Summary .8 9https://gbrrestoration.org/wp-content/uploads/2020/
+09/T3-Intervention-Technical-Summary-FINAL3.pdf (2019).
+47. Anthony, K. R. N. et al. Interventions to help coral reefs under global change
+—A complex decision challenge. PLoS ONE 15, e0236399 (2020).
+48. Knowlton, N. et al. Rebuilding Coral Reefs: A Decadal Grand Challenge https://
+coralreefs.org/publications/rebuilding_coral_reefs/ (2021) https://doi.org/10.
+53642/NRKY9386 .
+49. McLeod, I. M. et al. Coral restoration and adaptation in Australia: the ﬁrstﬁve
+years. PLoS ONE 17, e0273325 (2022).
+50. Randall, C. et al. Sexual production of corals for reef restoration in the
+Anthropocene. Mar. Ecol. Prog. Ser. 635, 203 –232 (2020).
+51. Banaszak, A. T. et al. Applying coral breeding to reef restoration: best
+practices, knowledge gaps, and priority actions in a rapidly ‐evolving ﬁeld.
+Restor. Ecol. e13913 https://doi.org/10.1111/rec.13913 (2023).
+52. Chamberland, V. F. et al. New seeding approach reduces costs and time to
+outplant sexually propagated corals for reef restoration. Sci. Rep. 7, 18076
+(2017).
+53. Randall, C., Giuliano, C., Heyward, A. J. & Negri, A. P. Enhancing coral
+survival on deployment devices with microrefugia. Front. Mar. Sci. 8, 662263
+(2021).
+54. Randall, C. J. et al. Site mediates performance in a coral ‐seeding trial. Restor.
+Ecol. https://doi.org/10.1111/rec.13745 (2022).
+55. Gillooly, J. F., Charnov, E. L., West, G. B., Savage, V. M. & Brown, J. H. Effects
+of size and temperature on developmental time. Nature 417,7 0–73 (2002).
+56. Nanninga, G. B. & Berumen, M. L. The role of individual variation in marine
+larval dispersal. Front. Mar. Sci .1, 71 (2014).
+57. Ayre, D. J. & Hughes, T. P. Genotypic diversity and gene ﬂow in brooding and
+spawning corals along the Great Barrier Reef, Australia. Evolution 54,
+1590 –1605 (2000).
+58. Palumbi, S. R. et al. Small ‐scale genetic structure of coral populations in Palau
+based on whole mitochondrial genomes: implications for future coralresilience. Evol. Appl. 16, 518 –529 (2023).
+59. Foster, N. L., Baums, I. B. & Mumby, P. J. Sexual vs. asexual reproduction in
+an ecosystem engineer: the massive coral Montastraea annularis .J. Anim.
+Ecol. 76, 384 –391 (2007).
+60. Selkoe, K. A., Gaggiotti, O. E., Bowen, B. W. & Toonen, R. J. ToBo Laboratory
+Emergent patterns of population genetic structure for a coral reef community.
+Mol. Ecol. 23, 3064 –3079 (2014).
+61. Zvuloni, A. et al. Local scale genetic structure in coral populations: a signature
+of selection. Mar. Pollut. Bull. 56, 430 –438 (2008).
+62. Severance, E. G. & Karl, S. A. Contrasting population genetic structures of
+sympatric, mass-spawning Caribbean corals. Mar. Biol. 150,5 7–68 (2006).
+63. Gilmour, J. P., Smith, L. D. & Brinkman, R. M. Biannual spawning, rapid
+larval development and evidence of self-seeding for scleractinian corals at anisolated system of reefs. Mar. Biol. 156, 1297 –1309 (2009).
+64. Sammarco, P. W. & Andrews, J. C. Localized dispersal and recruitment in
+Great Barrier Reef Corals: the Helix experiment. Science 239, 1422 –1424
+(1988).
+65. Sammarco, P. W. & Andrews, J. C. The Helix experiment: differential localized
+dispersal and recruitment patterns in Great Barrier Reef corals: the Helix
+experiment. Limnol. Oceanogr. 34, 896 –912 (1989).
+66. Hughes, T. P., Connolly, S. R. & Keith, S. A. Geographic ranges of reef corals
+(Cnidaria: Anthozoa: Scleractinia) in the Indo-Paci ﬁc:Ecological Archives
+E094-150. Ecology 94, 1659 (2013).
+67. Randall, C. J. Elevated temperature affects development, survivorship, and
+settlement of the elkhorn coral, Acropora palmata (Lamarck 1816). Biol. Bull.
+217, 269 –282 (2009).
+68. Graham, E. M., Baird, A. H., Connolly, S. R., Sewell, M. A. & Willis, B. L.
+Rapid declines in metabolism explain extended coral larval longevity. Coral
+Reefs 32, 539 –549 (2013).
+69. Harrison, P. L. et al. Mass spawning in tropical reef corals. Science 223,
+1186 –1189 (1984).
+70. Krug, P. Bet-hedging dispersal strategy of a specialist marine herbivore: a
+settlement dimorphism among sibling larvae of Alderia modesta .Mar. Ecol.
+Prog. Ser. 213, 177 –192 (2001).
+71. Bishop, C. D., Huggett, M. J., Heyland, A., Hodin, J. & Brandhorst, B. P.
+Interspeci ﬁc variation in metamorphic competence in marine invertebrates:COMMUNICATIONS BIOLOGY | https://doi.org/10.1038/s42003-024-05824-3 ARTICLE
+COMMUNICATIONS BIOLOGY |           (2024) 7:142 | https://doi.org/10.1038/s42003-024-05824-3 | www.nature.com/commsbio 13
+
+
+
+======================================================================
+PAGE 14
+======================================================================
+the signi ﬁcance for comparative investigations into the timing of
+metamorphosis. Integr. Comp. Biol. 46, 662 –682 (2006).
+72. Pechenik, J. A. Delayed metamorphosis by larvae of benthic marine
+invertebrates: does it occur? Is there a price to pay? Ophelia 32,6 3–94 (1990).
+73. Schwarz, J. A., Krupp, D. A. & Weis, V. M. Late larval development and onset
+of symbiosis in the scleractinian coral Furgia scutaria .Biol. Bull. 196,7 0–79
+(1999).
+74. Gleason, D. F. & Hofmann, D. K. Coral larvae: from gametes to recruits. J.
+Exp. Mar. Biol. Ecol. 408,4 2–57 (2011).
+75. Harii, S., Yasuda, N., Rodriguez-Lanetty, M., Irie, T. & Hidaka, M. Onset of
+symbiosis and distribution patterns of symbiotic dino ﬂagellates in the larvae
+of scleractinian corals. Mar. Biol. 156, 1203 –1212 (2009).
+76. Cumbo, V. R., Baird, A. H. & van Oppen, M. J. H. The promiscuous larvae:
+ﬂexibility in the establishment of symbiosis in corals. Coral Reefs 32, 111 –120
+(2013).
+77. Chamberland, V. F., Latijnhouwers, K. R. W., Huisman, J., Hartmann, A. C. &
+Vermeij, M. J. A. Costs and bene ﬁts of maternally inherited algal symbionts in
+coral larvae. Proc. R. Soc. B 284, 20170852 (2017).
+78. Whalan, S., Abdul Wahab, M. A., Sprungala, S., Poole, A. J. & de Nys, R.
+Larval settlement: The role of surface topography for sessile coral reefinvertebrates. PLoS ONE 10, e0117675 (2015).
+79. Nozawa, Y. Micro-crevice structure enhances coral spat survivorship. J. Exp.
+Mar. Biol. Ecol. 367, 127 –130 (2008).
+80. Doropoulos, C., Ward, S., Marshell, A., Diaz-Pulido, G. & Mumby, P. J.
+Interactions among chronic and acute impacts on coral recruits: theimportance of size-escape thresholds. Ecology 93, 2131 –2138 (2012).
+81. Petersen, D., Laterveer, M. & Schuhmacher, H. Innovative substrate tiles to
+spatially control larval settlement in coral culture. Mar. Biol. 146,9 3 7 –942
+(2005).
+82. Mundy, C. N. & Babcock, R. C. Role of light intensity and spectral quality in
+coral settlement: implications for depth-dependent settlement? J. Exp. Mar.
+Biol. Ecol. 223, 235 –255 (1998).
+83. Webster, N. S. et al. Metamorphosis of a Scleractinian coral in response to
+microbial bio ﬁlms. Appl. Environ. Microbiol. 70
+, 1213 –1221 (2004).
+84. Turnlund, A. C. et al. Linking differences in microbial network structure with
+changes in coral larval settlement. ISME Commun. 3, 114 (2023).
+85. Evensen, N. R. et al. Benthic micro ‐and macro ‐community succession and
+coral recruitment under over ﬁshing and nutrient enrichment. Ecology 102,
+e03536 (2021).
+86. Heyward, A. J. & Negri, A. P. Natural inducers for coral larval metamorphosis.
+Coral Reefs 18, 273 –279 (1999).
+87. Golbuu, Y. & Richmond, R. H. Substratum preferences in planula larvae of
+two species of scleractinian corals, Goniastrea retiformis and Stylaraea
+punctata .Mar. Biol. 152, 639 –644 (2007).
+88. Lee, C. S., Walford, J. & Goh, B. P. L. Adding coral rubble to substrata
+enhances settlement of Pocillopora damicornis larvae. Coral Reefs 28, 529 –533
+(2009).
+89. Morse, A. R. et al. An ancient chemosensory mechanism brings new life to
+coral reefs. Biol. Bull. 191, 149 –154 (1996).
+90. Doropoulos, C., Ward, S., Diaz-Pulido, G., Hoegh-Guldberg, O. & Mumby, P.
+J. Ocean acidi ﬁcation reduces coral recruitment by disrupting intimate larval-
+algal settlement interactions: elevated CO 2alters CCA-larval interactions. Ecol.
+Lett. 15, 338 –346 (2012).
+91. Price, N. Habitat selection, facilitation, and biotic settlement cues affect
+distribution and performance of coral recruits in French Polynesia. Oecologia
+163, 747 –758 (2010).
+92. Iwao, K., Fujisawa, T. & Hatta, M. A cnidarian neuropeptide of the
+GLWamide family induces metamorphosis of reef-building corals in the genusAcropora .Coral Reefs 21, 127 –129 (2002).
+93. Hatta, M. & Iwao, K. Metamorphosis induction and its possible application to
+coral seedlings production. (ed. Saxena, N. K.) In Recent Advances in Marine
+Science and Technology 465–470 (Japan International Marie Science and
+Technology Federation, 2002).
+94. Erwin, P. M. & Szmant, A. M. Settlement induction of Acropora palmata
+planulae by a GLW-amide neuropeptide. Coral Reefs 29, 929 –939 (2010).
+95. Randall, C. J. & Szmant, A. M. Elevated temperature reduces survivorship and
+settlement of the larvae of the Caribbean scleractinian coral, Favia fragum
+(Esper). Coral Reefs 28, 537 –545 (2009).
+96. Nozawa, Y. & Harrison, P. L. Larval settlement patterns, dispersal potential,
+and the effect of temperature on settlement of larvae of the reef coral,Platygyra daedalea , from the Great Barrier Reef. (ed. Kasim Moosa, M.) In
+Proc. 9th International Coral Reef Symposium Vol. 1, 409 –416 (International
+Society for Reef Studies, 2000).
+97. Shlesinger, T. & Loya, Y. Breakdown in spawning synchrony: a silent threat to
+coral persistence. Science 365, 1002 –1007 (2019).
+98. Zaslow, R. B.-D. & Benayahu, Y. Longevity, competence and energetic content
+in planulae of the soft coral Heteroxenia fuscescens .J. Exp. Mar. Biol. Ecol. 206,
+55–68 (1996).99. Webster, N. S., Soo, R., Cobb, R. & Negri, A. P. Elevated seawater temperature
+causes a microbial shift on crustose coralline algae with implications for therecruitment of coral larvae. ISME J. 5, 759 –770 (2011).
+100. Fabricius, K. E., Kluibenschedl, A., Harrington, L., Noonan, S. & De ’ath, G. In
+situchanges of tropical crustose coralline algae along carbon dioxide
+gradients. Sci. Rep. 5, 9537 (2015).
+101. Davies, S. W., Meyer, E., Guermond, S. M. & Matz, M. V. A cross-ocean
+comparison of responses to settlement cues in reef-building corals. PeerJ 2,
+e333 (2014).
+102. Shlesinger, Y. & Loya, Y. Larval development and survivorship in the corals
+Favia favus and Platygyra lamellina .I nCoelenterate Biology: Recent Research
+on Cnidaria and Ctenophora (eds Williams, R. B., Cornelius, P. F. S., Hughes,
+R. G. & Robson, E. A.) 101 –108 (Springer, Netherlands, 1991).
+103. Nozawa, Y. & Harrison, P. L. Temporal patterns of larval settlement and
+survivorship of two broadcast-spawning acroporid corals. Mar. Biol. 155,
+347–351 (2008).
+104. Daigle, R. M. et al. Operationalizing ecological connectivity in spatial conservation
+planning with Marxan Connect. Methods Ecol. Evol. 11,5 7 0 –579 (2020).
+105. King, S., Saint-Amand, A., Walker, B. K., Hanert, E. & Figueiredo, J. Larval
+dispersal patterns and connectivity of Acropora on Florida ’s Coral Reef and its
+implications for restoration. Front. Mar. Sci. 9, 1038463 (2023).
+106. Frys, C. et al. Fine-scale coral connectivity pathways in the Florida Reef Tract:
+implications for conservation and restoration. Front. Mar. Sci. 7, 312 (2020).
+107. Doropoulos, C. & Babcock, R. C. Harnessing connectivity to facilitate coral
+restoration. Front. Ecol. Environ. 16, 558 –559 (2018).
+108. Veron, J. E. N. Corals of the World (Australian Institute of Marine Science,
+2000).
+109. Baird, A. H. et al. An Indo-Paci ﬁc coral spawning database. Sci. Data 8, 35 (2021).
+110. Gabrielson, P. W., Hughey, J. R. & Diaz-Pulido, G. Genomics reveals
+abundant speciation in the coral reef building alga Porolithon onkodes
+(Corallinales, Rhodophyta). J. Phycol. 54, 429 –434 (2018).
+111. Sneed, J. M., Sharp, K. H., Ritchie, K. B. & Paul, V. J. The chemical cue
+tetrabromopyrrole from a bio ﬁlm bacterium induces settlement of multiple
+Caribbean corals. Proc. R. Soc. B: Biol. Sci. 281, 20133086 –20133086 (2014).
+112. Petersen, L.-E. et al. Mono- and multispecies bio ﬁlms from a crustose coralline
+alga induce settlement in the scleractinian coral Leptastrea purpurea .Coral
+Reefs 40, 381 –394 (2021).
+113. Doropoulos, C. et al. Characterising the ecological trade-offs throughout the
+early ontogeny of coral recruitment. Ecol. Monogr. https://doi.org/10.1890/15-
+0668.1 (2016).
+114. Gelman, A. & Hill, J. Data Analysis Using Regression and Multilevel/
+Hierarchical Models (Cambridge University Press, 2007).
+115. Hartig, F. DHARMa: Residual Diagnostics for Hierarchical (Multi-Level/
+Mixed) Regression Models (2020).
+116. Bürkner, P.-C. brms: an RPackage for Bayesian Multilevel Models Using Stan.
+J. Stat. Soft .80,1–28 (2017).
+117. Bürkner, P.-C. Advanced Bayesian multilevel modeling with the R package
+brms. R. J. 10, 395 (2018).
+118. Stan Development Team & F . RStan: the R interface to Stan. R Package (Stan
+Development Team & F, 2020).
+119. Wickham, H. ggplot2: Elegant Graphics for Data Analysis (Springer-Verlag,
+2016).
+120. Wallace, C. Staghorn Corals of the World: a Revision of the Coral Genus
+Acropora (Scleractinia; Astrocoeniina; Acroporidae) Worldwide, with Emphasison Morphology, Phylogeny and Biogeography (CSIRO Publishing, 1999).
+121. Madin, J. S. et al. The Coral Trait Database, a curated database of trait
+information for coral species from the global oceans. Sci. Data 3, 160017
+(2016).
+122. Shlesinger, Y., Goulet, T. L. & Loya, Y. Reproductive patterns of scleractinian
+corals in the northern Red Sea. Mar. Biol. 132, 691 –701 (1998).
+123. Babcock, R. C. & Heyward, A. J. Larval development of certain gamete-
+spawning scleractinian corals. Coral Reefs 5, 111 –116 (1986).
+124. Bouwmeester, J. Reproduction Patterns of Scleractinian Corals in the Central
+Red Sea (KAUST Research Repository, 2013).
+Acknowledgements
+We acknowledge the Bindal, Manbarra, Woppaburra, and Wulgurukaba Peoples as the
+Traditional Custodians of the Sea Countries where this research took place. The authorswish to acknowledge their Elder ’s past, present, and emerging, and their continuing
+spiritual connection to Sea Country. We thank J. Speaks, K. Allen, F. Brough, J.
+Grossman, and C. Sims for laboratory support and C. Kenkel, J. Gilmour and A. Hey-
+ward for valuable discussions. We thank the staff of the AIMS vessels and the NationalSea Simulator for coral broodstock collection and spawning and larval husbandry sup-port, respectively. This study was co-funded by The Reef Restoration and Adaptation
+Programme (RRAP), a partnership between the Australian Governments Reef Trust and
+the Great Barrier Reef Foundation, and the BHP ‒AIMS Australian Coral Reef Resilience
+Initiative (ACRRI).ARTICLE COMMUNICATIONS BIOLOGY | https://doi.org/10.1038/s42003-024-05824-3
+14 COMMUNICATIONS BIOLOGY |           (2024) 7:142 | https://doi.org/10.1038/s42003-024-05824-3 | www.nature.com/commsbio
+
+

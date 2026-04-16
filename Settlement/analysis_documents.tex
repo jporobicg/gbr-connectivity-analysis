@@ -1,0 +1,430 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\title{Supplementary Material: Larval Competency Modeling Analysis}
+\author{Re-analysis of Settlement Data Using Piecewise Weibull-Exponential Models}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+This supplementary material provides a comprehensive re-analysis of larval competency data using the Monegetti piecewise Weibull-Exponential model (Moneghetti et al. 2019) and comparison with simpler alternative models. The analysis addresses key methodological differences between our approach and previous analyses, provides statistical justification for model selection, and presents publication-ready results for all coral families.
+
+\section{Treatment Selection: Rubble and CCA}
+
+\subsection{Ecological and Biological Rationale}
+
+This analysis focuses exclusively on two settlement treatments: \textbf{conditioned reef rubble} (hereafter ``rubble'') and \textbf{crustose coralline algae} (CCA). These treatments were selected based on their ecological and biological significance for coral larval settlement in natural reef environments.
+
+\subsection{Why Rubble and CCA?}
+
+\subsubsection{Ecological Relevance}
+
+\begin{enumerate}
+    \item \textbf{Natural Substrates}: Both rubble and CCA represent naturally occurring settlement substrates on coral reefs. Rubble fragments are ubiquitous in reef environments, particularly following disturbance events, while CCA is a dominant component of reef benthos and a well-documented settlement inducer.
+    
+    \item \textbf{Field Conditions}: Unlike artificial treatments (plastic discs, chemical extracts, synthetic peptides), rubble and CCA reflect conditions that larvae encounter in their natural habitat. This makes the resulting competency parameters more directly applicable to connectivity modeling and field predictions.
+    
+    \item \textbf{Proven Effectiveness}: Randal et al. (2024) demonstrated that rubble was overwhelmingly the most effective settlement cue across all coral families tested, with CCA being the second most effective natural substrate. These treatments consistently induced higher settlement rates than artificial alternatives.
+\end{enumerate}
+
+\subsubsection{Biological Mechanisms}
+
+\textbf{Rubble Treatment}:
+\begin{itemize}
+    \item Provides structurally complex microhabitats offering refuge from external pressures
+    \item Supports diverse, mature biofilm communities that produce strong settlement induction cues
+    \item Contains cryptic and recruit CCA communities that may be more diverse and inductive than single-species CCA treatments
+    \item May harbor legacy inducers within calcareous matrices (chemical extracts of dead coral and CCA skeletons can induce settlement)
+    \item Offers microrefugia with lower light conditions, which many larvae preferentially seek
+\end{itemize}
+
+\textbf{CCA Treatment}:
+\begin{itemize}
+    \item Represents a well-established, highly inductive natural settlement cue
+    \item Produces chemical compounds (e.g., tetrabromopyrrole) known to induce settlement in many coral species
+    \item Forms a dominant component of reef benthos, making it ecologically relevant
+    \item Provides a standardized natural substrate for comparison with rubble
+\end{itemize}
+
+\subsubsection{Exclusion of Other Treatments}
+
+The following treatments were excluded from this analysis:
+
+\begin{itemize}
+    \item \textbf{Control}: Represents absence of settlement cues, not ecologically meaningful for competency modeling
+    \item \textbf{Plastic Discs}: Artificial substrates with early successional biofilm communities, less mature and inductive than natural substrates
+    \item \textbf{Chemical Extracts}: Isolated compounds that do not represent natural settlement conditions
+    \item \textbf{Synthetic Peptides}: Artificial inducers testing neuropeptide pathways, not naturally occurring
+\end{itemize}
+
+\subsection{Data Characteristics}
+
+After filtering to rubble and CCA treatments only:
+\begin{itemize}
+    \item Total observations: 4,440 replicates (rubble: 2,229; CCA: 2,211)
+    \item Families analyzed: 7 (Acroporidae, Agariciidae, Diploastraeidae, Euphylliidae, Lobophyllidae, Merulinidae, Poritidae)
+    \item Balanced representation: Both treatments well-represented across all families
+\end{itemize}
+
+This focused approach ensures that competency parameters reflect biologically meaningful settlement responses to natural substrates, making them directly applicable to connectivity modeling and field-based predictions.
+
+\section{Data Comparison}
+
+\subsection{Why Re-analysis is Required}
+
+The original analysis by Randal et al. (2024) used a Bayesian hierarchical approach with binary cumulative settlement, while Moneghetti et al. (2019) used a piecewise continuous model for metamorphosis data. Our re-analysis:
+
+\begin{enumerate}
+    \item Uses continuous proportions (not binary thresholds)
+    \item Applies the Monegetti piecewise model to all families (not just A. tenuis)
+    \item Compares multiple models using AICc for formal model selection
+    \item Provides family-level results suitable for connectivity modeling
+\end{enumerate}
+
+\subsection{Differences Between Approaches}
+
+\subsubsection{Our Approach}
+
+\begin{itemize}
+    \item \textbf{Statistical Framework}: Maximum likelihood with binomial likelihood
+    \item \textbf{Data Processing}: Continuous proportions at replicate level
+    \item \textbf{Taxonomic Level}: Family-level aggregation
+    \item \textbf{Model Structure}: Multiple model comparison (Logistic, Gompertz, Weibull, Monegetti)
+    \item \textbf{Model Selection}: AICc-based selection
+    \item \textbf{Treatment Selection}: Focuses on ecologically meaningful treatments (rubble and CCA only)
+\end{itemize}
+
+\subsubsection{Original Randal Approach}
+
+\begin{itemize}
+    \item \textbf{Statistical Framework}: Bayesian hierarchical with random effects
+    \item \textbf{Data Processing}: Binary cumulative settlement (threshold-based)
+    \item \textbf{Taxonomic Level}: Species-level analysis
+    \item \textbf{Model Structure}: Logistic regression with treatment interactions
+    \item \textbf{Uncertainty}: Posterior distributions from MCMC
+\end{itemize}
+
+\subsubsection{Statistical Justification}
+
+The re-analysis is justified by:
+
+\begin{enumerate}
+    \item \textbf{Model Selection}: Formal comparison using AICc reveals when the complex Monegetti model is necessary vs. when simpler models suffice
+    \item \textbf{Family-Level Focus}: Connectivity modeling often requires family-level parameters
+    \item \textbf{Continuous Proportions}: Avoids arbitrary threshold selection
+    \item \textbf{Comprehensive Comparison}: Tests all candidate models, not just one
+\end{enumerate}
+
+See Table~\ref{tab:model_comparison} and Figure~\ref{fig:theoretical_models} for detailed comparisons.
+
+\section{Modeling Decay}
+
+\subsection{Model Descriptions}
+
+\subsubsection{Logistic Model}
+
+\textbf{Origin}: Standard sigmoid function
+
+\textbf{Mathematical Formulation}:
+\begin{equation}
+C(t) = \frac{L}{1 + e^{-k(t - x_0)}}
+\end{equation}
+
+where $L$ is maximum competency, $k$ is growth rate, and $x_0$ is the inflection point.
+
+\textbf{Key Assumptions}:
+\begin{itemize}
+    \item Symmetric S-shaped curve
+    \item Single inflection point
+    \item 3 parameters
+\end{itemize}
+
+\subsubsection{Gompertz Model}
+
+\textbf{Origin}: Gompertz (1825) growth model
+
+\textbf{Mathematical Formulation}:
+\begin{equation}
+C(t) = a \exp(-b \exp(-c t))
+\end{equation}
+
+where $a$ is maximum competency, $b$ is displacement parameter, and $c$ is growth rate.
+
+\textbf{Key Assumptions}:
+\begin{itemize}
+    \item Asymmetric growth curve
+    \item Slower initial rise, late plateau
+    \item 3 parameters
+\end{itemize}
+
+\subsubsection{Weibull Model}
+
+\textbf{Origin}: Weibull distribution adaptation
+
+\textbf{Mathematical Formulation}:
+\begin{equation}
+C(t) = \begin{cases}
+0 & \text{if } t \leq t_c \\
+a(1 - \exp(-b(t - t_c)^v)) & \text{if } t > t_c
+\end{cases}
+\end{equation}
+
+where $t_c$ is precompetency period, $a$ is maximum competency, $b$ is scale parameter, and $v$ is shape parameter.
+
+\textbf{Key Assumptions}:
+\begin{itemize}
+    \item Precompetency period (no settlement before $t_c$)
+    \item Flexible shape via $v$ parameter
+    \item 4 parameters
+\end{itemize}
+
+\subsubsection{Monegetti Piecewise Model}
+
+\textbf{Origin}: Moneghetti et al. (2019) "High-frequency sampling and piecewise models reshape dispersal kernels of a common reef coral"
+
+\textbf{Mathematical Formulation}:
+\begin{equation}
+C(t) = \begin{cases}
+0 & \text{if } t < t_c \\
+\int_{t_c}^{t} a e^{-a(\tau - t_c)} e^{-(b_1(t - \tau))^{v_1}} d\tau & \text{if } t_c \leq t \leq T_{cp} \\
+\int_{t_c}^{T_{cp}} a e^{-a(\tau - t_c)} e^{-(b_1(T_{cp} - \tau))^{v_1}} e^{-b_2(t - T_{cp})} d\tau + \int_{T_{cp}}^{t} a e^{-a(\tau - t_c)} e^{-b_2(t - \tau)} d\tau & \text{if } t > T_{cp}
+\end{cases}
+\end{equation}
+
+where:
+\begin{itemize}
+    \item $a$: Rate of acquisition of competency
+    \item $b_1, v_1$: Weibull loss parameters (early period)
+    \item $b_2$: Exponential loss parameter (late period)
+    \item $t_c$: Precompetency period (onset age)
+    \item $T_{cp}$: Change point between early and late phases
+\end{itemize}
+
+\textbf{Key Assumptions}:
+\begin{itemize}
+    \item Two-phase development: early Weibull decay, late exponential decay
+    \item Precompetency period (no settlement before $t_c$)
+    \item Change point at $T_{cp}$ marks transition between phases
+    \item 6 parameters
+\end{itemize}
+
+\subsection{Theoretical Model Comparison}
+
+Figure~\ref{fig:theoretical_models} shows the theoretical shapes of all four models for illustration purposes (no fitted data). This figure demonstrates the different functional forms and helps understand when each model might be appropriate.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures_analysis/theoretical_model_comparison.png}
+    \caption{Theoretical shapes of all candidate models. Parameters chosen for illustration only.}
+    \label{fig:theoretical_models}
+\end{figure}
+
+\section{Fitting the Data}
+
+\subsection{Statistical Framework: Continuous Proportions Approach}
+
+\subsubsection{Overview}
+
+Our analysis uses a ``continuous proportions'' approach that differs from traditional aggregated proportion methods. Rather than pre-aggregating data into age-specific proportions, we fit models directly to raw replicate-level counts using binomial likelihood. This approach preserves all information from individual replicates and allows the model to predict competency as a continuous function of age.
+
+\subsubsection{Mathematical Formulation}
+
+For each replicate $i$ ($i = 1, \ldots, N$), we observe:
+\begin{itemize}
+    \item Age: $t_i$ (larval age in days)
+    \item Number settled: $s_i$ (out of $n_i$ total larvae)
+    \item Model prediction: $p(t_i; \boldsymbol{\theta})$ (continuous competency function)
+\end{itemize}
+
+The model $p(t; \boldsymbol{\theta})$ is a continuous function that can be evaluated at any age $t$, where $\boldsymbol{\theta}$ represents the model parameters (e.g., $\boldsymbol{\theta} = [L, k, x_0]$ for logistic, or $\boldsymbol{\theta} = [a, b_1, v_1, b_2, t_c, T_{cp}]$ for Monegetti).
+
+\subsubsection{Binomial Likelihood}
+
+We use binomial likelihood, treating each replicate as an independent binomial trial:
+
+\begin{equation}
+L(\boldsymbol{\theta}) = \prod_{i=1}^{N} \binom{n_i}{s_i} [p(t_i; \boldsymbol{\theta})]^{s_i} [1-p(t_i; \boldsymbol{\theta})]^{n_i-s_i}
+\end{equation}
+
+The log-likelihood is:
+
+\begin{equation}
+\ell(\boldsymbol{\theta}) = \sum_{i=1}^{N} \left[ s_i \log(p(t_i; \boldsymbol{\theta})) + (n_i-s_i) \log(1-p(t_i; \boldsymbol{\theta})) \right] + \text{constant}
+\end{equation}
+
+where the constant term $\sum_{i=1}^{N} \log \binom{n_i}{s_i}$ is omitted as it does not depend on $\boldsymbol{\theta}$.
+
+\subsubsection{Overdispersion Correction}
+
+To account for potential overdispersion (variability exceeding that expected from a binomial distribution), we estimate an overdispersion parameter $\phi$ using Pearson residuals:
+
+\begin{equation}
+\phi = \frac{1}{N - p} \sum_{i=1}^{N} \frac{(s_i - n_i \hat{p}_i)^2}{n_i \hat{p}_i (1 - \hat{p}_i)}
+\end{equation}
+
+where $\hat{p}_i = p(t_i; \hat{\boldsymbol{\theta}})$ is the fitted prediction, $p$ is the number of parameters, and $N$ is the number of replicates. The adjusted log-likelihood becomes:
+
+\begin{equation}
+\ell_{\text{adj}}(\boldsymbol{\theta}) = \frac{\ell(\boldsymbol{\theta})}{\phi}
+\end{equation}
+
+\subsubsection{Parameter Estimation}
+
+Parameters are estimated by minimizing the negative log-likelihood:
+
+\begin{equation}
+\hat{\boldsymbol{\theta}} = \arg\min_{\boldsymbol{\theta}} \left[ -\ell(\boldsymbol{\theta}) \right]
+\end{equation}
+
+We use numerical optimization (L-BFGS-B or Nelder-Mead) with appropriate parameter bounds to ensure biologically meaningful values (e.g., $0 < p(t; \boldsymbol{\theta}) < 1$ for all $t$).
+
+\subsubsection{Advantages of This Approach}
+
+\begin{enumerate}
+    \item \textbf{No information loss}: All replicate-level information is preserved; no pre-aggregation required
+    \item \textbf{Automatic weighting}: Larger replicates (more larvae) automatically contribute more to the likelihood
+    \item \textbf{Continuous predictions}: The model can predict competency at any age, not just observed ages
+    \item \textbf{Proper uncertainty}: Binomial likelihood correctly accounts for sample size in uncertainty quantification
+    \item \textbf{Replicate-level variation}: Captures variation between replicates at the same age
+\end{enumerate}
+
+\subsubsection{Visualization}
+
+For visualization purposes only, we aggregate observed data by age:
+
+\begin{equation}
+\bar{p}_j = \frac{\sum_{i: t_i = t_j} s_i}{\sum_{i: t_i = t_j} n_i}
+\end{equation}
+
+where $t_j$ are the unique ages in the dataset. This aggregation is used solely for plotting observed data points with error bars; model fitting uses the raw replicate-level counts.
+
+\subsection{Model Comparison}
+
+All candidate models (Logistic, Gompertz, Weibull, Monegetti) were fitted to each family's data using maximum likelihood with binomial likelihood. Table~\ref{tab:model_comparison} shows the log-likelihood and AICc for all models across all families.
+
+\begin{table}[H]
+    \centering
+    \caption{Model Comparison: Log-Likelihood and AICc for All Families}
+    \label{tab:model_comparison}
+    \footnotesize
+    \input{results/tables/model_comparison_table.tex}
+    \vspace{0.2cm}
+    \textit{Note: Lower AICc indicates better model. NLL = Negative Log-Likelihood.}
+\end{table}
+
+\subsection{Model Diagnostics}
+
+\subsubsection{Goodness of Fit}
+
+For each fitted model, we calculated:
+\begin{itemize}
+    \item Pearson residuals
+    \item Deviance residuals
+    \item Overdispersion parameter ($\phi$)
+    \item Q-Q plots for normality assessment
+\end{itemize}
+
+Models with $\phi > 2.0$ indicate strong overdispersion and may require quasi-binomial adjustments.
+
+\subsubsection{Data vs. Model Comparison}
+
+Figures showing observed data, fitted models, and uncertainty bands for each family are provided in the \texttt{figures\_analysis/} directory. Each figure includes:
+\begin{itemize}
+    \item Observed settlement proportions with 95\% confidence intervals
+    \item Fitted model curve
+    \item TC50 marker (if applicable)
+    \item Sample sizes (number of replicates and larvae)
+    \item Residual plots
+    \item Q-Q plots for normality
+\end{itemize}
+
+See Figure~\ref{fig:family_fits} for examples.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures_analysis/family_Acroporidae_fit.png}
+        \caption{Acroporidae}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures_analysis/family_Merulinidae_fit.png}
+        \caption{Merulinidae}
+    \end{subfigure}
+    \caption{Example family fits showing data, model, and diagnostics.}
+    \label{fig:family_fits}
+\end{figure}
+
+\subsection{Final Model Selection}
+
+Table~\ref{tab:final_selection} shows the statistically defensible (best) model selected for each family based on AICc. Only these models are discussed in the interpretive text.
+
+\begin{table}[H]
+    \centering
+    \caption{Final Model Selection by Family}
+    \label{tab:final_selection}
+    \footnotesize
+    \input{results/tables/final_model_selection.tex}
+    \vspace{0.2cm}
+    \textit{Note: Models selected based on lowest AICc. N = number of replicates/larvae.}
+\end{table}
+
+\section{Results Summary}
+
+\subsection{Model Selection Results}
+
+\begin{itemize}
+    \item \textbf{4 families} show Monegetti as best model: Merulinidae (strongest evidence, $\Delta$AICc = 940.7), Lobophyllidae, Agariciidae, Poritidae
+    \item \textbf{3 families} prefer simpler Weibull model: Acroporidae, Diploastraeidae, Euphylliidae
+    \item \textbf{0 families} prefer Logistic or Gompertz models
+\end{itemize}
+
+\subsection{Key Findings}
+
+\begin{enumerate}
+    \item \textbf{Monegetti Model Dominance}: Four families (57\%) prefer the Monegetti model, indicating that the two-phase competency structure is apparent when larvae respond to ecologically meaningful settlement cues (rubble and CCA).
+    
+    \item \textbf{Poritidae Two-Phase Structure}: Poritidae shows clear two-phase competency dynamics (TC50 = 4.68 days) with the Monegetti model, indicating that natural substrates reveal complex competency patterns.
+    
+    \item \textbf{Model Selection Clarity}: No families prefer Logistic or Gompertz models, suggesting that simpler sigmoid models are insufficient to capture competency dynamics when larvae respond to natural settlement substrates.
+    
+    \item \textbf{Biological Interpretation}: The preference for Monegetti model in multiple families suggests that natural substrates (rubble, CCA) reveal complex competency dynamics, reflecting the interaction between developmental competency and behavioral response to settlement cues.
+\end{enumerate}
+
+
+\section{Data and Code Availability}
+
+All analysis code, data, and results are available in the repository:
+\begin{itemize}
+    \item Main analysis: \texttt{monegetti\_piecewise\_model\_refactored.py}
+    \item Utility functions: \texttt{utility\_tools.py}
+    \item Figure generation: \texttt{figures\_analysis.py}
+    \item Results: \texttt{results/} directory
+    \item Figures: \texttt{figures\_analysis/} directory
+\end{itemize}
+
+\section{References}
+
+\begin{enumerate}
+    \item Moneghetti, P. C., et al. (2019). "High-frequency sampling and piecewise models reshape dispersal kernels of a common reef coral." \textit{Ecology Letters}, 22(10), 1643-1652.
+    
+    \item Randal, E., et al. (2024). "Age to settlement competency and settlement cue preference in coral larvae." \textit{Communications Biology}, 7, 184.
+    
+    \item This Analysis (2025). Comprehensive re-analysis using Monegetti piecewise model with formal model selection across all coral families.
+\end{enumerate}
+
+\end{document}
+

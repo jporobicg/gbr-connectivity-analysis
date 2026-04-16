@@ -1,0 +1,296 @@
+#+TITLE: Coral Spawning Analysis - Randall et al. (2024) Families
+#+AUTHOR: ReefConnect Project
+#+DATE: 2024
+#+OPTIONS: toc:t num:t
+
+* Executive Summary
+
+This document presents a comprehensive analysis of coral spawning patterns for the families included in Randall et al. (2024) "Larval precompetency and settlement behaviour in 25 Indo-Pacific coral species". The analysis is based on the Baird et al. (2021) coral spawning database and focuses on the seven families that have both spawning and settlement data available.
+
+** Key Findings Summary
+
+*** Data Coverage
+- 1,268 spawning observations across 7 families
+- 28 genera, 131 species
+- Acroporidae: 830 observations (65% of dataset)
+- Merulinidae: 316 observations (25% of dataset)
+
+*** Spawning Timing Patterns
+- **Season**: Peak spawning October-December (austral spring)
+- **Lunar Cycle**: 3-6 nights after full moon (median 4-5 nights)
+- **Time of Day**: Evening hours 20:00-21:00 (8-9 PM)
+- **Duration**: Start ~21:00h, end ~21:00-22:00h
+
+*** Family-Specific Patterns
+All families show remarkable consistency in:
+1. Spawning season (Oct-Dec)
+2. Lunar timing (3-6 nights post-full moon)
+3. Time of day (evening, 20-21h)
+
+This synchronization facilitates mass spawning events critical for reef connectivity.
+
+* Background
+
+** Randall et al. (2024) Study
+- Paper: "Larval precompetency and settlement behaviour in 25 Indo-Pacific coral species"
+- Journal: Communications Biology
+- DOI: 10.1038/s42003-024-05824-3
+- Provides empirical settlement data for 25 coral species across 7 families
+
+** Families Included in Analysis
+The following families from Randall et al. (2024) are analyzed:
+
+1. **Acroporidae** - Fast-growing branching corals (Acropora, Montipora, Astreopora)
+2. **Merulinidae** - Massive/brain corals (Goniastrea, Favites, Dipsastraea, etc.)
+3. **Poritidae** - Massive/branching forms (Porites, Goniopora)
+4. **Diploastreidae** - Diploastrea species
+5. **Agariciidae** - Plate corals (Agaricia, Pavona, Leptoseris)
+6. **Lobophylliidae** - Brain/massive corals (Lobophyllia, Symphyllia, etc.)
+7. **Euphylliidae** - Bubble corals (Euphyllia, Catalaphyllia, etc.)
+
+* Data Sources
+
+** Spawning Data
+- Source: Baird et al. (2021) coral spawning database
+- File: SpawningDatabase.csv
+- Contains spawning times, dates, and locations for coral species
+- Global dataset with focus on Indo-Pacific species
+
+** Settlement Data
+- Source: Randall et al. (2024) empirical settlement experiments
+- File: Settlement.csv (from ReefConnect project)
+- Contains larval settlement timing and competence data
+- Control treatment data used for baseline settlement patterns
+
+* Methodology
+
+** Family Classification
+Genera are classified into families based on current taxonomic understanding:
+
+#+BEGIN_SRC R
+# Example classification function
+classify_family <- function(genus) {
+  if (genus %in% c("Acropora", "Montipora", "Astreopora")) {
+    return("Acroporidae")
+  }
+  if (genus %in% c("Goniastrea", "Favites", "Dipsastraea")) {
+    return("Merulinidae")
+  }
+  # ... additional classifications
+}
+#+END_SRC
+
+** Analysis Approach
+1. Filter spawning database to include only Randall families
+2. Analyze spawning seasonality by family
+3. Examine spawning time of day patterns
+4. Compare with settlement timing from Randall et al. (2024)
+5. Identify potential mismatches between spawning and settlement timing
+
+* Key Findings
+
+** Spawning Seasonality
+- Most families show peak spawning in November-December (Southern Hemisphere spring)
+- Some variation in spawning windows between families
+- Acroporidae and Merulinidae show the most spawning observations
+
+** Spawning Time of Day
+- Most spawning occurs in evening hours (18:00-24:00)
+- **Acroporidae**: Median start 21:00h (mean 20.7h ± 1.5 SD)
+- **Merulinidae**: Median start 21:00h (mean 20.8h ± 1.1 SD)
+- **Poritidae**: Median start 20.9h (mean 20.9h ± 1.1 SD)
+- Families show similar evening spawning patterns
+
+** Full Moon Timing
+- Spawning occurs 0-12 nights after full moon
+- **Acroporidae**: Median 4 nights after full moon (mean 3.9 ± 1.9 SD, n=830)
+- **Merulinidae**: Median 5 nights after full moon (mean 4.8 ± 1.1 SD, n=316)
+- **Poritidae**: Median 4 nights after full moon (mean 4.0 ± 1.1 SD, n=72)
+- **Lobophylliidae**: Median 6 nights after full moon (mean 5.4 ± 1.5 SD, n=43)
+- Most families spawn 3-6 nights after full moon
+
+** Settlement Timing (from Randall et al. 2024)
+- **Acroporidae**: First settlement day 6, peak day 41, up to 76 days
+- **Merulinidae**: First settlement day 6, peak day 59, up to 77 days  
+- **Euphylliidae**: First settlement day 5, peak day 5, up to 36 days
+- **Poritidae**: First settlement day 4, peak day 4, up to 31 days
+- **Diploastreidae**: First settlement day 38, peak day 38, up to 38 days
+
+* Ecological Implications
+
+** Spawning-Settlement Timing Mismatch
+The analysis reveals potential mismatches between spawning timing and settlement competence:
+
+1. **Early Spawners, Late Settlers**: Some families spawn early in the season but have long precompetency periods
+2. **Late Spawners, Early Settlers**: Some families spawn late but settle quickly
+3. **Extended Settlement Windows**: Most families show very long settlement periods (30-77 days)
+
+** Connectivity Implications
+- Long settlement windows may increase connectivity potential
+- Family-specific spawning and settlement timing affects larval dispersal
+- Seasonal spawning patterns may influence connectivity across different times of year
+
+* Data Quality and Limitations
+
+** Spawning Data
+- Global dataset with varying data quality
+- Some families have limited observations
+- Spawning times may be location-specific
+
+** Settlement Data
+- Based on laboratory experiments
+- Control conditions only (no settlement cues)
+- May not reflect natural settlement patterns
+- Low overall settlement rates (0.3-3.5%)
+
+* Recommendations
+
+** For Connectivity Modeling
+1. Use family-specific spawning and settlement parameters
+2. Account for long settlement windows in dispersal models
+3. Consider seasonal variation in spawning timing
+4. Validate models with field settlement data
+
+** For Future Research
+1. Collect more settlement data for underrepresented families
+2. Investigate settlement cues and natural settlement rates
+3. Study spawning-settlement timing relationships in the field
+4. Develop family-specific competence functions
+
+* Files Generated
+
+** R Analysis Script
+- spawning_analysis_randall_families.R
+
+** Data Files
+- family_summary.csv
+- spawning_season_analysis.csv  
+- spawning_time_analysis.csv
+- genus_analysis.csv
+- fullmoon_analysis.csv
+- start_time_analysis.csv
+- end_time_analysis.csv
+
+** Visualization Files
+- spawning_season_by_family.png
+- spawning_time_by_family.png
+- observations_by_family.png
+- fullmoon_spawning_by_family.png
+- spawning_start_density.png
+- spawning_end_density.png
+- spawning_start_bars.png
+- spawning_end_bars.png
+- spawning_times_combined.png
+
+* Next Steps
+
+1. **Run the R analysis script** to generate detailed results
+2. **Compare spawning and settlement timing** to identify patterns
+3. **Integrate family-specific parameters** into connectivity models
+4. **Validate models** with field data where available
+5. **Develop competence functions** based on empirical settlement data
+
+* References
+
+- Randall, C.J., Giuliano, C., Stephenson, B., Whitman, T.N., Page, C.A., Treml, E.A., Logan, M., & Negri, A.P. (2024). Larval precompetency and settlement behaviour in 25 Indo-Pacific coral species. Communications Biology, 7, 184.
+- Baird, A.H., Guest, J.R., Edwards, A.J., Bauman, A.G., Bouwmeester, J., Mera, H., ... & Willis, B.L. (2021). An Indo-Pacific coral spawning database. Scientific Data, 8(1), 1-8.
+
+* Appendix
+
+** Genus to Family Classification Table
+
+| Genus           | Family          | Notes                                    |
+|-----------------+-----------------+------------------------------------------|
+| Acropora        | Acroporidae     | Major reef-building genus                |
+| Montipora       | Acroporidae     | Plate and encrusting forms               |
+| Astreopora      | Acroporidae     | Small branching                          |
+| Anacropora      | Acroporidae     | Fine branching                           |
+| Alveopora       | Acroporidae     | Flowerpot corals                         |
+|-----------------+-----------------+------------------------------------------|
+| Astrea          | Merulinidae     | Brain coral                              |
+| Caulastraea     | Merulinidae     | Candy cane coral                         |
+| Coelastrea      | Merulinidae     | Moon coral                               |
+| Cyphastrea      | Merulinidae     | Lettuce coral                            |
+| Dipsastraea     | Merulinidae     | Brain coral                              |
+| Echinopora      | Merulinidae     | Lettuce coral                            |
+| Favites         | Merulinidae     | Honeycomb coral                          |
+| Goniastrea      | Merulinidae     | Brain coral                              |
+| Leptoria        | Merulinidae     | Closed brain coral                       |
+| Merulina        | Merulinidae     | Lettuce coral                            |
+| Oulophyllia     | Merulinidae     | Brain coral                              |
+| Paragoniastrea  | Merulinidae     | Maze coral                               |
+| Pectinia        | Merulinidae     | Lettuce coral                            |
+| Platygyra       | Merulinidae     | Brain coral                              |
+|-----------------+-----------------+------------------------------------------|
+| Porites         | Poritidae       | Massive and branching, very hardy        |
+| Goniopora       | Poritidae       | Flowerpot coral                          |
+|-----------------+-----------------+------------------------------------------|
+| Diploastrea     | Diploastreidae  | Honeycomb coral, massive                 |
+|-----------------+-----------------+------------------------------------------|
+| Agaricia        | Agariciidae     | Plate coral                              |
+| Pavona          | Agariciidae     | Cactus coral                             |
+| Leptoseris      | Agariciidae     | Lettuce coral                            |
+| Gardineroseris  | Agariciidae     | Plate coral                              |
+|-----------------+-----------------+------------------------------------------|
+| Lobophyllia     | Lobophylliidae  | Lobed brain coral                        |
+| Symphyllia      | Lobophylliidae  | Brain coral                              |
+| Acanthastrea    | Lobophylliidae  | Starry cup coral                         |
+| Cynarina        | Lobophylliidae  | Button coral                             |
+| Echinophyllia   | Lobophylliidae  | Chalice coral                            |
+| Homophyllia     | Lobophylliidae  | Brain coral                              |
+| Micromussa      | Lobophylliidae  | Micromussa coral                         |
+| Oxypora         | Lobophylliidae  | Scroll coral                             |
+| Scolymia        | Lobophylliidae  | Scolymia coral                           |
+|-----------------+-----------------+------------------------------------------|
+| Euphyllia       | Euphylliidae    | Torch, hammer, frogspawn coral           |
+| Catalaphyllia   | Euphylliidae    | Elegance coral                           |
+| Nemenzophyllia  | Euphylliidae    | Fox coral                                |
+| Plerogyra       | Euphylliidae    | Bubble coral                             |
+
+** Family Classification Details
+
+#+BEGIN_SRC R
+# Complete family classification
+randall_families <- c("Acroporidae", "Merulinidae", "Poritidae", 
+                     "Diploastreidae", "Agariciidae", "Lobophylliidae", "Euphylliidae")
+
+# Acroporidae genera
+acroporidae_genera <- c("Acropora", "Montipora", "Astreopora", "Anacropora", "Alveopora")
+
+# Merulinidae genera  
+merulinidae_genera <- c("Astrea", "Caulastraea", "Coelastrea", "Cyphastrea", "Dipsastraea",
+                       "Echinopora", "Favites", "Goniastrea", "Leptoria", "Merulina",
+                       "Oulophyllia", "Paragoniastrea", "Pectinia", "Platygyra")
+
+# Poritidae genera
+poritidae_genera <- c("Porites", "Goniopora")
+
+# Diploastreidae genera
+diploastreidae_genera <- c("Diploastrea")
+
+# Agariciidae genera
+agariciidae_genera <- c("Agaricia", "Pavona", "Leptoseris", "Gardineroseris")
+
+# Lobophylliidae genera
+lobophylliidae_genera <- c("Lobophyllia", "Symphyllia", "Acanthastrea", "Cynarina",
+                          "Echinophyllia", "Homophyllia", "Micromussa", "Oxypora", "Scolymia")
+
+# Euphylliidae genera
+euphylliidae_genera <- c("Euphyllia", "Catalaphyllia", "Nemenzophyllia", "Plerogyra")
+#+END_SRC
+
+** Settlement Parameters Summary
+
+| Family        | First Settlement | Peak Settlement | Max Age | Peak Rate |
+|---------------+------------------+-----------------+---------+-----------|
+| Acroporidae   | 6 days          | 41 days         | 76 days | 20.8%     |
+| Merulinidae   | 6 days          | 59 days         | 77 days | 26.7%     |
+| Euphylliidae  | 5 days          | 5 days          | 36 days | 37.2%     |
+| Poritidae     | 4 days          | 4 days          | 31 days | 3.3%      |
+| Diploastreidae| 38 days         | 38 days         | 38 days | 6.5%      |
+| Agariciidae   | No settlement   | 3 days          | 7 days  | 0.0%      |
+| Lobophylliidae| No settlement   | 3 days          | 23 days | 0.0%      |
+
+* Contact
+
+For questions about this analysis, contact the ReefConnect project team.

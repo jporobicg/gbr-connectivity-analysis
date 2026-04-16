@@ -1,0 +1,373 @@
+\documentclass[12pt,a4paper,twoside,times,midday,frontpic]{csiropresentation2017}
+
+
+%% Blueberry,Forest, Midday, Mint, Sky or Teal.
+% % Packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{texpower}
+\usepackage{multicol}
+\usepackage{graphics}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage{fancybox}
+\usepackage{palatino}
+\usepackage{array}
+\usepackage{marvosym}
+\usepackage[dvipsnames]{xcolor, colortbl} % Table cell colors
+\usepackage{enumitem}
+\usepackage[export]{adjustbox}
+\usepackage{tikz}
+\usepackage[none]{hyphenat}
+\setlength{\columnsep}{3cm}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage[absolute,overlay]{textpos}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Beamer Layout - the complete frame
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\docfurtherinfoA[Ocean \& Atmosphere]{Javier Porobic}{+61362325037}
+{javier.porobicgarate@csiro.au}{https://people-my.csiro.au/P/J/javier-porobicgarate}{Javier Porobic}
+\docfrontpicture[scale=.18]{figures/Amazing_Great_Barrier_Reef_1.jpg}
+\doctitle[\vspace{0mm}{\huge\bfseries \color{midnight-blue}{{\HUGE  Unveiling spatio-temporal dynamics of the Great Barrier Reef using connectivity kernels}}}]
+\docauthors[\vspace{15mm}{\textbf{Javier Porobic}; Scott Condie; Jim Greenwood; Mark Baird}]
+\docdivision[CSIRO Environment]
+\docPageFooter{15mm}{5mm}{Kernel GBR: Slide \thepage\ of \pageref{LastPage}}
+
+\definecolor{fuschia}{rgb}{0.875,0.111,0.584} %R223 G25 B149 CSIRO Fuschia
+\definecolor{plum}{rgb}{0.428,0.126,0.467} %R109 G32 B119 CSIRO Plum
+\definecolor{vermilion}{rgb}{0.894,0,0.169} %R228 G0 B43 CSIRO Vermilion
+\definecolor{orange}{rgb}{0.910,0.467,0.133} %R232 G119 B34 CSIRO Orange
+\definecolor{gold}{rgb}{1,0.722,0.110} %R255 G184 B28 CSIRO Golds
+\newcommand\Fontvi{\fontsize{40}{40}\selectfont}
+
+\newcommand\Wider[2][3em]{%
+  \makebox[\linewidth][c]{%
+    \begin{minipage}{\dimexpr\textwidth+#1\relax}
+      \raggedright#2
+    \end{minipage}%
+  }%
+}
+
+\begin{document}
+
+\begin{csiroslide}{\HUGE \color{midday-blue} Table of contents}
+    \begin{center}
+    \begin{tabular}[H]{llllllllll}
+      \textcolor{midnight-blue}{\huge INTRO 00} & &\textcolor{gold}{{\Huge \Fontvi 01}} & & \textcolor{orange}{{\Huge \Fontvi 02}} & &\textcolor{vermilion}{{\Huge \Fontvi 03}}& &\textcolor{fuschia}{{\Huge \Fontvi 04}} \\
+      \cline{3-3} \cline{5-5} \cline{7-7} \cline{9-9} \cline{11-11}\\
+
+                                             & & \textcolor{gold}{\Large Why?} & & \textcolor{orange}{\Large How?} & &\textcolor{vermilion}{\Large Outcomes}& &\textcolor{fuschia}{\Large This is the End}& \\
+                                             & & & & & & & & & \\
+      \textcolor{lavender}{Pages} & & \multicolumn{1}{r}{\textcolor{lavender}{3-5}} & & \multicolumn{1}{r}{\textcolor{lavender}{6-8}}     & & \multicolumn{1}{r}{\textcolor{lavender}{9-14}} & & \multicolumn{1}{r}{\textcolor{lavender}{15-29}} & \\
+    \end{tabular}\\
+    \vspace{1cm}
+    \includegraphics[height = 5cm]{figures/Don-Quijote.jpg}
+   \end{center}
+\end{csiroslide}
+
+\begin{csiroslide}{\textcolor{gold}{{\Huge \Fontvi 01}} The Great Barrier Reef}
+  \includegraphics[height = 10cm]{figures/GBRMPA.jpg}\\
+\end{csiroslide}
+\begin{csiroslide}{\textcolor{gold}{{\Huge \Fontvi 01}} The Great Barrier Reef}
+  \begin{multicols}{2}
+    \begin{itemize}
+    \item Tropical cyclones
+    \item Heatwaves
+    \item CoTS
+    \end{itemize}
+    \hspace{-3cm}
+    \includegraphics[height = 10cm]{figures/COTS.jpg}\\
+  \end{multicols}
+\end{csiroslide}
+
+
+\begin{csiroslide}{\textcolor{gold}{{\Huge \Fontvi 01}} Connectivity as a cornerstone}
+  \begin{multicols}{2}
+    \begin{itemize}[leftmargin=0cm]
+    \item Ecosystem models
+    \item Connectivity
+    \item Vulnerability
+    \item Source/Sink
+    \end{itemize}
+    \columnbreak
+    \hspace{-5cm}
+    \includegraphics[height = 8cm]{figures/coconet.png}\\
+    \hspace{-5cm} \caption{\small Condie et al 2018. Great Barrier Reef recovery through multiple interventions}
+  \end{multicols}
+\end{csiroslide}
+
+\begin{csiroslide}{\textcolor{orange}{{\Huge \Fontvi 02}} Connectivity matrices \& Particle tracks}
+  \begin{multicols}{2}
+    \textcolor{vermilion}{Problems?}
+    \begin{itemize}[leftmargin=0cm]
+    \item Calculations
+    \item Assumptions
+    \item Snapshots
+    \end{itemize}
+
+    \columnbreak
+    \hspace{-5cm}
+    \includegraphics[height = 8cm]{figures/connectivity.png}\\
+  \end{multicols}
+\end{csiroslide}
+
+\begin{csiroslide}{\textcolor{orange}{{\Huge \Fontvi 02}} Connectivity matrices \& Particle tracks}
+  \begin{multicols}{2}
+    \textcolor{orange}{What was our concern}
+    \begin{itemize}[leftmargin=0cm]
+    \item 3806 reefs
+    \item Repeated runs
+      \begin{itemize}
+      \item 7 years
+      \item 3 Spawning event
+      \item 45 days
+      \item hourly
+      \end{itemize}
+    \item Not efficient
+    \item uncertainty?
+    \end{itemize}
+    \columnbreak
+    \hspace{-2cm}
+    \includegraphics[height = 10cm]{figures/data_load.png}
+  \end{multicols}
+\end{csiroslide}
+
+
+\begin{csiroslide}{\textcolor{orange}{{\Huge \Fontvi 02 }}What was our solution}
+  \begin{multicols}{2}
+    \begin{itemize}[leftmargin=0cm]
+    \item Connectivity matrices
+      \begin{itemize}
+      \item all the reefs
+      \item 10K simulations
+      \end{itemize}
+    \item Connectivity  Kernels
+    \end{itemize}
+    \columnbreak
+    \hspace{-4.5cm}
+    \includegraphics[height = 10cm]{figures/dataflow.png}\\
+  \end{multicols}
+\end{csiroslide}
+
+\begin{csiroslide}{\textcolor{vermilion}{{\Huge \Fontvi 03}}  OceanParcels}
+  \begin{multicols}{2}
+    \begin{itemize}[leftmargin=0cm]
+      \begin{itemize}
+      \item Easy to Run
+      \item Code is peer review
+      \item Great for metadata
+      \item Curvilinear C-grid
+      \item Standard outputs
+      \item Great documentation
+      \end{itemize}
+      \columnbreak
+      \includegraphics[height = 10cm]{figures/parcels_user_diagram.png}\\
+    \end{multicols}
+  \end{csiroslide}
+
+  \begin{csiroslide}{\textcolor{vermilion}{{\Huge \Fontvi 03}}  Physics}
+    \begin{multicols}{2}
+      \begin{itemize}
+      \item GBR1 Shelf model
+      \item 1 km grid
+      \item 48 vertical layers
+      \end{itemize}
+      \columnbreak
+      \hspace{-1cm}
+      \includegraphics[height = 10cm]{figures/GBR1_hydro.jpg}
+    \end{multicols}
+  \end{csiroslide}
+
+  \begin{csiroslide}{\textcolor{vermilion}{{\Huge \Fontvi 03}}  Biological - Component}
+    \begin{multicols}{2}
+      \begin{itemize}
+      \item Spawning
+      \item Wind 3\%
+      \item Behaviour
+        \begin{itemize}
+        \item Vertical Migration
+        \end{itemize}
+      \item Displacement
+      \item Settlement
+        \begin{itemize}
+        \item 1km buffer
+        \item Decay
+        \item Competence
+        \end{itemize}
+      \end{itemize}
+      \columnbreak
+      \hspace{-4cm}
+      \includegraphics[height = 10cm]{figures/coral_behaviour.png}
+    \end{multicols}
+  \end{csiroslide}
+
+  \begin{csiroslide} {\textcolor{vermilion}{{\Huge \Fontvi 03}}  Avoiding the coast}
+    \begin{multicols}{2}
+      \begin{itemize}
+      \item Particle beached
+      \end{itemize}
+      \columnbreak
+      \hspace{-4cm}
+      \includegraphics[height = 10cm]{figures/Displacement01.png}
+    \end{multicols}
+  \end{csiroslide}
+
+
+  \begin{csiroslide} {\textcolor{vermilion}{{\Huge \Fontvi 03}}  Avoiding the coast}
+    \begin{multicols}{2}
+      \begin{itemize}
+      \item Displacement field
+      \end{itemize}
+      \columnbreak
+      \hspace{-4cm}
+      \includegraphics[height = 10cm]{figures/Displacement.png}
+    \end{multicols}
+  \end{csiroslide}
+
+  \begin{csiroslide} {\textcolor{vermilion}{{\Huge \Fontvi 03}}  Avoiding the coast}
+    \begin{multicols}{2}
+      \begin{itemize}
+      \item Displacement field
+      \end{itemize}
+      \columnbreak
+      \hspace{-4cm}
+      \includegraphics[height = 10cm]{figures/Displacement02.png}
+    \end{multicols}
+  \end{csiroslide}
+
+  \begin{csiroslide} {\textcolor{vermilion}{{\Huge \Fontvi 03}}  Calculating the Kernels}
+    \begin{multicols}{2}
+      \begin{itemize}
+      \item \textbf{R:} Radius
+      \item \textbf{S:} Angle (0 - 359)
+      \item \textbf{DS:} Bandwidth
+      \item \textbf{C:} Strength
+      \end{itemize}
+      \columnbreak
+      \hspace{-4cm}
+      \includegraphics[height = 10cm]{figures/Kernels_schematic.png}
+
+    \end{multicols}
+  \end{csiroslide}
+
+  \begin{csiroslide}{\textcolor{fuschia}{{\Huge \Fontvi 04}} Changing perspective}
+    \includegraphics[height = 10cm]{figures/maps.png}
+  \end{csiroslide}
+
+  \begin{csiroslide}{\textcolor{fuschia}{{\Huge \Fontvi 04}} Who is connected?}
+    \begin{multicols}{2}
+      \begin{itemize}[leftmargin=0cm]
+      \item Extremes less connected
+      \item Follows ocean patterns
+      \end{itemize}
+      \columnbreak
+      \hspace{-1.5cm}
+      \includegraphics[height = 10.2cm]{figures/probability_of_connection_map.png}
+    \end{multicols}
+  \end{csiroslide}
+
+
+  \begin{csiroslide}{\textcolor{fuschia}{{\Huge \Fontvi 04}} Who is connected?}
+    \vspace{-5cm}
+    \Wider[4em]{
+      \includegraphics[height = 7cm]{figures/network_metrics.png}
+    }
+  \end{csiroslide}
+
+  \begin{csiroslide}{\textcolor{fuschia}{{\Huge \Fontvi 04}} What about the Kernel?}
+    \Wider[4em]{
+      \includegraphics[height = 10cm]{figures/distance_matrices.png}
+    }
+  \end{csiroslide}
+
+
+
+  \begin{csiroslide}{\textcolor{fuschia}{{\Huge \Fontvi 04}} What about the Kernel?}
+    \vspace{-5cm}
+      \includegraphics[height = 10.2cm]{figures/Kernel/kernel_0.png}
+    }
+  \end{csiroslide}
+
+%% Closer look
+  \begin{csiroslide}{\textcolor{fuschia}{{\Huge \Fontvi 04}} A closer look}
+    \vspace{-5cm}
+    \Wider[4em]{
+      \includegraphics[height = 7cm]{figures/Kernel/kernel_2_0.png}
+    }
+  \end{csiroslide}
+
+  \begin{csiroslide}{\textcolor{fuschia}{{\Huge \Fontvi 04}} A closer look}
+    \vspace{-5cm}
+    \Wider[4em]{
+      \includegraphics[height = 7cm]{figures/Kernel/kernel_2_3.png}
+    }
+  \end{csiroslide}
+  \begin{csiroslide}{\textcolor{fuschia}{{\Huge \Fontvi 04}} A closer look}
+    \vspace{-5cm}
+    \Wider[4em]{
+      \includegraphics[height = 7cm]{figures/Kernel/kernel_2_6.png}
+    }
+  \end{csiroslide}
+  \begin{csiroslide}{\textcolor{fuschia}{{\Huge \Fontvi 04}} A closer look}
+    \vspace{-5cm}
+    \Wider[4em]{
+      \includegraphics[height = 7cm]{figures/Kernel/kernel_2_9.png}
+    }
+  \end{csiroslide}
+
+  \begin{csiroslide}{\textcolor{fuschia}{{\Huge \Fontvi 04}} A closer look}
+    \vspace{-5cm}
+    \Wider[4em]{
+      \includegraphics[height = 7cm]{figures/Kernel/kernel_2_12.png}
+    }
+  \end{csiroslide}
+
+
+  \begin{csiroslide}{\textcolor{fuschia}{{\Huge \Fontvi 04}} Kernels summary}
+    \vspace{-5cm}
+    \Wider[4em]{
+      \includegraphics[height = 9cm]{figures/Kernel_source_avg.png}
+    }
+  \end{csiroslide}
+
+  \begin{csiroslide}{\textcolor{fuschia}{{\Huge \Fontvi 05}} What did we learn?}
+    \begin{multicols}{2}
+      \begin{itemize}[leftmargin=0cm]
+      \item Oceanography effect
+      \item Clear areas
+      \item Similar patterns for Coral an CoTS
+      \end{itemize}
+      \columnbreak
+      \includegraphics[height = 10.2cm]{figures/probability_explanation.png}
+    \end{multicols}
+  \end{csiroslide}
+
+  \begin{csiroslide}{\textcolor{fuschia}{{\Huge \Fontvi 05}} What did we learn?}
+    \begin{multicols}{2}
+      \begin{itemize}[leftmargin=0cm]
+      \item Different Areas
+      \item Impact for management?
+      \item
+      \end{itemize}
+      \columnbreak
+      \includegraphics[height = 10.2cm]{figures/probability_explanation_AREAS.png}
+    \end{multicols}
+  \end{csiroslide}
+
+  \begin{csiroslide}{\textcolor{fuschia}{{\Huge \Fontvi 05}} What did we learn?}
+    \begin{multicols}{2}
+      \begin{itemize}[leftmargin=0cm]
+      \item Different Areas
+      \item Impact for management
+      \item Include uncertainty
+      \item Key Role for MSE
+      \end{itemize}
+      \columnbreak
+      \includegraphics[height = 10.2cm]{figures/probability_explanation_AREAS.png}
+    \end{multicols}
+  \end{csiroslide}
+
+\end{document}

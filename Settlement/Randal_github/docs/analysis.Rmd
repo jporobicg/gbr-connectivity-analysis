@@ -1,0 +1,769 @@
+---
+title: Larval settlement competency
+author: Murray Logan
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    code_folding: hide
+    collapse: yes
+    df_print: paged
+    fig_caption: yes
+    fig_height: 4
+    fig_width: 4
+    highlight: textmate
+    theme: spacelab
+    toc: yes
+    toc_float: yes
+    css: style.css
+  bookdown::html_document2:
+    code_folding: hide
+    collapse: yes
+    df_print: paged
+    fig_caption: yes
+    fig_height: 4
+    fig_width: 4
+    highlight: textmate
+    theme: spacelab
+    toc: yes
+    toc_float: yes
+    css: style.css
+output_dir: "docs"
+bibliography: references.bib
+---
+ 
+```{r setup, include=FALSE}
+assignInNamespace('.sep.label',  "^\\ *(#|--)+\\s*(@knitr|----+)(.*?)-*\\s*$", ns='knitr')
+tidyverse_style_with_comments_removed <- function() {
+  remove_comments <- function(pd) {
+    is_comment <- pd$token == "COMMENT"
+    pd <- pd[!is_comment,]
+    pd
+  }
+  
+  tidyverse_with_comments_removed <- styler::tidyverse_style()
+  tidyverse_with_comments_removed$token$remove_comments <- remove_comments
+  tidyverse_with_comments_removed
+}
+
+## knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE,cache.lazy = TRUE, tidy='styler',
+##                       tidy.opts=list(transformers = tidyverse_style_with_comments_removed()))
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE, tidy = 'styler',
+                     tidy.opts=list(transformers = tidyverse_style_with_comments_removed()))
+options(tinytex.engine = 'xelatex')
+
+## knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE,cache.lazy = FALSE, tidy='styler')
+## knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE, cache = FALSE)
+knitr::read_chunk("../scripts/functions.R") 
+knitr::read_chunk("../scripts/00_main.R") 
+knitr::read_chunk("../scripts/10_processData.R") 
+knitr::read_chunk("../scripts/20_fitModels.R") 
+knitr::read_chunk("../scripts/30_modelValidations.R") 
+knitr::read_chunk("../scripts/40_summariseModels.R") 
+knitr::read_chunk("../scripts/50_cue_comparisons.R") 
+```
+  
+# Info
+ 
+The code responsible for the described actions can be toggled via the
+`hide/code` buttons.  
+
+# Preparations {.tabset .tabset-faded}
+
+## Load the packages
+
+1. establish (and if necessary create) a set of paths
+
+```{r paths, results='markdown', eval=TRUE}
+```
+
+2. load necessary packages
+
+```{r loadPackages, results='markdown', eval=TRUE}
+```
+
+## Species abbreviations
+
+```{r readSpeciesAbbrev, results='markdown', eval=TRUE}
+```
+```{r SpeciesAbbrev, results='asis', eval=TRUE}
+speciesAbbrev %>%
+    knitr::kable(caption = 'Species abbreviation lookup table.')
+```
+
+## Load the data
+
+```{r readData, results='markdown', eval=TRUE}
+```
+
+## Process the data
+
+We collectively decided that when Larval age is 0, it is physically
+impossible for the larvae to settle, and therefore even though it is
+not actually measured, we will set the number of settled larvae to be
+0 at this age.  Although there has been an attempt to do this is the
+dataset, it needs to be done at the Plate level for each Species and
+SpecificTreatment.  Therefore I will remove the current attempt and
+add a more complete version.
+
+```{r processData, results='markdown', eval=TRUE}
+```
+
+## EDA
+
+```{r EDA, results='markdown', eval = FALSE}
+```
+
+![(#fig:EDA) Proportion of larvae settled against larval age (days) conditional on inducer treatment (colours) for each species (panels).  Cubic regession splines overlayed to assist in the exploration of the nature and consistency of general trends.](../output/figures/EDA.png)
+
+
+# Question 1: time to settlement {.tabset .tabset-faded}
+
+The aim of this analysis is to explore the time (age) to settlement
+competency associated with different inducers.  To do so, it is
+necessary to define settlement competency.  There are numerous
+options:
+
+- extract the first time (=age) that any larvae were observed to have
+  settled in any replicate of an inducement treatment.  This approach
+  assumes that any observed settlement represents the biological
+  potential for settlement.  However, it does not necessarily reflect
+  the typical behavioural responses to the inducer.
+
+- set a (series) of thresholds on the proportion of larvae that have
+  settled in each sampling unit above which, the larval within the
+  unit is considered to have demonstrated settlement.  Proportions to
+  explore include 0.1, 0.3, and 0.5, representing 10, 30 and 50%
+  respectively.  This approach focusses on the combination of
+  biological potential for settlement and behavioural response.
+
+In the case of the later, each sampling unit was scored as either 1
+(when the proportion of settled larve exceed the threshold proportion
+or have done so at an earlier age) or 0 (when the proportion of
+settled larvae have yet to exceed the threshold proportion).
+
+## Preparation
+
+1. Set thresholds
+
+```{r setThresholds, results='markdown', eval=TRUE, tidy = TRUE}
+```
+  
+2. Data preparation
+
+	Prepare the data
+
+    1. Filter the data to just those observations deemed (by CR) to be
+       appropriate for Q1 analysis
+	   
+	2. Ensure that Species levels are alphabetical 
+	
+	3. Score an observation as either 1 (proportion settled greater than
+		threshold) or 0 (not greater)
+
+	4. For each species, treatment and plate
+		- sort by Larval age
+		- score settlement as 1 (has currently or previously obtained a
+		settlement proportion greater than the threshold) or 0 (has
+		not)
+
+	5. Establish analysis nesting (on Species)
+
+	6. Remove the peptile and extract inducment treatments
+       (A.N. suggestion) as arguably these two inducers do not
+       represent natural conditions
+	   
+	7. Arrange (sort) the nested data by Species
+
+```{r prepareDataQ1, results='markdown', eval=FALSE}
+```
+
+## EDA {.tabset .tabset-pills}
+
+The following exploratory data analysis figures comprise two panels.
+
+In the top panel, the percentage of settlement (Number settled as a
+percentage of the Number settled and Number not settled) in each
+sampling unit (well) is plotted against larval age (in days)
+conditional on the inducer treatments (colours). 
+<!--Faint lines represent
+trends within each plate (averaged over wells) and solid lines
+represent gam smoothers (binomial family).
+-->
+Plotting symbols are used
+to signify whether larval cohorts exceed the settlement threshold or
+not.  Note, this is cummulative, so all larval ages subsequent to an
+age that exceeds the threshold will also be deemed to have exceeded
+the threshold.  With the exception of the points, this sub-figure will
+not change between alternative thresholds.  It is also worth pointing
+out that I have not jittered the points and thus there may well be
+numerous overlapping points (making the symbols difficult to
+distinguish).  Furthermore, symbols further to the right of the
+sub-figure are not expected to change between alternative thresholds.
+
+In the bottom panel settlement (cummulative cohort settlement
+exceedence from the threshold) is plotted against larval age
+conditional on the inducer treatments (colours).  
+<!--Fain lines represent
+thrends within each plate (averaged over wells) and solid lines
+represent logistc regression smoothers.
+-->
+
+
+```{r functionEDA, results='markdown', eval=FALSE, echo = TRUE}
+```
+
+```{r EDAQ1, results='markdown', eval=FALSE, echo = TRUE}
+```
+ 
+```{r load data Q1, results='asis', eval=TRUE, echo=FALSE}
+load(paste0(DATA_PATH, "processed/data.q1.RData"))
+load(paste0(DATA_PATH, "processed/Species abbreviations.RData"))
+
+SPECIES <- data.q1 %>% pull(Species) %>% unique()
+ 
+for (i in 1:length(SPECIES)) {
+    SP <- speciesAbbrev %>% filter(Abbreviation == SPECIES[i]) %>% pull(Species) %>% unique()
+    cat(paste0("\n### ", SP, " {.tabset .tabset-faded} \n"))
+    for (thresholdProp in seq(0.1, 0.9, by = 0.1)) {
+        cat(paste0("\n#### Thresh. prop.:", thresholdProp, "\n"))
+        cat(paste0("![(#fig:EDA-",SPECIES[i],"-",str_replace(thresholdProp, "\\.",""),") Percentage of larvae settled (top figure) and cummulative cohort settlement exceeding threshold (bottom figure) against larval age (days) conditional on inducer treatment (colours).  Overlayed lines represent cubic-regression generalised additive model smoothers (top figure) and logistic regression trend (bottom figure).](../output/figures/eda_",SPECIES[i],"__",thresholdProp,"_.png) \n\n"))
+    }
+}
+```
+  
+## Fit model
+
+The relationships between larval settlement and the interaction of
+larval age and inducement treatment was explored by hierarchical
+logistic models [@Gelman-2007-2007] in a Bayesian framework.
+
+All Bayesian models included 3 chains (NUTS), each with 6000
+iterations, thinned to a rate of 10, and excluded the first 2000
+iterations (warmup).  Chain mixture and convergence was assessed via
+trace plots, autocorrelation plots, Rhat and effective sample size
+diagnostics.  Models were also validated via DHARMa [@Hartig-2022]
+simulated residuals
+  
+All statistical models were performed in the R (4.2.1) Statistical and
+Graphical Environment [@RCoreTeam-2022] via the _brms_ [@Burkner-2021]
+package
+
+```{r functionFitModel, results='markdown', eval=FALSE}
+```
+
+```{r fitModelQ1, results='markdown', eval=FALSE}
+```
+
+```{r load modelled Q1, results='asis', eval=TRUE}
+load(paste0(DATA_PATH, "modelled/data.q1.mod.RData"))
+SPECIES <- data.q1.mod %>% pull(Species) %>% unique()
+```
+    
+## Diagnostics {.tabset .tabset-pills}
+
+A quick scan of all the MCMC and residual diagnostics suggests that:
+
+- the chains are well mixed (trace plots very noisy and consistently
+  so for each chain)
+- no autocorrelation amongst retained draws
+- the chains have converged (all Rhat values < 1.01)
+- the No-U-Turn (NUTS) sampler appears to have sampled effectively
+  (all ESS/Sample size values > 0.5)
+- there is little evidence of a lack of fit (DHARMa residuals did not
+  reveal any major issues).  Some models did suggest under-dispersion.
+  Under-dispersion is often an artefact of the model over compensating
+  for dispersion and has the net result of making the outcomes more
+  conservative.
+
+```{r functionMCMCdiagnostics, results='markdown', eval=FALSE}
+```
+
+```{r functionDHARMa, results='markdown', eval=FALSE}
+```
+
+```{r MCMCdiagnosticsQ1, results='markdown', eval=FALSE}
+```
+
+```{r MCMCplots modelled Q1, results='asis', eval=TRUE, echo = FALSE}
+load(paste0(DATA_PATH, "processed/Species abbreviations.RData"))
+
+SPECIES <- data.q1 %>% pull(Species) %>% unique()
+  
+for (i in 1:length(SPECIES)) {
+    SP <- speciesAbbrev %>% filter(Abbreviation == SPECIES[i]) %>% pull(Species) %>% unique()
+    cat(paste0("\n### ", SP, " {.tabset .tabset-faded} \n"))
+    for (thresholdProp in seq(0.1, 0.9, by = 0.1)) {
+        suffix <- paste0(SPECIES[i], "-", str_replace(thresholdProp, "\\.",""))
+        cat(paste0("\n#### Thresh. prop.:", thresholdProp, "\n"))
+        cat(paste0("![(#fig:Trace-",suffix,") Trace plots of each of the main parameters from each chain of the No-U-Turn sampler.](../output/figures/Trace_",SPECIES[i],"__",thresholdProp,"_.png) \n\n"))
+        cat(paste0("![(#fig:AC-",suffix,") Auto-correlation plots of each of the main parameters from each chain of the No-U-Turn sampler.](../output/figures/AC_",SPECIES[i],"__",thresholdProp,"_.png) \n\n"))
+        cat(paste0("![(#fig:Rhat-",suffix,") Rhat plots of each of the main parameters from each chain of the No-U-Turn sampler.](../output/figures/Rhat_",SPECIES[i],"__",thresholdProp,"_.png) \n\n"))
+        cat(paste0("![(#fig:ESS-",suffix,") Effective sample size (ESS) plots of each of the main parameters from each chain of the No-U-Turn sampler.](../output/figures/ess_",SPECIES[i],"__",thresholdProp,"_.png) \n\n"))
+        cat(paste0("![(#fig:DHARMa-",suffix,") Simulated (DHARMa) residual diagnostics: QQ plot (left), residual plot (middle) and dispersion (right).](../output/figures/DHARMa_",SPECIES[i],"__",thresholdProp,"_.png) \n\n"))
+    }
+}
+```
+ 
+ 
+## Partial plots {.tabset .tabset-pills}
+
+The following figures display the expected cohort settlement
+probability (of exceeding threshold) associated with larval age for
+each inducer treatment.  Solid lines represent posterior medians and
+ribbons represent associated 95% credibility intervals.
+
+```{r functionPartials, results='markdown', eval=FALSE}
+```
+```{r functionPartialPlot, results='markdown', eval=FALSE}
+```
+
+```{r partialsQ1, results='markdown', eval=FALSE}
+```
+```{r partialPlotQ1, results='markdown', eval=FALSE}
+```
+
+```{r PartialPlots  Q1, results='asis', eval=TRUE, echo = FALSE}
+for (i in 1:length(SPECIES)) {
+    SP <- speciesAbbrev %>% filter(Abbreviation == SPECIES[i]) %>% pull(Species) %>% unique()
+    cat(paste0("\n### ", SP, " {.tabset .tabset-faded} \n"))
+    for (thresholdProp in seq(0.1, 0.9, by = 0.1)) {
+        suffix <- paste0(SPECIES[i], "-", str_replace(thresholdProp, "\\.",""))
+        cat(paste0("\n#### Thresh. prop.:", thresholdProp, "\n"))
+        cat(paste0("![(#fig:partialPlots-", suffix,") Modelled probability of cohort settlement exceeding a threshold of ", thresholdProp," associated with larval age (days) conditional on inducer treatment.  Solid lines represent posterior medians and
+ribbons represent associated 95% credibility intervals.](../output/figures/PartialPlot_",SPECIES[i],"__",thresholdProp,"_.png) \n"))
+    }
+}
+```
+
+## TC50 {.tabset .tabset-pills}
+
+One measure of the time (age) to settlement competency could be the
+_TC50_(Time to Completion) which would be analogous to the typical
+'leathal dose 50' which estimates the value along the x-axis that is
+associated with the inflection point (point at which the response
+switches from more to less likely, e.i. a probability of 0.5).  In the
+current context, this would represent the age at which the cohort is
+more likely to have exceeded the threshold settlement.  Whilst the
+absolute value of this measure might only have a tenuous
+interpretation in this context, the pairwise differences between TC50
+associated with each inducer treatment does provide a means to compare
+settlement competency ties between inducer treatments.  The
+differences are presented in units of age and thus:
+
+- positive numbers indicate that the first treatment in the comparison
+  (variable) is associated with a more protracted age to cohort
+  settlement
+- negative numbers indicate that the first treatment in the comparison
+  (variable) is associated with faster cohort
+  settlement
+- the magnitude of the values is a reflection of the degree of
+  difference in cohort settlement competency ages between the inducer
+  treatments.
+- Exceedence probabilies are used to enumerate the strength of the
+  evidence that the difference is greater (or less) than 0 (no
+  effect).  Exceedence probabilities (P>0) between 0.9 and 0.95
+  indicate _evidence_ that the age to cohort settlement competency is
+  more protracted for the rist treatment in the comparison.  Values
+  above 0.95 indicate _strong evidence_.  Exceedence probabilities
+  (P<0) reverse the polarity of the comparison.
+
+```{r functionLD50, results='markdown', eval=FALSE}
+```
+```{r functionLD50dif, results='markdown', eval=FALSE}
+```
+```{r function pairwise tests, results='markdown', eval=FALSE}
+```
+
+```{r LD50Q1, results='markdown', eval=FALSE}
+```
+
+```{r LD50TablesQ1, results='asis', eval=TRUE, echo = FALSE, cache = FALSE, cache.comments = FALSE, tidy.opts = NULL}
+files <- list.files(path = paste0(DATA_PATH, "modelled"),
+                    pattern = "data.q1.*mod_sum.RData",
+                    full.names = TRUE)
+
+load(files[1])
+SPECIES <- data.q1.mod %>% pull(Species) %>% unique()
+for (i in 1:length(SPECIES)) {
+    SP <- speciesAbbrev %>% filter(Abbreviation == SPECIES[i]) %>% pull(Species) %>% unique()
+    cat(paste0("\n### ", SP, " {.tabset .tabset-faded} \n"))
+    for (thresholdProp in seq(0.1, 0.9, by = 0.1)) {
+        suffix <- paste0(SPECIES[i], "-", str_replace(thresholdProp, "\\.",""))
+        cat(paste0("\n#### Thresh. prop.:", thresholdProp, "\n\n"))
+        load(paste0(DATA_PATH, "modelled/data.q1__",thresholdProp,".mod_sum.RData"))
+        print(data.q1.mod[i,'LD50tab'][[1]][[1]] %>%
+              knitr::kable(caption = "Estimated larval age (95% CI) at which larval cohort are considered more likely to have settled than not settled per inducer treatment.",
+                           label = paste0("LD50-", suffix)))
+        cat('\n\n')
+        print(data.q1.mod[i,'LD50dif'][[1]][[1]] %>%
+              knitr::kable(caption = "Pairwise comparisons of estimated larval age at which larval cohorts are considered more likely to have settled than not settled between inducer treatments. Exceedence probabilities of effects greater than and less than 0 also provided.",
+                           label = paste0("LD50comp-", suffix)))
+        cat('\n\n')
+    }
+}
+```
+   
+## Odds ratios {.tabset .tabset-pills}
+
+Odds ratios of the partial slopes provide a measure of the rate at
+which the odds of cohort settlement competency change per unit change
+of larval age.  Odds above 1 indicate that the odds of cohort
+settlement competency increase with every additional day of larval
+age.  Odds values of 1.5, 2 and 3 represent fractional changes in odds
+of 50%, 100% (doubling) and 200% respectively for every addional day
+of larval age.  The larger the value, the steeper the rate of change
+in cohort settlement probability.
+
+Pairwise comparisons of cohort settlement odds provide a way to
+compare the treatments.  These differences are presented on an odds
+ratio scale:
+
+- values between 0 and 1 indicate that the first treatment in the
+  comparison (variable) has a slower rate of cohort settlement change.  For
+  example, a value of 0.5 would indicate that the rate associated with
+  the first tteatment is half that of the second.
+- values above 1 indicate that the first treatment in the comparison
+  (variable) has a faster rate of cohort settlement change.  A value
+  of 1.5 indicates a 50% increase in cohort settlement change.
+
+```{r functionoddsQ1, results='markdown', eval=FALSE}
+```
+```{r oddsQ1, results='markdown', eval=FALSE}
+```
+```{r sumTabsQ1, results='markdown', eval=FALSE}
+```
+
+```{r oddsTablesQ1, results='asis', eval=TRUE, echo = FALSE, cache = FALSE, cache.comments = FALSE, tidy.opts = NULL}
+files <- list.files(path = paste0(DATA_PATH, "modelled"),
+                    pattern = "data.q1.*mod_sum.RData",
+                    full.names = TRUE) 
+load(files[1])
+SPECIES <- data.q1.mod %>% pull(Species) %>% unique()
+for (i in 1:length(SPECIES)) {
+    SP <- speciesAbbrev %>% filter(Abbreviation == SPECIES[i]) %>% pull(Species) %>% unique()
+    cat(paste0("\n### ", SP, " {.tabset .tabset-faded} \n"))
+    for (thresholdProp in seq(0.1, 0.9, by = 0.1)) {
+        suffix <- paste0(SPECIES[i], "-", str_replace(thresholdProp, "\\.",""))
+        cat(paste0("\n#### Thresh. prop.:", thresholdProp, "\n"))
+        load(paste0(DATA_PATH, "modelled/data.q1__",thresholdProp,".mod_sum.RData"))
+        print(data.q1.mod[i,'Oddstab'][[1]][[1]] %>%
+              knitr::kable(caption = "Estimated rate of change in above threshold cohort settlement probability per unit of larval age change (odds ratio scale) per inducer treatment.",
+                           label = paste0("Odds-", suffix)))
+        cat('\n\n')
+        print(data.q1.mod[i,'Oddsdif'][[1]][[1]] %>%
+              knitr::kable(caption = "Pairwise comparisons of estimated odds of above threshold cohort settlement between inducer treatments. Exceedence probabilities of effects greater than and less than 0 also provided.",
+                           label = paste0("OddsComp-", suffix)))
+        cat('\n\n')
+    }
+}
+```
+   
+## Compilation of partial plots {.tabset .tabset-faded}
+
+```{r functionCompilationNew, results='markdown', eval=FALSE}
+```
+```{r compilationNewQ1, results='markdown', eval=FALSE}
+```
+ 
+```{r compilationPlotsQ1, results='asis', eval=TRUE, echo = FALSE}
+files <- list.files(path = paste0(OUTPUT_PATH, "/figures"),
+                    pattern = "compilation[^large]*.png",
+                    full.names = TRUE)
+thresholdProp <- str_replace(files, ".*compilation_(.*)_.png", "\\1")
+for (thresh in thresholdProp) {
+    suffix <- paste0(str_replace(thresh, "\\.",""))
+    cat(paste0("\n### Thresh. prop.:", thresh, "\n\n"))
+    cat(paste0("![(#fig:",suffix,") Modelled probability of cohort settlement exceeding a threshold of ",thresh," associated with larval age (days) conditional on inducer treatment for each species. Solid lines represent posterior medians and ribbons represent associated 95% credibility intervals.  The dashed vertical lines indicate the minimum estimated time to 50% probability of cohort settlement exceeding the threshold and which inducer treatment this minimum is associated with.](../output/figures/partialCompilation_3cols",thresh,"_.png) \n\n"))
+    cat('\n')
+}
+```
+ 
+## Days vs Threshold {.tabset .tabset-faded}
+
+```{r days_vs_thresholdQ1, results='markdown', eval=FALSE}
+```
+
+```{r days_vs_threshold Q1, results='asis', eval=TRUE, echo = FALSE}
+files <- list.files(path = paste0(OUTPUT_PATH, "/figures"),
+                    pattern = "all_LD50.*.png",
+                    full.names = TRUE)
+Species <- str_replace(files, '.*__(.*)_.png', '\\1')
+for (Sp in Species) {
+
+    cat(paste0("\n### ", Sp, "\n"))
+    cat(paste0("![](../output/figures/all_LD50__",Sp,"_.png) \n"))
+    cat('\n')
+}
+```
+
+## Compilation of Days vs Threshold {.tabset .tabset-faded}
+
+```{r functionLD50_compilations, results='markdown', eval=FALSE}
+```
+
+### 4 column version
+
+![(#fig:CompilationLD50) Modelled days to >0.5 settlement probability against cohort settlement threshold conditional on inducer treatment for each species.  Points represent posterior medians and error bars represent 95% credibility intervals.  Estimates are truncated to exclude durations that are greater than the extent of the experiments.](../output/figures/LD50Compilation_.png)
+
+### 3 column version
+
+![(#fig:CompilationLD503col) Modelled days to >0.5 settlement probability against cohort settlement threshold conditional on inducer treatment for each species.  Points represent posterior medians and error bars represent 95% credibility intervals.  Estimates are truncated to exclude durations that are greater than the extent of the experiments.](../output/figures/LD50Compilation_3cols_.png)
+
+# Question 2: effects of inducer type on settlement compentency {.tabset .tabset-faded}
+
+```{r GetSpecies, results='markdown', eval=TRUE}
+load(file = paste0("../data/modelled/data.q2.mod.RData"))
+SPECIES <- data.q2.mod %>% pull(Species) %>% unique()
+```
+
+The aim of this component is to compare larval settlement competency
+in association with each of the major inducers (CCA, disc, rubble and
+control) for each coral species.  The approach that we will take is:
+
+- fit Bayesian generalised additive hierarchical models to model the
+  proportion of settled larvae against a cubic regression spline for
+  larval age conditional on inducer type separately for each species.
+  Each model will also include a varying ('random') effect of
+  date/age/plate so as to account for the dependency structure.  
+- since the dataset is relatively small, there is a danger of
+  overfitting.  To protect against this, we will restrict the maximum
+  number of spline knots to 5 rather than permitting the models to
+  self-select.  A value of 5 was chosen to permit a reasonable degree
+  of trend tortuosity whilst preventing illogical or unreasonable
+  pertebations resulting from unusual values (that are more common in
+  small datasets).
+- estimate the partial trends associated with each inducer by
+  calculating posterior effects marginalising over plate.
+- calculate the area under each spline trend by numerical integration
+  at a resolution of 100 for each posterior draw
+- perform pairwise contrasts of the full posterior areas and express
+  the results both graphically and in summary tables.
+- in the resulting Area Under Curve tables, posterior distribution of
+  the estimates are summarised as median and lower/upper Highest
+  Posterior Distribution (HPD) intervals.
+- tables of pairwise differences also include exceedence probabilities
+  associated with the differences (P>0).  By way of reference, an exceedence
+  probability of 0.9 for a comparison of (A - B) indicates that we are
+  90% confident that the area under the curve for inducer A is greater
+  than that of inducer B.  Since this is a one-tailed test (only tests
+  for change in one direction), I have also included the reciprocal
+  (P<0).
+- the differences are expressed in absolute differences (first
+  pairwise diff table in the section) as well as in fractional
+  differences (second pairwise diff table in the section).  On a
+  fractional scale, a value of 1 indicates no change (e.i. multiply a
+  value by 1 - no change).  Values of 0.5 and 2 represent halving and
+  doubling respectively (or 50% decline and 100% increase
+  respectively).
+  
+## Fit model
+
+```{r functionfitModelQ2, results='markdown', eval=FALSE}
+```
+
+```{r fitModel Q2, results='markdown', eval=FALSE}
+```
+
+```{r save Models Q2, results='markdown', eval=FALSE}
+```
+
+## Diagnostics {.tabset .tabset-pills}
+
+A quick scan of all the MCMC and residual diagnostics suggests that:
+
+- the chains are well mixed (trace plots very noisy and consistently
+  so for each chain)
+- no autocorrelation amongst retained draws
+- the chains have converged (all Rhat values < 1.01)
+- the No-U-Turn (NUTS) sampler appears to have sampled effectively
+  (all ESS/Sample size values > 0.5)
+- there is no evidence of a lack of fit (DHARMa residuals did not
+  reveal any major issues)
+
+```{r functionMCMCdiagnostics, results='markdown', eval=FALSE}
+```
+
+```{r functionDHARMaQ2, results='markdown', eval=FALSE}
+```
+
+```{r MCMCdiagnostics Q2, results='markdown', eval=FALSE}
+```
+
+```{r MCMCplots modelled Q2, results='asis', eval=TRUE, echo = FALSE}
+SPECIES <- sort(SPECIES)
+for (i in 1:length(SPECIES)) {
+    SP <- speciesAbbrev %>% filter(Abbreviation == SPECIES[i]) %>% pull(Species) %>% unique()
+    cat(paste0("\n### ", SP, " {.tabset .tabset-faded} \n"))
+    suffix <- SPECIES[i]
+    if (file.exists(paste0('../output/figures/Trace_',SPECIES[i],"_.png"))) {
+        cat(paste0("![(#fig:Trace-", suffix,") Trace plots of each of the main parameters from each chain of the No-U-Turn sampler.](../output/figures/Trace_",SPECIES[i],"_.png) \n\n"))
+        cat(paste0("![(#fig:AC-", suffix,") Trace plots of each of the main parameters from each chain of the No-U-Turn sampler.](../output/figures/AC_",SPECIES[i],"_.png) \n\n"))
+        cat(paste0("![(#fig:Rhat-", suffix,") Trace plots of each of the main parameters from each chain of the No-U-Turn sampler.](../output/figures/Rhat_",SPECIES[i],"_.png) \n\n"))
+        cat(paste0("![(#fig:ESS-", suffix,") Trace plots of each of the main parameters from each chain of the No-U-Turn sampler.](../output/figures/ess_",SPECIES[i],"_.png) \n\n"))
+        cat(paste0("![(#fig:DHARMa-", suffix,") Trace plots of each of the main parameters from each chain of the No-U-Turn sampler.](../output/figures/DHARMa_",SPECIES[i],"_.png) \n\n"))
+    }
+}
+```
+
+## Partial plots {.tabset .tabset-pills}
+
+The following figures display the expected cohort settlement
+probability (of exceeding threshold) associated with larval age for
+each inducer treatment.  Solid lines represent posterior medians and
+ribbons represent associated 95% credibility intervals.
+
+```{r functionPartials, results='markdown', eval=FALSE}
+```
+```{r functionPartialPlot, results='markdown', eval=FALSE}
+```
+
+```{r partialsQ2, results='markdown', eval=FALSE}
+```
+```{r partialPlotQ2, results='markdown', eval=FALSE}
+```
+
+```{r PartialPlots  Q2, results='asis', eval=TRUE, echo = FALSE}
+for (i in 1:length(SPECIES)) {
+    SP <- speciesAbbrev %>% filter(Abbreviation == SPECIES[i]) %>% pull(Species) %>% unique()
+    cat(paste0("\n### ", SP, " {.tabset .tabset-faded} \n"))
+    suffix <- SPECIES[i]
+    if (file.exists(paste0('../output/figures/PartialPlot_',SPECIES[i],"__.png"))) {
+        cat(paste0("![(#fig:partialPlots-",suffix,") Modelled cohort settlement probability associated with larval age (days) conditional on inducer treatment.  Solid lines represent posterior medians and ribbons reporesent associated 95% credibility intervals.](../output/figures/PartialPlot_",SPECIES[i],"__.png) \n"))
+    }
+}
+```
+
+## Area under curves {.tabset .tabset-pills}
+
+Posteriors of areas under curves estimates are presented as
+distributions (densities).  The area under curve estimates associated
+with the control treatment are often orders of magnitude less variable
+than those associated with the specific inducer treatments.  As a
+result, the posterior densities for the control treatment would appear
+as very narrow spikes and those associated with the specific inducer
+treatments would be very flat (since all density distributions have a
+total area of 1).  However, in order to better visualise each
+posterior distribution, each posterior will be normalised separately
+such that each has a maximum height of 1.  It is worth remembering
+that in reality, narrower posterior distributions would normally be
+taller.
+
+<details><summary>Code</summary>
+```{r functionAUCQ2, results='markdown', eval=FALSE}
+```
+```{r functionAUCPlot, results='markdown', eval=FALSE}
+```
+```{r functionAUC_diff, results='markdown', eval=FALSE}
+```
+```{r functionAUC_ratio, results='markdown', eval=FALSE}
+```
+```{r functionAUC_diff_sums, results='markdown', eval=FALSE}
+```
+```{r functionAUC_ratio_sums, results='markdown', eval=FALSE}
+```
+```{r functionAUC_diff_plot, results='markdown', eval=FALSE}
+```
+```{r functionAUC_ratio_plot, results='markdown', eval=FALSE}
+```
+```{r areaQ2, results='markdown', eval=FALSE}
+```
+
+```{r compare_Areas Q2, results='markdown', eval=FALSE}
+```
+```{r compare_Areas_sums Q2, results='markdown', eval=FALSE}
+```
+```{r compare_Areas_plots Q2, results='markdown', eval=FALSE}
+```
+</details>
+
+```{r AreaPlotsTablesQ2, results='asis', eval=TRUE, echo = FALSE}
+load(file = paste0('../data/modelled/data.q2.mod_areas_sums.RData'))
+SPECIES <- data.q2.mod %>% pull(Species) %>% unique
+for (i in 1:length(SPECIES)) {
+    SP <- speciesAbbrev %>% filter(Abbreviation == SPECIES[i]) %>% pull(Species) %>% unique()
+    cat(paste0("\n### ", SP, " {.tabset .tabset-faded} \n"))
+    suffix <- SPECIES[i]
+    if (file.exists(paste0('../output/figures/PartialArea_',SPECIES[i],"__.png"))) {
+        cat(':::: {.columns}:\n\n')
+        cat('::: {.column .center style="width:45%;"}\n\n')
+        print(data.q2.mod[i,'Area_sums'][[1]][[1]] %>%
+              filter(variable == 'Area') %>%
+              rename(Inducer = SpecificTreatment) %>%
+              mutate(across(where(is.numeric), ~ round(., 3))) %>%
+              knitr::kable(caption = "Estimated area under curve per inducer treatment.",
+                           label = paste0("AreaSums", suffix)))
+        cat(':::\n\n')
+        cat('::: {.column .center style="width:55%;"}\n\n')
+        cat(paste0("![(#fig:AUC-",suffix,") Posterior distribution of areas under curve per inducer treatments. Note, posteriors normalized seperately per inducer to aid visibility of non-control treatments.](../output/figures/PartialArea_",SPECIES[i],"__.png) \n\n"))
+        cat(':::\n\n')
+        cat('::::\n\n')
+        
+        print(data.q2.mod[i,'Areas_diff_sums'][[1]][[1]] %>%
+              filter(variable == 'Area') %>%
+              rename(Inducer = SpecificTreatment) %>%
+              mutate(across(where(is.numeric), ~ round(., 3))) %>%
+              knitr::kable(caption = "Estimated pairwise differences in area under curve between inducer treatments.",
+                           label = paste0("AREAcomp-", suffix)))
+        cat('\n\n')
+        print(data.q2.mod[i,'Areas_ratio_sums'][[1]][[1]] %>%
+              filter(variable == 'Area') %>%
+              rename(Inducer = SpecificTreatment) %>%
+              mutate(across(where(is.numeric), ~ round(., 3))) %>%
+              knitr::kable(caption = "Estimated pairwise differences (on a fractional scale) in area under curve between inducer treatments.",
+                           label = paste0("AREAratio-", suffix)))
+        cat('\n\n')
+        cat(':::: {.columns}:\n\n')
+        cat('::: {.column .center style="width:49%;"}\n\n')
+        cat(paste0("![(#fig:ParialAreaDiffs-", suffix,") Pairwise differences in areas under curves.](../output/figures/PartialAreaDiffs_",SPECIES[i],"__.png) \n\n"))
+        cat(':::\n\n')
+        cat('::: {.column .center style="width:49%;"}\n\n')
+        cat(paste0("![(#fig:Parialratio-", suffix,") Pairwise differences (fractional scale) in areas under curves.](../output/figures/PartialAreaRatios_",SPECIES[i],"__.png) \n\n"))
+        cat(':::\n\n')
+        cat('::::\n\n')
+    }
+    
+}
+```
+
+## Compilation of partial plots {.tabset .tabset-faded}
+
+```{r functionCompilationQ2Area, results='markdown', eval=FALSE}
+```
+```{r partialCompilationPlot2, results='markdown', eval=FALSE}
+```
+```{r partialCompilationPlot2Carly, results='markdown', eval=FALSE}
+```
+   
+```{r compilationPlotsQ2, results='asis', eval=TRUE, echo = FALSE}
+cat("### Mixed version\n\n")
+cat(paste0("![(#fig:CompilationQ2AreaMixed) Modelled cohort settlement probability associated with larval age (days) conditional on inducer treatment for each species. Solid lines represent posterior medians and ribbons represent associated 95% credibility intervals.](../output/figures/partialAreaCompilation_Carly.png) \n\n"))
+cat("### 4 column version\n\n")
+cat(paste0("![(#fig:CompilationQ2Area) Modelled cohort settlement probability associated with larval age (days) conditional on inducer treatment for each species. Solid lines represent posterior medians and ribbons represent associated 95% credibility intervals.](../output/figures/partialAreaCompilation_.png) \n\n"))
+cat('\n')
+cat("### 5 column version\n\n")
+cat(paste0("![(#fig:CompilationQ2Area5) Modelled cohort settlement probability associated with larval age (days) conditional on inducer treatment for each species. Solid lines represent posterior medians and ribbons represent associated 95% credibility intervals.](../output/figures/partialAreaCompilation_5col.png) \n\n"))
+cat('\n')
+```
+ 
+## Compilation of AUC partials {.tabset .tabset-faded}
+
+```{r functionCompilationQ2AreaPosteriors, results='markdown', eval=FALSE}
+```
+```{r partialAreaPosteriorsCompilationPlot2, results='markdown', eval=FALSE}
+```
+ 
+```{r compilationAreaPosteriorPlotsQ2, results='asis', eval=TRUE, echo = FALSE}
+load(file = paste0('../data/modelled/data.q2__.area.RData'))
+cat("### 4 column version\n\n")
+cat(paste0("![(#fig:CompilationQ2AreaPosterior) Posterior distribution of areas under curve per inducer treatment for each species. Note, posteriors normalized seperately per inducer to aid visibility of non-control treatments.](../output/figures/partialAreaPosteriorCompilation_.png) \n\n"))
+cat('\n')
+cat("### 5 column version\n\n")
+cat(paste0("![(#fig:CompilationQ2AreaPosterior5) Posterior distribution of areas under curve per inducer treatment for each species. Note, posteriors normalized seperately per inducer to aid visibility of non-control treatments.](../output/figures/partialAreaPosteriorCompilation_5col.png) \n\n"))
+cat('\n')
+```
+
+# Preparation notes
+- the full codebase for this project can be found 
+  [on github](https://github.com/open-AIMS/larval_settlement_competency)
+
+# References

@@ -1,0 +1,99 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# --- Data & geospatial (do not commit datasets) ---
+datasets/
+*.nc
+*.nc4
+*.cdf
+*.h5
+*.hdf5
+*.npz
+*.zarr/
+*.grib
+*.grb
+*.tif
+*.tiff
+*.geotiff
+*.shp
+*.dbf
+*.shx
+*.prj
+*.cpg
+*.qpj
+
+# --- Generated figures & media outputs ---
+figures/
+**/figures/
+**/figures_analysis/
+Spawning/figures/
+Settlement/figures/
+Settlement/figures_analysis/
+Documents/**/figures/
+Codes/*.nc
+output.png
+test_map_old.png
+test_matrix_old.png
+
+# --- Analysis outputs (tables, plots, intermediates) ---
+connectivity_comparison/outputs/
+Settlement/results/
+Settlement/family_results/
+Settlement/Randal/data/
+Settlement/Randal_github/data/
+
+# --- LaTeX build artifacts & bundled figure copies ---
+Tex_report/figures/
+Tex_report/*.pdf
+Tex_report/*.aux
+Tex_report/*.log
+Tex_report/*.out
+Tex_report/*.toc
+Tex_report/*.synctex.gz
+
+# --- Binary media, documents, and model outputs (keep repository code-focused) ---
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.pdf
+*.docx
+*.odt
+*.pkl
+*.pickle
+.codex
+.codex/
+
+# Tabular data & exports (regenerate from code; do not commit)
+**/*.csv
+**/*.tsv
+
+# Log outputs
+Settlement/estimations/
+Settlement/**/*.log
+Settlement/monegetti/*.csv
+
+# --- OS & editors ---
+.DS_Store
+Thumbs.db
+*~
+*.swp
+.idea/
+.vscode/
