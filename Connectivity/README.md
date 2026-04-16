@@ -118,6 +118,24 @@ python run_analysis.py --time-indices 1,2 --skip-plots
 python run_analysis.py
 ```
 
+### SLURM (one job per family)
+
+From the **repository root**, set the directory that contains `connectivity_*.nc` and submit the array job (see `slurm/run_family_array.slurm` for memory/time defaults you can tune):
+
+```bash
+bash Connectivity/slurm/submit_family_array.sh /path/to/your/netcdf_directory
+```
+
+Or manually:
+
+```bash
+export CONNECTIVITY_MATRICES_DIR=/path/to/your/netcdf_directory
+mkdir -p Connectivity/slurm/logs
+sbatch Connectivity/slurm/run_family_array.slurm
+```
+
+Outputs go to `Connectivity/outputs_<family>/` so families do not overwrite each other.
+
 4. Open the main outputs:
 
 - [outputs/analysis_catalog.md](outputs/analysis_catalog.md)
