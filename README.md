@@ -1,5 +1,7 @@
 # GBR connectivity analysis
 
+**Repository:** [github.com/jporobicg/gbr-connectivity-analysis](https://github.com/jporobicg/gbr-connectivity-analysis)
+
 <p align="center">
   <img src="assets/repo-icon.svg" alt="GBR connectivity analysis icon" width="96" height="96"/>
 </p>
