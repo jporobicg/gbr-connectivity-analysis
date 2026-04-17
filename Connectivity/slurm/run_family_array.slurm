@@ -1,4 +1,5 @@
 #!/bin/bash
+#SBATCH --account=OD-234462
 #SBATCH --job-name=conn-cmp
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -14,8 +15,8 @@
 # Families match: connectivity_acroporidae.nc, ..._agariciidae.nc, etc.
 #
 # Submit from the repository ROOT (parent of Connectivity/), e.g.:
-#   export CONNECTIVITY_MATRICES_DIR=/path/to/dir/with/netcdfs
-#   mkdir -p Connectivity/slurm/logs
+export CONNECTIVITY_MATRICES_DIR=/datasets/work/oa-coconet/work/ReefConnect/output/final_output/
+mkdir -p Connectivity/slurm/logs
 #   sbatch Connectivity/slurm/run_family_array.slurm
 #
 # Optional:
